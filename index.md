@@ -337,12 +337,14 @@ title: Home
 </style>
 
 <div class="hero-section">
-    <h1 class="hero-title">Functional Genomics Lab @ CPU</h1>
-    <p class="hero-subtitle">We explore how genetic variations shape human biology, from molecular mechanisms to diseases and evolution.</p>
+    <h1 class="hero-title">Center for Neuroscience and Precision Drug Development</h1>
+    <p class="hero-subtitle">Center for Neuroscience and Precision Drug Development (CNSPDD) is dedicated to uncovering sex-specific mechanisms of multicellular, multi-regional, and central–peripheral interactions across the nervous system and the body. By decoding cell-specific intracellular and intercellular signaling networks, the Center advances the precise modulation of neural circuits and biological pathways, elucidates the in vivo mechanisms of promising therapeutic compounds, and translates these discoveries into next-generation precision therapies. Through interdisciplinary innovation, CNSPDD aims to transform the understanding, prevention, and treatment of neurological and psychiatric disorders.
+</p>
     <div class="hero-tags">
-        <span class="hero-tag">Variant-to-Function</span>
-        <span class="hero-tag">Human Diseases  and Evolution</span>
-        <span class="hero-tag">Scalable Genomics Technologies</span>
+        <span class="hero-tag">Systems Neurophysiology and Circuit Pathology</span>
+        <span class="hero-tag">Multicellular Interactions and Neurovascular Mechanisms</span>
+        <span class="hero-tag">Advanced Technologies for Neuroscience Research</span>
+        <span class="hero-tag">Precision Diagnostics and Therapeutic Discovery</span>
     </div>
 </div>
 
