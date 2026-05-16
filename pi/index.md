@@ -1,6 +1,7 @@
 ---
 layout: default
 title: PI Team
+permalink: /pi/
 ---
 
 <style>
