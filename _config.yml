@@ -2,7 +2,7 @@ title: Center for Neuroscience and Precision Drug Development
 email: fengyuanqing@cpu.edu.cn
 description: >- 
   I am a professor at China Pharmaceutical University, focusing on genetic mechanisms underlying human phenotypic diversity, and disease susceptibility.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/CNSPDD-CPU" # the subpath of your site, e.g. /blog
 url: "https://fenglab-cpu.github.io/" # the base hostname 
 
 # Build settings
