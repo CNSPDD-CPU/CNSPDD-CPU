@@ -21,6 +21,8 @@ navigation:
     url: /publications/
   - title: People
     url: /people/
+  - title: PI Team
+    url: /pi/
   - title: News
     url: /news/
   - title: Jobs
@@ -38,6 +40,8 @@ navigation_cn:
     url: /cn/publications/
   - title: 团队
     url: /cn/people/
+  - title: PI团队
+    url: /cn/pi/ 
   - title: 新闻
     url: /cn/news/
   - title: 招聘
