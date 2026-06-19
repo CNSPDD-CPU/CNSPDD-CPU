@@ -1,723 +1,287 @@
 ---
 layout: default
-title: Research
+title: Research and Platforms
+permalink: /research/
 ---
 
 <style>
-    :root {
-        --primary-color: #2C5F2D;
-        --secondary-color: #1E2761;
-        --accent-color: #735DA5;
-        --gradient-primary: linear-gradient(135deg, #2C5F2D 0%, #31473A 100%);
-        --gradient-secondary: linear-gradient(135deg, #1E2761 0%, #2C3E6E 100%);
-        --gradient-accent: linear-gradient(135deg, #735DA5 0%, #8B7CB5 100%);
-        --text-dark: #2D3748;
-        --text-light: #4A5568;
-        --bg-light: #F7FAFC;
-        --border-color: #E2E8F0;
+    .rp-page {
+        --rp-ink: #172033;
+        --rp-muted: #526071;
+        --rp-line: #dce5ee;
+        --rp-green: #2C5F2D;
+        --rp-navy: #1E2761;
+        --rp-purple: #735DA5;
+        --rp-red: #962E2A;
+        color: var(--rp-ink);
     }
 
-    .research-container {
+    .rp-shell {
         max-width: 1200px;
         margin: 0 auto;
-        padding:
-         0.5rem 2rem;
+        padding: 0 2rem;
         box-sizing: border-box;
     }
 
-    .research-header {
-        background: white;
-        border-radius: 16px;
-        padding: 0.75rem 2rem 2rem 2rem;
-        margin-bottom: 0.3rem;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        border: 1px solid #e2e8f0;
+    .rp-hero {
+        margin: 0 auto 2.8rem;
+        padding: 4rem 0;
+        background: linear-gradient(135deg, #eef5f2 0%, #f7f9fc 48%, #eef0f7 100%);
+        border-bottom: 1px solid var(--rp-line);
     }
 
-    .research-header h1 {
-        font-size: 2rem;
-        color: var(--primary-color);
-        margin-bottom: 0.45rem;
-        margin-top: 0.75rem;
-        font-weight: 700;
-        text-align: center;
+    .rp-kicker {
+        margin: 0 0 0.5rem;
+        color: var(--rp-purple);
+        font-size: 0.82rem;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
     }
 
-    .research-header h1::after {
-        content: '';
-        display: block;
-        width: clamp(120px, 30vw, 360px);
-        height: 4px;
-        background: var(--gradient-primary);
-        border-radius: 2px;
-        margin: 0.6rem auto 0;
+    .rp-title {
+        max-width: 850px;
+        margin: 0 0 1rem;
+        color: var(--rp-navy);
+        font-size: clamp(2.2rem, 4.5vw, 4rem);
+        line-height: 1.05;
+        text-align: left;
+        background: none;
+        -webkit-text-fill-color: currentColor;
     }
 
-    .research-header p {
-        font-size: 1.1rem;
-        line-height: 1.8;
-        color: var(--text-dark);
-        text-align: justify;
-        margin: 0 0 1rem 0;
-    }
-
-    .research-intro-layout {
-        max-width: 100%;
-        margin: 1rem 0;
-    }
-
-    .research-overview-text {
-        font-size: 1.1rem;
-        line-height: 1.8;
-        color: var(--text-dark);
-        margin-bottom: 3rem;
-        padding: 2rem;
-        background: var(--bg-light);
-        border-radius: 12px;
-        border-left: 4px solid var(--primary-color);
-    }
-
-    .research-overview-cards {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 1.5rem;
-        margin-bottom: 2rem;
-        width: 100%;
-    }
-
-    .overview-card {
-        background: #ffffff;
-        padding: 2rem;
-        border-radius: 16px;
-        border: 1px solid var(--border-color);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-        transition: all 0.3s ease;
-        position: relative;
-        overflow: hidden;
-        text-align: center;
-        flex: 1;
-        width: 25%;
-        box-sizing: border-box;
-    }
-
-    .mission-card {
-        background: linear-gradient(135deg, #ffffff 0%, #f8fff9 100%);
-        border-color: var(--primary-color);
-    }
-
-    .challenge-card {
-        background: linear-gradient(135deg, #ffffff 0%, #fff8f8 100%);
-        border-color: #dc3545;
-    }
-
-    .approach-card {
-        background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
-        border-color: var(--secondary-color);
-    }
-
-    .goal-card {
-        background: linear-gradient(135deg, #ffffff 0%, #fffbf8 100%);
-        border-color: #fd7e14;
-    }
-
-    .mission-card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 12px 30px rgba(44, 95, 45, 0.2);
-    }
-
-    .challenge-card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 12px 30px rgba(220, 53, 69, 0.2);
-    }
-
-    .approach-card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 12px 30px rgba(30, 39, 97, 0.2);
-    }
-
-    .goal-card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 12px 30px rgba(253, 126, 20, 0.2);
-    }
-
-    .card-title {
-        font-size: 1.3rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    }
-
-    .mission-card .card-title {
-        color: var(--primary-color);
-    }
-
-    .challenge-card .card-title {
-        color: #dc3545;
-    }
-
-    .approach-card .card-title {
-        color: var(--secondary-color);
-    }
-
-    .goal-card .card-title {
-        color: #fd7e14;
-    }
-
-    .card-text {
-        font-size: 1rem;
-        line-height: 1.6;
-        color: var(--text-dark);
+    .rp-lead {
+        max-width: 820px;
         margin: 0;
-        font-family: Georgia, 'Times New Roman', Times, serif;
+        color: var(--rp-muted);
+        font-size: 1.12rem;
+        line-height: 1.75;
     }
 
-    .research-section {
-        background: white;
-        border-radius: 16px;
-        padding: 2.5rem;
-        margin-bottom: 2rem;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        border: 1px solid #e2e8f0;
-        transition: all 0.3s ease;
+    .rp-section {
+        margin: 3rem 0;
     }
 
-    .research-section:hover {
-        transform: none;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    .section-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 1.5rem;
+        margin-bottom: 1.4rem;
+    }
+
+    .section-eyebrow {
+        margin: 0 0 0.35rem;
+        color: var(--rp-purple);
+        font-size: 0.82rem;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
     }
 
     .section-title {
-        font-size: 2rem;
-        color: var(--primary-color);
-        margin: 0 0 2rem 0;
-        font-weight: 700;
-        text-align: center;
-        padding-bottom: 1rem;
-        border-bottom: 3px solid var(--primary-color);
-    }
-
-    .research-intro-text {
-        font-size: 1.1rem;
-        line-height: 1.8;
-        color: var(--text-dark);
-        padding: 2.25rem;
-        background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
-        border-radius: 20px;
-        border: 1px solid #e6edf5;
-        box-shadow: 0 8px 24px rgba(17, 24, 39, 0.08);
-        text-align: justify;
-        overflow-wrap: break-word;
-        box-sizing: border-box;
-    }
-
-    .research-intro-image {
-        float: right;
-        width: 30%;
-        max-width: 400px;
-        height: 30%;
-        max-height: 500px;
-        object-fit: contain;
-        margin: 0 0 1rem 1rem;
-        border: none;
-        border-radius: 2;
-        background: none;
-    }
-
-    .research-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        align-items: start;
-    }
-
-    .research-card {
-        background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
-        border-radius: 20px;
-        padding: 2.25rem;
-        margin-bottom: 2rem;
-        box-shadow: 0 8px 24px rgba(17, 24, 39, 0.08);
-        border: 1px solid #e6edf5;
-        transition: box-shadow 0.3s ease, transform 0.2s ease;
-        --content-width: clamp(58ch, 60%, 75ch);
-        overflow-wrap: break-word;
-        box-sizing: border-box;
-    }
-
-    .research-card:hover {
-        box-shadow: 0 16px 40px rgba(17, 24, 39, 0.12);
-        transform: translateY(-2px);
-    }
-
-    .card-header {
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        margin-bottom: 1.5rem;
-        gap: clamp(0.75rem, 2vw, 1.5rem);
-        flex-wrap: nowrap;
-    }
-
-    .card-content {
-        flex: 0 0 80%;
-        max-width: 80%;
-        text-align: left;
-        padding-left: 2rem;
-        line-height: 1.7;
-        box-sizing: border-box;
-    }
-
-    .card-figure {
-        flex: 0 0 20%;
-        max-width: 20%;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        align-self: stretch;
         margin: 0;
+        color: var(--rp-navy);
+        font-size: clamp(1.75rem, 3vw, 2.45rem);
+        line-height: 1.15;
+        text-align: left;
+        background: none;
+        -webkit-text-fill-color: currentColor;
     }
 
-    .card-figure img {
-        width: 70%;
-        max-width: 70%;
-        height: auto;
-        min-height: 120px;
-        object-fit: cover;
-        border-radius: 12px;
-        background: #f8fafc;
-        border: 1px solid #e5e7eb;
-        box-shadow: 0 6px 18px rgba(17, 24, 39, 0.08);
+    .section-copy {
+        max-width: 660px;
+        margin: 0;
+        color: var(--rp-muted);
+        line-height: 1.7;
     }
 
-    .card-figure figcaption {
-        font-size: 0.9rem;
-        color: var(--text-light);
-        margin-top: 0.5rem;
-        font-style: italic;
+    .rp-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1rem;
+    }
+
+    .platform-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+    }
+
+    .rp-card {
+        min-height: 100%;
+        padding: 1.35rem;
+        border: 1px solid var(--rp-line);
+        border-radius: 8px;
+        background: #ffffff;
+        box-shadow: 0 10px 28px rgba(23, 32, 51, 0.07);
+        box-sizing: border-box;
+    }
+
+    .rp-card::before {
+        content: "";
+        display: block;
+        width: 42px;
+        height: 4px;
+        margin-bottom: 1rem;
+        border-radius: 999px;
+        background: var(--rp-green);
+    }
+
+    .rp-card:nth-child(2)::before {
+        background: var(--rp-navy);
+    }
+
+    .rp-card:nth-child(3)::before {
+        background: var(--rp-purple);
+    }
+
+    .rp-card:nth-child(4)::before {
+        background: var(--rp-red);
     }
 
     .card-title {
-        font-size: 1.1rem;
-        color: #1e3a8a;
-        background: #dbeafe;
-        padding: 0.5rem 1rem;
-        border-radius: 9999px;
-        font-weight: 600;
-        text-align: center;
-        display: block;
-        width: auto;
-        max-width: 100%;
-        margin: 0 auto 1.25rem;
-        box-shadow: 0 2px 4px rgba(30, 64, 175, 0.15);
-        word-break: break-word;
-    }
-
-    .card-description {
-        font-size: 1rem;
-        line-height: 1.6;
-        color: #374151;
-        margin-bottom: 1.5rem;
-        font-weight: 400;
+        margin: 0 0 0.7rem;
+        color: var(--rp-navy);
+        font-size: 1.08rem;
+        line-height: 1.35;
         text-align: left;
     }
 
-    .card-lead {
-        font-size: 1.05rem;
-        line-height: 1.8;
-        color: #374151;
-        margin: 0 0 1.25rem 0;
-        max-width: 100%;
-        text-align: left;
-        overflow-wrap: break-word;
+    .card-copy {
+        margin: 0;
+        color: var(--rp-muted);
+        line-height: 1.65;
+        font-size: 0.98rem;
     }
 
-    .card-list {
-        list-style: none;
-        padding-left: 0;
-        margin: 1.25rem 0 0 0;
-        text-align: left;
+    .program-band {
+        padding: 2.2rem 0;
+        background: linear-gradient(180deg, #f7fafc 0%, #eef4f8 100%);
+        border-top: 1px solid var(--rp-line);
+        border-bottom: 1px solid var(--rp-line);
     }
 
-    .card-list li {
-        position: relative;
-        padding-left: 1.75rem;
-        margin-bottom: 1rem;
-        line-height: 1.7;
-        color: #374151;
-        font-size: 1rem;
-        overflow-wrap: break-word;
-    }
-
-    .card-list li::before {
-        content: '▸';
-        position: absolute;
-        left: 0;
-        color: #2563eb;
-        font-size: 1rem;
-        top: 0.2rem;
-    }
-
-    @media (max-width: 768px) {
-        .card-header {
-            flex-direction: column;
-            row-gap: 1rem;
-        }
-        .card-content {
-            width: 100%;
-            max-width: 100%;
-        }
-        .card-figure {
-            width: 100%;
-            max-width: 100%;
-            padding-right: 0;
-            margin: 0;
-        }
-        .card-figure img {
-            height: auto;
-            width: clamp(220px, 70vw, 320px);
+    @media (max-width: 900px) {
+        .rp-grid,
+        .platform-grid {
+            grid-template-columns: 1fr 1fr;
         }
     }
 
-    @media (max-width: 480px) {
-        .research-intro-image {
-            width: 80%;
-            max-width: 280px;
+    @media (max-width: 640px) {
+        .rp-shell {
+            padding: 0 1rem;
         }
-        .research-card {
-            padding: 1rem;
-        }
-        .card-title {
-            font-size: 1rem;
-            padding: 0.4rem 0.8rem;
-        }
-        .card-lead {
-            font-size: 0.95rem;
-        }
-        .card-list li {
-            font-size: 0.95rem;
-            padding-left: 1.5rem;
-        }
-        .card-figure img {
-            width: 100%;
-            max-width: 220px;
-            height: auto;
-        }
-        .card-header {
-            column-gap: 0.75rem;
-        }
-    }
 
-    .research-content h3 {
-        color: var(--secondary-color);
-        font-size: 1.3rem;
-        margin: 1.5rem 0 1rem 0;
-        font-weight: 600;
-        position: relative;
-        padding-left: 1rem;
-    }
-
-    .research-content h3::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 4px;
-        height: 20px;
-        background: var(--gradient-accent);
-        border-radius: 2px;
-    }
-
-    .research-content ul {
-        list-style: none;
-        padding-left: 0;
-        margin-bottom: 2rem;
-    }
-
-    .research-content li {
-        position: relative;
-        padding-left: 1.5rem;
-        margin-bottom: 0.8rem;
-        line-height: 1.6;
-        color: var(--text-dark);
-    }
-
-    .research-content li::before {
-        content: '▸';
-        position: absolute;
-        left: 0;
-        color: var(--accent-color);
-        font-weight: bold;
-    }
-
-    .research-image {
-        width: 100%;
-        max-width: 600px;
-        height: 375px;
-        object-fit: cover;
-        border-radius: 0;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease;
-        border: 1px solid #ccc;
-        margin: 2rem auto;
-        margin-right: 3rem;
-        display: block;
-    }
-
-    .research-image:hover {
-        transform: none;
-    }
-
-    .projects-section {
-        background: var(--bg-light);
-        border-radius: 16px;
-        padding: 2.5rem;
-        margin-top: 3rem;
-        border: 2px solid var(--primary-color);
-    }
-
-    .projects-header {
-        text-align: center;
-        margin-bottom: 2rem;
-    }
-
-    .projects-title {
-        font-size: 2.2rem;
-        color: var(--primary-color);
-        margin-bottom: 1rem;
-        font-weight: 700;
-    }
-
-    .projects-subtitle {
-        font-size: 1.1rem;
-        color: var(--text-light);
-        max-width: 600px;
-        margin: 0 auto;
-        line-height: 1.6;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-        .research-grid {
+        .rp-grid,
+        .platform-grid {
             grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-        
-        .research-header h1 {
-            font-size: 2rem;
-        }
-        
-        .research-header p {
-            font-size: 1.05rem;
-            text-align: left;
         }
 
-        .research-intro-layout {
-            margin: 0.5rem 0;
-        }
-
-        .research-intro-text {
-            padding: 1.25rem;
-            text-align: left;
-        }
-
-        .research-intro-image {
-            float: none;
-            display: block;
-            width: 60%;
-            max-width: 320px;
-            margin: 1rem auto;
-        }
-
-        .research-section {
-            padding: 1.5rem;
-        }
-        
-        .section-title {
-            font-size: 1.7rem;
-        }
-        
-        .research-image {
-            height: 180px;
-        }
-        
-        .card-header {
-            flex-direction: column;
-            align-items: stretch;
-            margin-bottom: 1.5rem;
-            gap: 1.25rem;
-        }
-        
-        .card-content {
-            width: 100%;
-            max-width: 100%;
-            margin: 0;
-            padding-left: 0;
-        }
-        
-        .card-title {
-            font-size: 1.1rem;
-            padding: 0.5rem 1rem;
-            display: block;
-            text-align: center;
-        }
-        
-        .card-figure {
-            flex: none;
-            width: 100%;
-            margin-top: 0.5rem;
-        }
-    }
-
-    @media (max-width: 1024px) {
-        .research-overview-cards {
-            gap: 1rem;
-        }
-        
-        .overview-card {
-            padding: 1.5rem;
-        }
-        
-        .card-title {
-            font-size: 1.1rem;
-            padding: 0.5rem 1rem;
-        }
-        
-        .card-text {
-            font-size: 0.95rem;
-        }
-        
-        .research-overview-text {
-            padding: 1.5rem;
-            font-size: 1rem;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .research-overview-cards {
+        .section-head {
+            align-items: flex-start;
             flex-direction: column;
         }
-        
-        .overview-card {
-            width: 100%;
-            margin-bottom: 1rem;
-        }
-        .research-container {
-            padding: 1rem 1rem;
-        }
-        
-        .research-hero {
-            padding: 1.5rem 1rem;
-        }
-        
-        .research-hero h1 {
-            font-size: 1.8rem;
-        }
-        
-        .section-title {
-            text-align: center;
-        }
-    }
-
-    /* Animation for scroll reveal */
-    .fade-in {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: all 0.6s ease;
-    }
-
-    .fade-in.visible {
-        opacity: 1;
-        transform: translateY(0);
     }
 </style>
 
-<div class="research-container">
-    <div class="research-header fade-in">
-        <h1>Research Areas</h1>
-        <div class="research-intro-layout">
-            <div class="research-intro-text">
-                <img src="/assets/images/background.jpg" alt="Genetic research" class="research-intro-image">
-                <p>Our research focuses on understanding genome function by decoding how genetic variants shape human phenotypes, disease risk, and evolutionary adaptation. Genetic variation underpins human biological diversity, yet most disease- and trait-associated mutations identified through GWAS and population genomics remain functionally uncharacterized—particularly within the vast landscape of non-coding regulatory variants. Many of these variants reflect ancient adaptive responses to historical environments but now contribute to modern complex disease susceptibility. Systematically defining their molecular functions and establishing causal links to phenotypes and disease represents one of the major bottlenecks in genetics, and precision medicine.</p>
-                <p>To address this challenge, our lab develops a high-throughput functional genomics platform that integrates massively parallel reporter assays (MPRA), deep mutational scanning (DMS), CRISPR-based perturbation screens, single-cell genomics, and long-read sequencing, combined with population genetic and computational analyses. This integrated framework enables the systematic identification of functional mutations and their target genes, the dissection of mechanisms that shape human phenotypes and disease risk, and the discovery of novel therapeutic targets. Ultimately, we aim to translate mechanistic insights into strategies for disease prevention and treatment.</p>
-            </div>
+<div class="rp-page">
+    <section class="rp-hero">
+        <div class="rp-shell">
+            <p class="rp-kicker">Research and Platforms</p>
+            <h1 class="rp-title">Mechanism-based neuroscience for precision drug discovery</h1>
+            <p class="rp-lead">CNSPDD integrates individual basic research, organized drug-development projects, and compound-validation services to understand brain function in health and disease and translate that understanding into cell-specific, sex-informed therapeutic strategies.</p>
         </div>
-    </div>
+    </section>
 
-    <div class="research-section fade-in">
-        <h2 class="section-title">Current Researches</h2>
-        
-        <div class="research-card" role="article" aria-labelledby="fgtd-title">
-            <h3 class="card-title" id="fgtd-title">Functional Genomics and Technology Development</h3>
-            <div class="card-header">
-                <div class="card-content">
-                    <p class="card-lead">We develop and deploy high-throughput functional genomics methodologies to rigorously interrogate gene regulation and the molecular consequences of human genetic variation.</p>
-                    <ul class="card-list">
-                        <li>Map gene-regulatory architecture using MPRA, Hi-C and other chromatin profiling assays</li>
-                        <li>Build scalable CRISPR-based perturbation platforms for genome and epigenome editing in disease-relevant models</li>
-                        <li>Resolve cellular heterogeneity with single-cell genomics and quantitative computational analysis</li>
-                    </ul>
-                </div>
-                <div class="card-figure">
-                    <img src="/assets/images//biotech.jpg" alt="Functional Genomics">
-                </div>
+    <section class="rp-section rp-shell">
+        <div class="section-head">
+            <div>
+                <p class="section-eyebrow">Program Architecture</p>
+                <h2 class="section-title">Three connected directions</h2>
             </div>
+            <p class="section-copy">The Center links discovery science to translational testing, creating a pipeline from disease mechanism to compound evaluation.</p>
         </div>
+        <div class="platform-grid">
+            <article class="rp-card">
+                <h3 class="card-title">Basic Research</h3>
+                <p class="card-copy">Individual projects define mechanisms of brain function in health and disease, with emphasis on sex-specific neuron-glia interactions and early multicellular disease processes.</p>
+            </article>
+            <article class="rp-card">
+                <h3 class="card-title">Drug Development</h3>
+                <p class="card-copy">Organized projects develop cell-specific strategies to target intracellular signaling and intercellular communication in defined neuronal and glial populations.</p>
+            </article>
+            <article class="rp-card">
+                <h3 class="card-title">Compound Validation</h3>
+                <p class="card-copy">A service-oriented platform tests novel compounds for their ability to modulate brain function, circuit activity, and disease-relevant cellular communication.</p>
+            </article>
+        </div>
+    </section>
 
-        <div class="research-card" role="article" aria-labelledby="gctd-title">
-            <h3 class="card-title" id="gctd-title"> Genetics of Complex Traits and Diseases</h3>
-            <div class="card-header">
-                <div class="card-content">
-                    <p class="card-lead">Identifying the genetic basis of human diseases to understand disease mechanisms and inform therapeutic strategies.</p>
-                    <ul class="card-list">
-                        <li>Linking risk variants to function by high-throughput genomic asssays</li>
-                        <li>Linking risk variants to molecular function by integrating multi-omics data (transcriptomic, epigenomic)</li>
-                        <li>Elucidating mechanisms underlying the disease susceptibility by modeling</li>
-                    </ul>
+    <section class="program-band">
+        <div class="rp-shell">
+            <div class="section-head">
+                <div>
+                    <p class="section-eyebrow">Research Focus</p>
+                    <h2 class="section-title">From neuron-glia mechanisms to sex-informed therapies</h2>
                 </div>
-                <div class="card-figure">
-                    <img src="/assets/images/gwas.jpg" alt="Disease Genetics Cartoon">
-                </div>
+                <p class="section-copy">The Center treats the brain as a highly interactive multicellular network and places sex as a biological variable at the center of disease mechanism, pharmacology, and therapeutic design.</p>
+            </div>
+            <div class="rp-grid">
+                <article class="rp-card">
+                    <h3 class="card-title">Neuron-Glia Communication</h3>
+                    <p class="card-copy">Uncovering how neurons, astrocytes, microglia, oligodendrocytes, and defined neuronal subtypes communicate in health, vulnerability, and disease.</p>
+                </article>
+                <article class="rp-card">
+                    <h3 class="card-title">Sex-Specific Disease Biology</h3>
+                    <p class="card-copy">Dissecting how female and male brains differ in receptor expression, intracellular signaling, network integration, and disease trajectories.</p>
+                </article>
+                <article class="rp-card">
+                    <h3 class="card-title">Early Intervention Windows</h3>
+                    <p class="card-copy">Focusing on multicellular communication events that arise before overt neurodegeneration or clinical symptom onset.</p>
+                </article>
+                <article class="rp-card">
+                    <h3 class="card-title">Precision Therapeutics</h3>
+                    <p class="card-copy">Developing cell-specific delivery and modulation strategies with optimized dose, route, formulation, biomarkers, and companion diagnostics.</p>
+                </article>
             </div>
         </div>
+    </section>
 
-        <div class="research-card" role="article" aria-labelledby="ae-title">
-            <h3 class="card-title" id="ae-title">Adaptive Evolution and Population Genetics</h3>
-            <div class="card-header">
-                <div class="card-content">
-                    <p class="card-lead">Investigating human evolutionary history and the genetic mechanisms of adaptation to diverse environments.</p>
-                    <ul class="card-list">
-                        <li>Identifying genetic loci that have been shaped by positive selection </li>
-                        <li>Analyzing the functional consequences of population-specific adaptive variants</li>
-                        <li>Exploring the molecular mechanisms by which how evolution shape modern disease</li>
-                    </ul>
-                </div>
-                <div class="card-figure">
-                    <img src="/assets/images/evo.png" alt="Evolutionary Genetics Cartoon">
-                </div>
+    <section class="rp-section rp-shell">
+        <div class="section-head">
+            <div>
+                <p class="section-eyebrow">Platforms</p>
+                <h2 class="section-title">Technology platforms for mechanism-based discovery</h2>
             </div>
+            <p class="section-copy">CNSPDD connects molecular and cellular mechanisms to circuit dynamics, behavior, pharmacology, and human-relevant models in female and male systems.</p>
         </div>
-    </div>
+        <div class="platform-grid">
+            <article class="rp-card">
+                <h3 class="card-title">Advanced Microscopy</h3>
+                <p class="card-copy">Confocal, super-resolution, two-photon, head-mounted two-photon, whole-slide scanning, and fluorescence lifetime fiber photometry.</p>
+            </article>
+            <article class="rp-card">
+                <h3 class="card-title">Circuit Physiology</h3>
+                <p class="card-copy">Optogenetics, Neuropixels population recordings, multielectrode arrays, and patch-clamp electrophysiology.</p>
+            </article>
+            <article class="rp-card">
+                <h3 class="card-title">Human-Relevant Models</h3>
+                <p class="card-copy">Brain organoids, iPSC-derived cultures, ex vivo preparations, and in vivo female and male animal studies.</p>
+            </article>
+            <article class="rp-card">
+                <h3 class="card-title">Precision Pharmacology</h3>
+                <p class="card-copy">Target discovery, medicinal chemistry, formulation science, and sex-dependent pharmacokinetic and pharmacodynamic profiling.</p>
+            </article>
+            <article class="rp-card">
+                <h3 class="card-title">Biomarkers and Diagnostics</h3>
+                <p class="card-copy">Developing readouts that reflect sex-specific disease mechanisms and treatment responses.</p>
+            </article>
+            <article class="rp-card">
+                <h3 class="card-title">Computational Biology</h3>
+                <p class="card-copy">Quantitative modeling of sex-specific disease pathways and integration of cellular, circuit, behavioral, and pharmacological data.</p>
+            </article>
+        </div>
+    </section>
 </div>
-
-<script>
-    // Intersection Observer for fade-in animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, observerOptions);
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const fadeElements = document.querySelectorAll('.fade-in');
-        fadeElements.forEach(el => observer.observe(el));
-    });
-</script>
