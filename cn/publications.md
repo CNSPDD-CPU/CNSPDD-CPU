@@ -1,462 +1,53 @@
 ---
 layout: default
-title: Publications
+title: 成果
+permalink: /cn/publications/
 ---
 
 <style>
-    :root {
-        --primary-color: #2C5F2D;
-        --secondary-color: #1E2761;
-        --accent-color: #735DA5;
-        --gradient-primary: linear-gradient(135deg, #2C5F2D 0%, #31473A 100%);
-        --gradient-secondary: linear-gradient(135deg, #1E2761 0%, #2C3E6E 100%);
-        --gradient-accent: linear-gradient(135deg, #735DA5 0%, #8B7CB5 100%);
-        --text-dark: #2D3748;
-        --text-light: #4A5568;
-        --bg-light: #F7FAFC;
-        --border-color: #E2E8F0;
-    }
-
-    .publications-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0.5rem 2rem;
-        box-sizing: border-box;
-    }
-
-    .pub-filter-bar {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        justify-content: center;
-        margin: 0.75rem 0 1.5rem;
-    }
-
-    .pub-filter-btn {
-        border-radius: 9999px;
-        border: 1px solid var(--border-color);
-        padding: 0.35rem 0.9rem;
-        font-size: 0.9rem;
-        background: #ffffff;
-        color: var(--text-light);
-        cursor: pointer;
-        transition: all 0.2s ease;
-    }
-
-    .pub-filter-btn:hover {
-        border-color: var(--accent-color);
-        color: var(--accent-color);
-    }
-
-    .pub-filter-btn.active {
-        background: var(--gradient-secondary);
-        color: #ffffff;
-        border-color: transparent;
-        box-shadow: 0 6px 16px rgba(30, 39, 97, 0.25);
-    }
-
-    .publications-subtitle {
-        font-size: 1.1rem;
-        opacity: 0.95;
-        font-weight: normal;
-        text-align: center;
-        margin-bottom: 1rem;
-        margin-top: 0.5rem;
-        color: var(--text-light);
-    }
-
-    .publications-subtitle a {
-        color: var(--accent-color);
-        text-decoration: underline;
-    }
-
-    .publications-subtitle a:hover {
-        color: var(--primary-color);
-    }
-
-    .publications-list {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    .publication-item {
-        display: grid;
-        grid-template-columns: 173px 1fr;
-        gap: 1.6rem;
-        background: white;
-        padding: 1.6rem;
-        border-radius: 16px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        border: 1px solid var(--border-color);
-        transition: all 0.3s ease;
-    }
-
-    .publication-item:hover {
-        transform: none;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
-    }
-
-    .pub-figure {
-        flex: 0 0 173px;
-        width: 60%;
-        border-radius: 12px;
-        border: 1px solid #e2e8f0;
-        background: #f8f9fa;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto;
-    }
-
-    .pub-figure img {
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-        transition: transform 0.3s ease;
-        border-radius: 12px;
-    }
-
-    .publication-item:hover .pub-figure img {
-        transform: none;
-    }
-
-    .pub-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .pub-title {
-        font-size: 1.2rem;
-        font-weight: 600;
-        margin-bottom: 0.8rem;
-        line-height: 1.4;
-    }
-
-    .pub-title a {
-        color: var(--secondary-color);
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
-
-    .pub-title a:hover {
-        color: var(--primary-color);
-        text-decoration: underline;
-    }
-
-    .pub-authors {
-        font-size: 1rem;
-        color: var(--text-light);
-        margin-bottom: 0.5rem;
-        line-height: 1.5;
-    }
-
-    .author-highlight {
-        font-weight: 600;
-        color: var(--accent-color);
-    }
-
-    .pub-venue {
-        font-size: 1rem;
-        color: var(--primary-color);
-        font-weight: 600;
-        margin-bottom: 0.8rem;
-        font-style: italic;
-    }
-
-    .pub-links {
-        font-size: 0.9rem;
-        color: var(--text-light);
-    }
-
-    .pub-links a {
-        color: var(--accent-color);
-        text-decoration: none;
-        font-weight: 500;
-        transition: color 0.3s ease;
-    }
-
-    .pub-links a:hover {
-        color: var(--primary-color);
-        text-decoration: underline;
-    }
-
-    .pub-year-heading {
-        font-size: 1.6rem;
-        font-weight: 700;
-        color: var(--secondary-color);
-        margin: 2.5rem 0 1rem;
-        padding-bottom: 0.25rem;
-        border-bottom: 2px solid rgba(148, 163, 184, 0.5);
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-        .publication-item {
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-            padding: 1.5rem;
-        }
-        
-        .pub-figure {
-            max-width: 300px;
-            margin: 0 auto;
-        }
-        
-
-    }
-
-    @media (max-width: 480px) {
-        .publications-container {
-            padding: 1rem 0.75rem;
-        }
-        
-        .pub-title {
-            font-size: 1.1rem;
-        }
-        
-        .publication-item {
-            padding: 1rem;
-        }
-    }
-
-    /* Animation for scroll reveal */
-    .fade-in {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: all 0.6s ease;
-    }
-
-    .fade-in.visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.template-page { max-width: 1200px; margin: 0 auto; padding: 0 2rem 4rem; }
+.template-hero { padding: 4rem 0 2.5rem; border-bottom: 1px solid #e1e8ed; }
+.template-eyebrow { margin: 0 0 .45rem; color: #735DA5; font-size: .82rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.template-hero h1 { max-width: 820px; margin: 0 0 1rem; color: #1E2761; font-size: clamp(2.1rem, 4vw, 3.6rem); line-height: 1.1; text-align: left; background: none; -webkit-text-fill-color: currentColor; }
+.template-hero p, .template-section-head p, .template-card p { color: #526071; line-height: 1.75; }
+.template-section { margin: 2.8rem 0 0; }
+.template-section-head { display: grid; grid-template-columns: minmax(220px, .8fr) minmax(320px, 1.2fr); gap: 1.4rem; align-items: end; margin-bottom: 1.2rem; }
+.template-section-head h2 { margin: 0; color: #1E2761; font-size: 1.8rem; line-height: 1.2; text-align: left; }
+.template-section-head p:not(.template-eyebrow) { margin: 0; }
+.template-list { display: grid; gap: 1rem; }
+.template-card { padding: 1.25rem; border: 1px solid #e1e8ed; border-radius: 8px; background: #fff; box-shadow: 0 2px 12px rgba(30,39,97,.08); }
+.template-card h3 { margin: 0 0 .55rem; color: #1E2761; font-size: 1.05rem; line-height: 1.35; text-align: left; }
+.template-card p { margin: 0; }
+.template-meta { margin-top: .9rem; padding-top: .75rem; border-top: 1px solid #e1e8ed; color: #2C5F2D; font-size: .86rem; font-weight: 800; }
+@media (max-width: 768px) { .template-page { padding: 0 1rem 3rem; } .template-section-head { grid-template-columns: 1fr; } }
 </style>
 
-<div class="publications-container">
-    <div class="pub-filter-bar">
-        <button class="pub-filter-btn active" data-year-filter="all">All</button>
-        <button class="pub-filter-btn" data-year-filter="2024">2024</button>
-        <button class="pub-filter-btn" data-year-filter="2023">2023</button>
-        <button class="pub-filter-btn" data-year-filter="2022">2022</button>
-        <button class="pub-filter-btn" data-year-filter="2021">2021</button>
-        <button class="pub-filter-btn" data-year-filter="2015">2015</button>
-    </div>
-    <div class="publications-subtitle">
-        (For a complete list of publications, please visit my <a href="https://scholar.google.com/citations?user=nWYWiVUAAAAJ&hl=en">Google Scholar profile</a>.)
-    </div>
+<div class="template-page">
+    <section class="template-hero">
+        <p class="template-eyebrow">Publications</p>
+        <h1>科研成果</h1>
+        <p>本页用于展示 CNSPDD 发表的同行评议论文、预印本、专利、数据集及其他研究产出。</p>
+    </section>
 
-    <h2 class="pub-year-heading" data-year="2024">2024</h2>
-
-    <div class="publication-item fade-in" data-year="2024">
-        <div class="pub-figure">
-            <img src="/assets/pub_images/2024_NG_cover.png" alt="Nature Genetics cover showing skin pigmentation diversity in Africans" style="width: 100%; height: auto; object-fit: contain;">
+    <section class="template-section">
+        <div class="template-section-head">
+            <div>
+                <p class="template-eyebrow">Research Outputs</p>
+                <h2>成果模板</h2>
+            </div>
+            <p>后续可按年份、平台、研究方向或成果类型组织条目，并添加 DOI、PMID、图文摘要和完整引用链接。</p>
         </div>
-        <div class="pub-content">
-            <div class="pub-title">
-                <a href="https://pubmed.ncbi.nlm.nih.gov/38238631/">Unravelling the molecular mechanisms of skin color diversity in Africans</a>
-            </div>
-            <div class="pub-authors">
-                <span class="author-highlight">Feng Y</span>, Tishkoff SA.
-            </div>
-            <div class="pub-venue">
-                <em>Nature Genetics</em>. 2024.
-            </div>
-            <div class="pub-links">
-                PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/38238631/">38238631</a> | 
-                DOI: <a href="https://doi.org/10.1038/s41588-023-01643-0"> 10.1038/s41588-023-01643-0</a>
-            </div>
+        <div class="template-list">
+            <article class="template-card">
+                <h3>期刊论文</h3>
+                <p>可添加论文题目、作者、期刊、年份、DOI、PMID，以及关联的平台或研究方向。</p>
+                <div class="template-meta">Peer-reviewed Research</div>
+            </article>
+            <article class="template-card">
+                <h3>预印本、专利与数据集</h3>
+                <p>可添加早期研究成果、知识产权、公开数据集、软件工具和标准化实验流程。</p>
+                <div class="template-meta">Translational Outputs</div>
+            </article>
         </div>
-    </div>
-
-    <div class="publication-item fade-in" data-year="2024">
-        <div class="pub-figure">
-            <img src="/assets/pub_images/2024_NG_cover.png" alt="Nature Genetics cover showing skin pigmentation diversity in Africans" style="width: 100%; height: auto; object-fit: contain;">
-        </div>
-        <div class="pub-content">
-            <div class="pub-title">
-                <a href="https://pubmed.ncbi.nlm.nih.gov/38200130/">Integrative functional genomic analyses identify genetic variants influencing skin pigmentation in Africans</a>
-            </div>
-            <div class="pub-authors">
-                <span class="author-highlight">Feng Y</span>, Xie N, Inoue F, Fan S, Saskin J, Zhang C, Zhang F, Hansen MEB, Nyambo T, Mpoloka SW, Mokone GG, Fokunang C, Belay G, Njamnshi AK, Marks MS, Oancea E, Ahituv N, Tishkoff SA.
-            </div>
-            <div class="pub-venue">
-                <em>Nature Genetics</em>. 2024; 56(2):258-272.
-            </div>
-            <div class="pub-links">
-                PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/38200130/">38200130</a> | 
-                DOI: <a href="https://doi.org/10.1038/s41588-023-01626-1">10.1038/s41588-023-01626-1</a>
-            </div>
-        </div>
-    </div>
-
-    <h2 class="pub-year-heading" data-year="2023">2023</h2>
-
-    <div class="publication-item fade-in" data-year="2023">
-        <div class="pub-figure">
-            <img src="/assets/pub_images/2021_cell_cover.jpg" alt="Cell journal cover showing African population evolution" style="width: 100%; height: auto; object-fit: contain;">
-        </div>
-        <div class="pub-content">
-            <div class="pub-title">
-                <a href="https://pubmed.ncbi.nlm.nih.gov/36868214/">Whole-genome sequencing reveals a complex African population demographic history and signatures of local adaptation</a>
-            </div>
-            <div class="pub-authors">
-                Fan S, Spence JP, <span class="author-highlight">Feng Y</span>, Hansen MEB, Terhorst J, Beltrame MH, Ranciaro A, Hirbo J, Beggs W, Thomas N, Nyambo T, Mpoloka SW, Mokone GG, Njamnshi A, Folkunang C, Meskel DW, Belay G, Song YS, Tishkoff SA.
-            </div>
-            <div class="pub-venue">
-                <em>Cell</em>. 2023; 186(5):923-939.
-            </div>
-            <div class="pub-links">
-                PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/36868214/">36868214</a> | 
-                DOI: <a href="https://doi.org/10.1016/j.cell.2023.01.042">10.1016/j.cell.2023.01.042</a>
-            </div>
-        </div>
-    </div>
-
-    <h2 class="pub-year-heading" data-year="2022">2022</h2>
-
-    <div class="publication-item fade-in" data-year="2022">
-        <div class="pub-figure">
-            <img src="/assets/pub_images/2022_pnas_cover.jpg" alt="SARS-CoV-2 research visualization" style="width: 100%; height: auto; object-fit: contain;">
-        </div>
-        <div class="pub-content">
-            <div class="pub-title">
-                <a href="https://pubmed.ncbi.nlm.nih.gov/35580180/">Impact of natural selection on global patterns of genetic variation and association with clinical phenotypes at genes involved in SARS-CoV-2 infection</a>
-            </div>
-            <div class="pub-authors">
-                Zhang C, Verma A, <span class="author-highlight">Feng Y</span>, Melo MCR, McQuillan M, Hansen M, Lucas A, Park J, Ranciaro A, Thompson S, Beggs W, Berens AJ, Campbell MC, Garrigan D, Rubel MA, Blum MGB, Daya M, Fagundes NJR, Gignoux CR, Granka J, Hollfelder N, Kenny EE, Mallick S, Metspalu M, Micheletti SJ, Nyambo T, Padilla-Guerrero IE, Patin E, Quintana-Murci L, Sezgin E, Tishkoff SA.
-            </div>
-            <div class="pub-venue">
-                <em>Proceedings of the National Academy of Sciences</em>. 2022; 119(21):e2123000119.
-            </div>
-            <div class="pub-links">
-                PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/35580180/">35580180</a> | 
-                DOI: <a href="https://doi.org/10.1073/pnas.2123000119">10.1073/pnas.2123000119</a>
-            </div>
-        </div>
-    </div>
-
-    <h2 class="pub-year-heading" data-year="2021">2021</h2>
-
-    <div class="publication-item fade-in" data-year="2021">
-        <div class="pub-figure">
-            <img src="/assets/pub_images/2021_hmg_cover.jpeg" alt="Skin pigmentation genetics research" style="width: 100%; height: auto; object-fit: contain;">
-        </div>
-        <div class="pub-content">
-            <div class="pub-title">
-                <a href="https://pubmed.ncbi.nlm.nih.gov/33438000/">Evolutionary genetics of skin pigmentation in African populations</a>
-            </div>
-            <div class="pub-authors">
-                <span class="author-highlight">Feng Y</span>, McQuillan MA, Tishkoff SA.
-            </div>
-            <div class="pub-venue">
-                <em>Human Molecular Genetics</em>. 2021; 30(R1):R88-R97.
-            </div>
-            <div class="pub-links">
-                PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/33438000/">33438000</a> | 
-                DOI: <a href="https://doi.org/10.1093/hmg/ddab007">10.1093/hmg/ddab007</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="publication-item fade-in" data-year="2021">
-        <div class="pub-figure">
-            <img src="/assets/pub_images/2021_mbe_cover.jpg" alt="TRIM72 expression research" style="width: 100%; height: auto; object-fit: contain;">
-        </div>
-        <div class="pub-content">
-            <div class="pub-title">
-                <a href="https://pubmed.ncbi.nlm.nih.gov/33744959/">Functional and adaptive significance of promoter mutations that affect divergent myocardial expressions of TRIM72 in primates</a>
-            </div>
-            <div class="pub-authors">
-                <span class="author-highlight">Feng Y</span>, Xu H, Liu J, Xie N, Gao L, He Y, Yao Y, Lv F, Zhang Y, Lu J, Zhang W, Li CY, Hu X, Yang Z, Xiao RP.
-            </div>
-            <div class="pub-venue">
-                <em>Molecular Biology and Evolution</em>. 2021; 38(7):2930-2945.
-            </div>
-            <div class="pub-links">
-                PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/33744959/">33744959</a> | 
-                DOI: <a href="https://doi.org/10.1093/molbev/msab083">10.1093/molbev/msab083</a>
-            </div>
-        </div>
-    </div>
-
-    <h2 class="pub-year-heading" data-year="2015">2015</h2>
-
-    <div class="publication-item" data-year="2015">
-        <div class="pub-figure">
-            <img src="/assets/pub_images/2015_circulation_cover.jpg" alt="Heart research visualization" style="width: 100%; height: auto; object-fit: contain;">
-        </div>
-        <div class="pub-content">
-            <div class="pub-title">
-                <a href="https://pubmed.ncbi.nlm.nih.gov/25637627/">Upregulation of MG53 induces diabetic cardiomyopathy through transcriptional activation of peroxisome proliferation-activated receptor α</a>
-            </div>
-            <div class="pub-authors">
-                Liu F, Song R, <span class="author-highlight">Feng Y</span>, Guo J, Chen Y, Zhang Y, Chen T, Wang Y, Huang Y, Li CY, Cao C, Zhang Y, Hu X, Xiao RP.
-            </div>
-            <div class="pub-venue">
-                <em>Circulation</em>. 2015; 131(9):795-804.
-            </div>
-            <div class="pub-links">
-                PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/25637627/">25637627</a> | 
-                DOI: <a href="https://doi.org/10.1161/CIRCULATIONAHA.114.012285">10.1161/CIRCULATIONAHA.114.012285</a>
-            </div>
-        </div>
-    </div>
+    </section>
 </div>
-
-<script>
-    // Intersection Observer for fade-in animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, observerOptions);
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const fadeElements = document.querySelectorAll('.fade-in');
-        fadeElements.forEach(el => observer.observe(el));
-
-        const filterButtons = document.querySelectorAll('.pub-filter-btn');
-        const pubItems = document.querySelectorAll('.publication-item');
-        const yearHeadings = document.querySelectorAll('.pub-year-heading');
-
-        function applyYearFilter(year) {
-            pubItems.forEach(item => {
-                const itemYear = item.getAttribute('data-year');
-                if (!year || year === 'all' || itemYear === year) {
-                    item.style.display = '';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-
-            yearHeadings.forEach(heading => {
-                const headingYear = heading.getAttribute('data-year');
-                if (!year || year === 'all' || headingYear === year) {
-                    heading.style.display = '';
-                } else {
-                    heading.style.display = 'none';
-                }
-            });
-        }
-
-        filterButtons.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const year = btn.getAttribute('data-year-filter');
-
-                filterButtons.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-
-                applyYearFilter(year);
-            });
-        });
-    });
-</script>
