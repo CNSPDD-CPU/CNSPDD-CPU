@@ -28,8 +28,6 @@
                 {% else %}
                     {% if page.url == '/' %}
                         {% assign chinese_url = '/cn/' %}
-                    {% elsif page.url == '/people/yuanqing-feng/' %}
-                        {% assign chinese_url = '/cn/people/' %}
                     {% else %}
                         {% assign chinese_url = '/cn' | append: page.url %}
                     {% endif %}
@@ -49,27 +47,19 @@
                 <a href="mailto:{{ site.email }}" class="icon" title="Email">
                     <i class="fas fa-envelope"></i>
                 </a>
-                <a href="https://scholar.google.com/citations?user={{ site.social_links.google_scholar }}" class="icon" title="Google Scholar">
-                    <i class="fas fa-graduation-cap"></i>
-                </a>
+                {% if site.social_links.github %}
                 <a href="https://github.com/{{ site.social_links.github }}" class="icon" title="GitHub">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://twitter.com/{{ site.social_links.twitter }}" class="icon" title="Twitter">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="https://clustrmaps.com/site/1c9vc" class="icon" title="Visitor Map">
-                    <i class="fas fa-globe"></i>
-                </a>
+                {% endif %}
             </div>
             <div class="copyright">
-                <p>&copy; {{ site.time | date: '%Y' }} Yuanqing Feng (冯园庆). All rights reserved.</p>
+                <p>&copy; {{ site.time | date: '%Y' }} Center for Neuroscience and Precision Drug Development. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Add scroll effect to header
         window.addEventListener('scroll', function() {
             const header = document.querySelector('.site-header');
             if (window.scrollY > 10) {
@@ -79,8 +69,5 @@
             }
         });
     </script>
-
-    <!-- ClustrMaps Visitor Tracking Widget -->
-    <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=fCMVCD1wsLyUEcVSNf7dsWBMx2er0alWC1ItMLqrLdM&cl=ffffff&w=a"></script>
 </body>
 </html>
