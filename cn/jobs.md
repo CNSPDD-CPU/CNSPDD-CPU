@@ -5,311 +5,68 @@ permalink: /cn/jobs/
 ---
 
 <style>
-    :root {
-        --primary-color: #2C5F2D;
-        --secondary-color: #1E2761;
-        --accent-color: #735DA5;
-        --gradient-primary: linear-gradient(135deg, #2C5F2D 0%, #31473A 100%);
-        --gradient-secondary: linear-gradient(135deg, #1E2761 0%, #2C3E6E 100%);
-        --text-dark: #2D3748;
-        --text-light: #4A5568;
-        --bg-light: #F7FAFC;
-        --border-color: #E2E8F0;
-    }
-
-    .jobs-container {
-        margin: 0 auto;
-        padding: 0.5rem 2rem;
-        max-width: 1200px;
-        box-sizing: border-box;
-    }
-
-    .jobs-header {
-        text-align: center;
-        margin-top: 0.1rem;
-        margin-bottom: 0.2rem;
-        padding: 0.8rem;
-        background: transparent;
-        border-radius: 16px;
-        color: inherit;
-        box-shadow: none;
-    }
-
-    .jobs-title {
-        font-size: 2rem;
-        margin-top: 0.1rem;
-        margin-bottom: 0.8rem;
-        font-weight: 700;
-        color: var(--heading-color);
-    }
-
-    .jobs-subtitle {
-        font-size: 1.05rem;
-        opacity: 0.9;
-        max-width: 650px;
-        margin: 0 auto;
-        line-height: 1.6;
-        color: var(--text-light);
-    }
-
-    .jobs-section {
-        margin: 2rem 0;
-    }
-
-    .jobs-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-        gap: 2rem;
-        margin-top: 2rem;
-    }
-
-    .job-card {
-        background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-        padding: 2rem;
-        border-radius: 16px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        border: 1px solid var(--border-color);
-        transition: all 0.3s ease;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .job-card::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 4px;
-        height: 100%;
-        background: var(--gradient-accent);
-    }
-
-    .job-card:hover {
-        transform: translateY(-8px) scale(1.02);
-        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
-        border-color: rgba(115, 93, 165, 0.2);
-    }
-
-    .job-title {
-        font-size: 1.4rem;
-        color: var(--secondary-color);
-        margin-bottom: 0.5rem;
-        font-weight: 600;
-    }
-
-    .job-type {
-        display: inline-block;
-        background: var(--gradient-accent);
-        color: white;
-        padding: 0.3rem 0.8rem;
-        border-radius: 9999px;
-        font-size: 0.8rem;
-        font-weight: 500;
-        margin-bottom: 1rem;
-    }
-
-    .job-description {
-        font-size: 1rem;
-        color: var(--text-light);
-        line-height: 1.6;
-        margin-bottom: 1.5rem;
-    }
-
-    .job-requirements {
-        margin-bottom: 1.5rem;
-    }
-
-    .job-requirements h4 {
-        color: var(--primary-color);
-        font-size: 1rem;
-        margin-bottom: 0.5rem;
-        font-weight: 600;
-    }
-
-    .job-requirements ul {
-        list-style: none;
-        padding-left: 0;
-        margin: 0;
-    }
-
-    .job-requirements li {
-        position: relative;
-        padding-left: 1.5rem;
-        margin-bottom: 0.5rem;
-        font-size: 0.95rem;
-        color: var(--text-dark);
-    }
-
-    .job-requirements li::before {
-        content: '▸';
-        position: absolute;
-        left: 0;
-        color: var(--accent-color);
-        font-weight: bold;
-    }
-
-    .application-info {
-        background: var(--bg-light);
-        padding: 1.5rem;
-        border-radius: 12px;
-        border-left: 4px solid var(--primary-color);
-        margin-bottom: 1.5rem;
-    }
-
-    .application-info h4 {
-        color: var(--primary-color);
-        font-size: 1rem;
-        margin-bottom: 0.8rem;
-        font-weight: 600;
-    }
-
-    .application-info p {
-        font-size: 0.95rem;
-        color: var(--text-dark);
-        line-height: 1.5;
-        margin-bottom: 0.5rem;
-    }
-
-    .contact-email {
-        color: var(--accent-color);
-        text-decoration: none;
-        font-weight: 500;
-    }
-
-    .contact-email:hover {
-        color: var(--primary-color);
-        text-decoration: underline;
-    }
-
-    .back-link {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        color: var(--primary-color);
-        text-decoration: none;
-        font-weight: 500;
-        margin-top: 2rem;
-        padding: 0.8rem 1.5rem;
-        background: white;
-        border: 2px solid var(--primary-color);
-        border-radius: 9999px;
-        transition: all 0.3s ease;
-    }
-
-    .back-link:hover {
-        background: var(--gradient-primary);
-        color: white;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 16px rgba(44, 95, 45, 0.3);
-    }
-
-    .no-positions {
-        text-align: center;
-        padding: 3rem;
-        background: var(--bg-light);
-        border-radius: 16px;
-        border: 2px dashed var(--border-color);
-    }
-
-    .no-positions h3 {
-        color: var(--text-dark);
-        margin-bottom: 1rem;
-    }
-
-    .no-positions p {
-        color: var(--text-light);
-        max-width: 600px;
-        margin: 0 auto;
-    }
-
-    @media (max-width: 768px) {
-        .jobs-grid {
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .jobs-container {
-            padding: 1rem 0.75rem;
-        }
-    }
+.template-page { max-width: 1200px; margin: 0 auto; padding: 0 2rem 4rem; }
+.template-hero { padding: 4rem 0 2.5rem; border-bottom: 1px solid #e1e8ed; }
+.template-eyebrow { margin: 0 0 .45rem; color: #735DA5; font-size: .82rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.template-hero h1 { max-width: 820px; margin: 0 0 1rem; color: #1E2761; font-size: clamp(2.1rem, 4vw, 3.6rem); line-height: 1.1; text-align: left; background: none; -webkit-text-fill-color: currentColor; }
+.template-hero p, .template-card p, .template-note p { color: #526071; line-height: 1.75; }
+.template-section { margin: 2.8rem 0 0; }
+.template-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.template-card, .template-note { padding: 1.25rem; border: 1px solid #e1e8ed; border-radius: 8px; background: #fff; box-shadow: 0 2px 12px rgba(30,39,97,.08); }
+.template-card h2, .template-note h2 { margin: 0 0 .7rem; color: #1E2761; font-size: 1.18rem; line-height: 1.35; text-align: left; }
+.template-card p, .template-note p { margin: 0 0 .7rem; }
+.template-card ul { margin: .75rem 0 0; padding-left: 1.15rem; color: #526071; line-height: 1.7; }
+.template-meta { margin-top: .9rem; padding-top: .75rem; border-top: 1px solid #e1e8ed; color: #2C5F2D; font-size: .86rem; font-weight: 800; }
+.template-note { margin-top: 1rem; }
+.template-note a { color: #735DA5; font-weight: 800; }
+@media (max-width: 768px) { .template-page { padding: 0 1rem 3rem; } .template-grid { grid-template-columns: 1fr; } }
 </style>
 
-<div class="jobs-container">
-    <div class="jobs-header">
-        <h1 class="jobs-title">加入我们团队</h1>
-        <p class="jobs-subtitle">
-            欢迎功能基因组学及相关领域的优秀人才加入或合作，共探新方向。
-        </p>
-    </div>
+<div class="template-page">
+    <section class="template-hero">
+        <p class="template-eyebrow">Jobs</p>
+        <h1>加入 CNSPDD</h1>
+        <p>中心欢迎对神经科学、精准药理学、转化疾病模型与药物研发技术平台感兴趣的优秀人才加入。</p>
+    </section>
 
-    <div class="jobs-section">
-        <div class="jobs-grid">
-            <div class="job-card">
-                <h3 class="job-title">博士后 / 研究员</h3>
-                <span class="job-type">全职</span>
-                <p class="job-description">
-                    功能基因组学和人类遗传学相关领域。
-                </p>
-
-                <div class="job-requirements">
-                    <h4>岗位要求：</h4>
-                    <ul>
-                        <li><strong>教育背景：</strong>遗传学、分子生物学、生物信息学或相关领域博士学位。</li>
-                        <li><strong>科研经验：</strong>有功能基因组学实验经验（如CRISPR筛选等）者优先。</li>
-                        <li><strong>技术能力：</strong>熟练掌握Python/R等编程语言，具备数据分析能力。</li>
-                        <li><strong>学术成果：</strong>有高质量论文发表记录。</li>
-                        <li><strong>综合素质：</strong>良好的沟通能力与团队合作精神。</li>
-                    </ul>
-                </div>
-
-                <div class="application-info">
-                    <h4>岗位待遇：</h4>
-                    <p>1. 聘为“中国药科大学兴药科研博士后”，年薪<span style="font-weight:600;">30万元人民币起</span>；</p>
-                    <p>2. 享受公费医疗、公积金及校工会相关福利待遇。</p>
-                </div>
-
-                <div class="application-info">
-                    <h4>职业发展：</h4>
-                    <p>1. 在站期间取得突出科研成果者，可申报学校特聘副研究员或具有正式编制的副教授 / 副研究员等长期职位；</p>
-                    <p>2. 支持依托中国药科大学申请国家资助博士后研究人员计划（12–28万元/年）、国家自然科学基金（约30万元/项目）、江苏省自然科学基金（约20万元/项目）、江苏省卓越博士后计划（10–25万元/年）等各类项目，所有渠道的工资及经费待遇可叠加发放，上不封顶；</p>
-                    <p>3. 工作地点：南京市江宁校区。</p>
-                </div>
-            </div>
-
-            <div class="job-card">
-                <h3 class="job-title">研究生</h3>
-                <span class="job-type">全职/轮转</span>
-            <p class="job-description">
-                欢迎对功能基因组学或人类遗传学感兴趣的研究生加入课题组，开展实验与计算相结合的交叉研究。
-            </p>
-
-            <div class="job-requirements">
-                <h4>岗位要求：</h4>
+    <section class="template-section">
+        <div class="template-grid">
+            <article class="template-card">
+                <h2>博士后</h2>
+                <p>研究方向可包括神经环路机制、电生理、高内涵成像、类器官与 iPSC 衍生模型、药理评价、生物标志物及计算生物学等。</p>
                 <ul>
-                    <li>相关专业在读或即将入学的研究生</li>
-                    <li>对基因组学与人类疾病研究有浓厚兴趣</li>
-                    <li>具备一定编程或数据分析基础者优先</li>
-                    <li>具有主动学习能力和独立科研潜力</li>
+                    <li>具有神经科学、药理学、生物学、医学、生物工程、计算生物学或相关领域博士学位。</li>
+                    <li>具备严谨科研训练、良好论文基础与清晰学术表达能力。</li>
+                    <li>愿意参与跨学科、平台化、面向转化应用的研究工作。</li>
                 </ul>
-            </div>
-            </div>
+                <div class="template-meta">全职岗位</div>
+            </article>
+            <article class="template-card">
+                <h2>研究生</h2>
+                <p>欢迎研究生和轮转学生参与疾病机制与精准药物研发相结合的交叉研究项目。</p>
+                <ul>
+                    <li>对神经科学与药物研发具有浓厚兴趣。</li>
+                    <li>具有实验生物学、药理学、成像、电生理或数据科学训练者优先。</li>
+                    <li>具备主动学习能力、责任心和跨学科合作意愿。</li>
+                </ul>
+                <div class="template-meta">研究生培养</div>
+            </article>
+            <article class="template-card">
+                <h2>科研与平台人员</h2>
+                <p>中心欢迎科研助理、工程师和平台技术人员参与模型构建、检测方法开发、仪器运行维护和数据流程建设。</p>
+                <ul>
+                    <li>具有实验室运行或平台技术相关经验。</li>
+                    <li>重视实验记录、质量控制与规范化管理。</li>
+                    <li>能够与教师、学生和合作团队高效协作。</li>
+                </ul>
+                <div class="template-meta">平台支撑</div>
+            </article>
         </div>
 
-        <div class="no-positions" style="margin-top: 2rem;">
-            <h3>其他机会</h3>
-            <p>
-                欢迎有意加入或合作的朋友发送邮件联系。
-            </p>
-            <p><a href="mailto:fengyuanqing@cpu.edu.cn" class="contact-email">fengyuanqing@cpu.edu.cn</a></p>
+        <div class="template-note">
+            <h2>申请方式</h2>
+            <p>请将个人简历、简要研究兴趣说明、代表性论文或项目经历发送至 <a href="mailto:hangao@cpu.edu.cn">hangao@cpu.edu.cn</a>。</p>
+            <p>工作地点：中国药科大学江宁校区，南京市江宁区龙眠大道639号。</p>
         </div>
-
-        <div style="text-align: center; margin-top: 3rem;">
-            <a href="/cn/" class="back-link">
-                <i class="fas fa-home"></i>
-                返回主页
-            </a>
-        </div>
-    </div>
+    </section>
 </div>
