@@ -54,6 +54,11 @@
                 {% endif %}
             </div>
             <div class="copyright">
+                {% if page.url contains '/cn/' %}
+                <p>友情链接：<a href="https://www.cpu.edu.cn/" target="_blank" rel="noopener">中国药科大学</a></p>
+                {% else %}
+                <p>Links: <a href="https://www.cpu.edu.cn/" target="_blank" rel="noopener">China Pharmaceutical University</a></p>
+                {% endif %}
                 <p>&copy; {{ site.time | date: '%Y' }} Center for Neuroscience and Precision Drug Development. All rights reserved.</p>
             </div>
         </div>
