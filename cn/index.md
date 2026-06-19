@@ -4,373 +4,174 @@ title: 首页
 ---
 
 <style>
+    .home-page {
+        --ink: #172033;
+        --muted: #526071;
+        --line: #dce5ee;
+        --green: #2C5F2D;
+        --navy: #1E2761;
+        --purple: #735DA5;
+        color: var(--ink);
+    }
+
     .hero-section {
-        text-align: center;
-        padding: 2.8rem 1.5rem 3.5rem;
-        background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-        border-radius: 24px;
+        min-height: clamp(520px, 72vh, 720px);
+        display: grid;
+        align-items: center;
+        color: #fff;
+        background:
+            linear-gradient(90deg, rgba(18, 30, 52, 0.9) 0%, rgba(18, 30, 52, 0.74) 48%, rgba(18, 30, 52, 0.34) 100%),
+            url('{{ "/assets/images/cnspdd-neuroscience-hero.jpg" | relative_url }}') center 44% / cover no-repeat;
+    }
+
+    .home-shell,
+    .hero-content {
         max-width: 1200px;
-        margin: 1.25rem auto 2rem;
-        position: relative;
-        overflow: hidden;
-        box-shadow: 0 24px 70px rgba(23, 37, 84, 0.1);
-        min-height: clamp(420px, 63vh, 644px);
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 1.4rem;
+        margin: 0 auto;
+        padding: 0 2rem;
         box-sizing: border-box;
     }
-    
-    .hero-section::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 6px;
-        background: var(--gradient-secondary);
-        border-radius: 3px 3px 0 0;
-        z-index: 2;
-    }
-    
-    .hero-section::after {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background-image: url('/assets/images/background2.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: 50% 45%;
-        opacity: 0.3;
-        filter: brightness(0.95);
-        z-index: 0;
-        transform: none;
-    }
-    
-    .hero-section > * {
-        position: relative;
-        z-index: 1;
-    }
-    
-    .hero-title {
-        font-size: clamp(2.6rem, 3.4vw, 3.4rem);
-        font-weight: 700;
-        margin-bottom: 1.05rem;
-        background: var(--gradient-secondary);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        letter-spacing: -0.02em;
-        line-height: 1.1;
-        margin-top: -0.5rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 1.4rem;
-        color: var(--text-dark);
-        margin-bottom: 2.1rem;
-        font-weight: 600;
-        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-        max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
-        line-height: 1.6;
-    }
 
-    .hero-tags {
+    .hero-content {
         width: 100%;
-        max-width: 800px;
-        margin: 1.5rem auto 0.75rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.6rem;
-        padding: 0 1.5rem;
-        box-sizing: border-box;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
     }
 
-    .hero-tag {
-        display: inline-block;
-        padding: 0.35rem 0.9rem;
-        border-radius: 9999px;
-        border: 1px solid rgba(148, 163, 184, 0.9);
-        background: transparent;
-        font-size: 1.15rem;
-        font-weight: 600;
-        letter-spacing: 0.06em;
-        color: #111827;
-        text-transform: none;
-    }
-    
-    .btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0.875rem 2rem;
-        border: none;
-        border-radius: 9999px;
-        font-weight: 600;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        cursor: pointer;
-        font-size: 1rem;
-        line-height: 1;
-        position: relative;
-        overflow: hidden;
-        min-width: 140px;
-    }
-    
-    .btn-primary {
-        background: var(--gradient-primary);
-        color: white;
-        box-shadow: var(--shadow-light);
-    }
-    
-    .btn-primary:hover {
-        transform: translateY(-3px) scale(1.05);
-        box-shadow: var(--shadow-medium);
-        color: white;
-    }
-    
-    .hero-ticker {
-        width: min(720px, 90vw);
-        background: rgba(255, 255, 255, 0.8);
-        border-radius: 24px;
-        padding: 0.72rem 1.3rem;
-        display: flex;
-        align-items: center;
-        gap: 1.5rem;
-        border: 1px solid rgba(134, 151, 214, 0.4);
-        box-shadow: 0 20px 45px rgba(30, 41, 59, 0.15);
-        backdrop-filter: blur(14px);
-        margin: 1.5rem auto 0;
-        min-height: 51px;
-    }
-    
-    .ticker-label {
-        font-weight: 700;
-        font-size: 0.95rem;
-        text-transform: uppercase;
+    .hero-kicker,
+    .section-eyebrow {
+        margin: 0 0 0.6rem;
+        color: var(--purple);
+        font-size: 0.82rem;
+        font-weight: 900;
         letter-spacing: 0.08em;
-        color: #2f3f7f;
-    }
-    
-    .ticker-track {
-        flex: 1;
-        position: relative;
-        overflow: hidden;
-        height: 2.56rem;
-        display: flex;
-        align-items: center;
-    }
-    
-    .ticker-track::before,
-    .ticker-track::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        right: 0;
-        height: 18px;
-        pointer-events: none;
-        z-index: 2;
-    }
-    
-    .ticker-track::before {
-        top: 0;
-        background: linear-gradient(180deg, rgba(248, 250, 255, 0.85), transparent);
-    }
-    
-    .ticker-track::after {
-        bottom: 0;
-        background: linear-gradient(0deg, rgba(248, 250, 255, 0.85), transparent);
-    }
-    
-    .ticker-inner {
-        display: flex;
-        flex-direction: column;
-        gap: 0;
-        animation: tickerScrollY 20s linear infinite;
-        animation-play-state: running;
+        text-transform: uppercase;
     }
 
-    .hero-ticker:hover .ticker-inner {
-        animation-play-state: paused;
+    .hero-kicker {
+        display: inline-flex;
+        padding: 0.45rem 0.75rem;
+        border: 1px solid rgba(255, 255, 255, 0.32);
+        border-radius: 999px;
+        color: rgba(255, 255, 255, 0.9);
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(12px);
     }
-    
-    .ticker-item {
-        white-space: nowrap;
+
+    .hero-title {
+        max-width: 840px;
+        margin: 1.25rem 0 1rem;
+        color: #fff;
+        font-size: clamp(2.55rem, 5.2vw, 4.8rem);
+        line-height: 1.08;
+        letter-spacing: 0;
+        text-align: left;
+        background: none;
+        -webkit-text-fill-color: currentColor;
+    }
+
+    .hero-subtitle {
+        max-width: 760px;
+        margin: 0 0 1.8rem;
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 1.18rem;
+        line-height: 1.85;
         font-weight: 600;
-        color: #1f2a44;
-        font-size: 0.98rem;
+    }
+
+    .hero-actions,
+    .hero-tags {
         display: flex;
-        align-items: center;
-        gap: 0.65rem;
-        min-height: 1.92rem;
-        padding: 0.2rem 0;
-        text-decoration: none;
+        flex-wrap: wrap;
+        gap: 0.85rem;
     }
-    
-    .ticker-date {
-        font-size: 0.85rem;
-        font-weight: 700;
-        color: #5a6bb0;
-        letter-spacing: 0.05em;
-    }
-    
-    .ticker-title {
-        color: #1f2a44;
-    }
-    
-    .ticker-item:hover .ticker-title {
-        color: #243b80;
-        text-decoration: underline;
-    }
-    
-    .ticker-link {
-        font-weight: 600;
-        color: #4c6ef5;
-        text-decoration: none;
+
+    .home-btn {
         display: inline-flex;
         align-items: center;
-        gap: 0.25rem;
+        gap: 0.55rem;
+        min-height: 46px;
+        padding: 0.8rem 1.1rem;
+        border-radius: 999px;
+        font-weight: 800;
+        text-decoration: none;
     }
-    
-    .ticker-link:hover {
-        text-decoration: underline;
+
+    .home-btn::after { display: none; }
+    .home-btn.primary { color: #fff; background: var(--green); }
+    .home-btn.secondary { color: #fff; border: 1px solid rgba(255,255,255,0.42); background: rgba(255,255,255,0.08); }
+
+    .hero-tags { max-width: 840px; margin-top: 2rem; }
+    .hero-tag {
+        padding: 0.75rem 0.85rem;
+        border: 1px solid rgba(255,255,255,0.22);
+        border-radius: 8px;
+        color: rgba(255,255,255,0.92);
+        background: rgba(255,255,255,0.08);
+        backdrop-filter: blur(12px);
+        font-weight: 700;
+        line-height: 1.45;
     }
-    
-    @keyframes tickerScrollY {
-        0% { transform: translateY(0); }
-        100% { transform: translateY(-50%); }
-    }
-    
-    .btn-secondary {
-        background: var(--gradient-secondary);
-        color: white;
-        box-shadow: var(--shadow-light);
-    }
-    
-    .btn-secondary:hover {
-        transform: translateY(-3px) scale(1.05);
-        box-shadow: var(--shadow-medium);
-        color: white;
-    }
-    
-    .btn-accent {
-        background: var(--gradient-accent);
-        color: white;
-        box-shadow: var(--shadow-light);
-    }
-    
-    .btn-accent:hover {
-        transform: translateY(-3px) scale(1.05);
-        box-shadow: var(--shadow-medium);
-        color: white;
-    }
-    /* Responsive design */
+
+    .home-section { margin: 3rem 0; }
+    .section-head { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 1.5rem; align-items: end; margin-bottom: 1.4rem; }
+    .section-title { margin: 0; color: var(--navy); font-size: clamp(1.75rem, 3vw, 2.45rem); line-height: 1.2; text-align: left; background: none; -webkit-text-fill-color: currentColor; }
+    .section-copy { margin: 0; color: var(--muted); line-height: 1.8; }
+    .card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+    .home-card { padding: 1.35rem; border: 1px solid var(--line); border-radius: 8px; background: #fff; box-shadow: 0 10px 28px rgba(23,32,51,0.07); }
+    .home-card::before { content: ""; display: block; width: 42px; height: 4px; margin-bottom: 1rem; border-radius: 999px; background: var(--green); }
+    .home-card:nth-child(2)::before { background: var(--navy); }
+    .home-card:nth-child(3)::before { background: var(--purple); }
+    .home-card h3 { margin: 0 0 0.7rem; color: var(--navy); font-size: 1.08rem; text-align: left; }
+    .home-card p { margin: 0; color: var(--muted); line-height: 1.75; }
+
     @media (max-width: 768px) {
-        .hero-section {
-            padding: 2rem 1rem 2.5rem;
-            margin: 1rem auto 1.25rem;
-            min-height: auto;
-        }
-        
-        .hero-title {
-            font-size: 2.6rem;
-        }
-        
-        .hero-subtitle {
-            font-size: 1.2rem;
-            text-align: center;
-        }
-
-        .hero-tags {
-            margin: 1.2rem auto 1.5rem;
-            padding: 0 1rem;
-        }
-        
-        .hero-ticker {
-            flex-direction: column;
-            align-items: stretch;
-            gap: 0.75rem;
-            border-radius: 24px;
-            width: 100%;
-        }
-        
-        .ticker-track,
-        .ticker-inner {
-            flex-direction: column;
-            gap: 0.75rem;
-            animation: none;
-        }
-        
-        .ticker-track::before,
-        .ticker-track::after {
-            display: none;
-        }
-        
-        .ticker-item {
-            white-space: normal;
-        }
-
-        .ticker-duplicate {
-            display: none;
-        }
-    }
-    
-    @media (max-width: 480px) {
-        .hero-title {
-            font-size: 2rem;
-        }
-        
-        .hero-subtitle {
-            font-size: 1rem;
-            text-align: center;
-        }
-        
-        .hero-ticker {
-            padding: 1rem;
-        }
+        .home-shell, .hero-content { padding-left: 1rem; padding-right: 1rem; }
+        .section-head, .card-grid { grid-template-columns: 1fr; }
+        .hero-title { font-size: 2.3rem; }
     }
 </style>
 
-<div class="hero-section">
-    <h1 class="hero-title">中国药科大学功能基因组学实验室</h1>
-    <p class="hero-subtitle">解析遗传变异驱动疾病发生与表型差异的分子机制，发现潜在新药靶点，推动精准医学发展。</p>
-    <div class="hero-tags">
-        <span class="hero-tag">遗传突变功能解析</span>
-        <span class="hero-tag">疾病发生与人类进化</span>
-        <span class="hero-tag">高通量组学技术</span>
-    </div>
-</div>
-
-<!-- News Ticker moved below hero -->
-{% assign news_page = site.pages | where: "path", "news.md" | first %}
-{% if news_page and news_page.news_items and news_page.news_items.size > 0 %}
-<div class="hero-ticker">
-    <span class="ticker-label">最新动态</span>
-    <div class="ticker-track">
-        <div class="ticker-inner">
-            {% for item in news_page.news_items limit: 4 %}
-            <a class="ticker-item" href="/news/">
-                <span class="ticker-date">{{ item.date }}</span>
-                <span class="ticker-title">{{ item.title }}</span>
-            </a>
-            {% endfor %}
-            <span class="ticker-duplicate">
-            {% for item in news_page.news_items limit: 4 %}
-            <a class="ticker-item" href="/news/">
-                <span class="ticker-date">{{ item.date }}</span>
-                <span class="ticker-title">{{ item.title }}</span>
-            </a>
-            {% endfor %}
-            </span>
+<div class="home-page">
+    <section class="hero-section" aria-labelledby="home-title">
+        <div class="hero-content">
+            <div class="hero-kicker">China Pharmaceutical University</div>
+            <h1 class="hero-title" id="home-title">神经科学与精准药物发现中心</h1>
+            <p class="hero-subtitle">中心面向神经与精神疾病，围绕神经元-胶质细胞通讯、性别特异性疾病易感性和药物作用机制，发展机制驱动、兼顾性别差异的精准治疗策略。</p>
+            <div class="hero-actions">
+                <a class="home-btn primary" href="{{ '/cn/research/' | relative_url }}"><i class="fas fa-microscope"></i> 研究与平台</a>
+                <a class="home-btn secondary" href="{{ '/cn/jobs/' | relative_url }}"><i class="fas fa-user-plus"></i> 加入我们</a>
+            </div>
+            <div class="hero-tags" aria-label="研究主题">
+                <span class="hero-tag">兼顾性别差异的精准药物发现</span>
+                <span class="hero-tag">动态神经元-胶质细胞通讯</span>
+                <span class="hero-tag">早期疾病修饰与预防窗口</span>
+                <span class="hero-tag">细胞特异性递送与调控</span>
+            </div>
         </div>
-    </div>
-    <a class="ticker-link" href="/news/">查看全部 →</a>
-</div>
-{% endif %}
+    </section>
 
-<!-- Language switch handled globally in header -->
+    <section class="home-section home-shell">
+        <div class="section-head">
+            <div>
+                <p class="section-eyebrow">Center Mission</p>
+                <h2 class="section-title">从脑功能机制到化合物验证的连续创新路径</h2>
+            </div>
+            <p class="section-copy">中心围绕三个互补方向开展工作：面向机制问题的基础研究、组织化推进的精准药物开发，以及服务于新型化合物评价的脑功能调控验证平台。</p>
+        </div>
+        <div class="card-grid">
+            <article class="home-card">
+                <h3>基础研究</h3>
+                <p>通过独立课题解析健康与疾病状态下的脑功能机制，重点关注性别特异性神经元-胶质细胞互作和早期多细胞疾病过程。</p>
+            </article>
+            <article class="home-card">
+                <h3>药物开发</h3>
+                <p>通过组织化课题发展细胞特异性策略，精准靶向特定神经元和胶质细胞群体的细胞内信号与细胞间通讯。</p>
+            </article>
+            <article class="home-card">
+                <h3>化合物验证</h3>
+                <p>建设服务型验证平台，系统测试新型化合物对脑功能、环路活动和疾病相关细胞通讯的调控能力。</p>
+            </article>
+        </div>
+    </section>
+</div>

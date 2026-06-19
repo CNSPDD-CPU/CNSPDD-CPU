@@ -5,362 +5,146 @@ permalink: /contact/
 ---
 
 <style>
-    :root {
-        --primary-color: #2C5F2D;
-        --secondary-color: #1E2761;
-        --accent-color: #735DA5;
-        --gradient-primary: linear-gradient(135deg, #2C5F2D 0%, #31473A 100%);
-        --gradient-secondary: linear-gradient(135deg, #1E2761 0%, #2C3E6E 100%);
-        --gradient-accent: linear-gradient(135deg, #735DA5 0%, #8B7CB5 100%);
-        --text-dark: #2D3748;
-        --text-light: #4A5568;
-        --bg-light: #F7FAFC;
-        --border-color: #E2E8F0;
-    }
-
-    .contact-container {
-        margin: 0 auto;
-        padding: 0.5rem 2rem;
+    .template-page {
         max-width: 1200px;
-        box-sizing: border-box;
-    }
-
-    .contact-header {
-        text-align: center;
-        margin-top: 0.1rem;
-        margin-bottom: 0.8rem;
-        padding: 0.8rem;
-        background: transparent;
-        border-radius: 16px;
-        color: inherit;
-        box-shadow: none;
-    }
-
-    .contact-title {
-        font-size: 2rem;
-        margin-top: 0.1rem;
-        margin-bottom: 0.5rem;
-        font-weight: 700;
-        color: var(--heading-color);
-    }
-
-    .contact-subtitle {
-        font-size: 1.1rem;
-        opacity: 0.9;
-        max-width: 600px;
         margin: 0 auto;
-        line-height: 1.6;
-        color: var(--text-light);
+        padding: 0 2rem 4rem;
     }
 
-    .contact-section {
-        margin: 2rem 0;
+    .template-hero {
+        padding: 4rem 0 2.5rem;
+        border-bottom: 1px solid #e1e8ed;
     }
 
-    .contact-grid {
+    .template-eyebrow {
+        margin: 0 0 0.45rem;
+        color: #735DA5;
+        font-size: 0.82rem;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+
+    .template-hero h1 {
+        max-width: 820px;
+        margin: 0 0 1rem;
+        color: #1E2761;
+        font-size: clamp(2.1rem, 4vw, 3.6rem);
+        line-height: 1.1;
+        text-align: left;
+        background: none;
+        -webkit-text-fill-color: currentColor;
+    }
+
+    .template-hero p,
+    .template-section-head p,
+    .template-card p {
+        color: #526071;
+        line-height: 1.75;
+    }
+
+    .template-section {
+        margin: 2.8rem 0 0;
+    }
+
+    .template-section-head {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 2rem;
-        margin-top: 2rem;
+        grid-template-columns: minmax(220px, 0.8fr) minmax(320px, 1.2fr);
+        gap: 1.4rem;
+        align-items: end;
+        margin-bottom: 1.2rem;
     }
 
-    .contact-card {
-        background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-        padding: 2rem;
-        border-radius: 16px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        border: 1px solid var(--border-color);
-        transition: all 0.3s ease;
-        position: relative;
-        overflow: hidden;
+    .template-section-head h2 {
+        margin: 0;
+        color: #1E2761;
+        font-size: 1.8rem;
+        line-height: 1.2;
+        text-align: left;
     }
 
-    .contact-card::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 4px;
-        height: 100%;
-        background: var(--gradient-accent);
+    .template-section-head p:not(.template-eyebrow) {
+        margin: 0;
     }
 
-    .contact-card:hover {
-        transform: translateY(-8px) scale(1.02);
-        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
-        border-color: rgba(115, 93, 165, 0.2);
+    .template-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
     }
 
-    .contact-method {
-        font-size: 1.2rem;
-        color: var(--secondary-color);
-        margin-bottom: 1rem;
-        font-weight: 600;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
-
-    .contact-icon {
-        width: 24px;
-        height: 24px;
-        color: var(--accent-color);
-    }
-
-    .contact-details {
-        font-size: 1rem;
-        color: var(--text-light);
-        line-height: 1.6;
-        margin-bottom: 1rem;
-    }
-
-    .map-iframe {
-        width: 100%;
-        height: 280px;
-        border: 0;
-        border-radius: 12px;
-    }
-
-    .contact-link {
-        color: var(--accent-color);
-        text-decoration: none;
-        font-weight: 500;
-        transition: color 0.3s ease;
-    }
-
-    .contact-link:hover {
-        color: var(--primary-color);
-        text-decoration: underline;
-    }
-
-    .contact-form {
-        background: white;
-        padding: 2rem;
-        border-radius: 16px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        border: 1px solid var(--border-color);
-        margin-top: 2rem;
-    }
-
-    .form-group {
-        margin-bottom: 1.5rem;
-    }
-
-    .form-label {
-        display: block;
-        font-size: 0.95rem;
-        font-weight: 600;
-        color: var(--text-dark);
-        margin-bottom: 0.5rem;
-    }
-
-    .form-input,
-    .form-textarea {
-        width: 100%;
-        padding: 0.75rem 1rem;
-        border: 2px solid var(--border-color);
+    .template-card {
+        padding: 1.25rem;
+        border: 1px solid #e1e8ed;
         border-radius: 8px;
-        font-size: 1rem;
-        font-family: inherit;
-        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        background: #ffffff;
+        box-shadow: 0 2px 12px rgba(30, 39, 97, 0.08);
     }
 
-    .form-input:focus,
-    .form-textarea:focus {
-        outline: none;
-        border-color: var(--accent-color);
-        box-shadow: 0 0 0 3px rgba(115, 93, 165, 0.1);
+    .template-card h3 {
+        margin: 0 0 0.55rem;
+        color: #1E2761;
+        font-size: 1.05rem;
+        line-height: 1.35;
+        text-align: left;
     }
 
-    .form-textarea {
-        resize: vertical;
-        min-height: 120px;
+    .template-card p {
+        margin: 0;
     }
 
-    .submit-btn {
-        background: var(--gradient-primary);
-        color: white;
-        border: none;
-        padding: 0.75rem 2rem;
-        border-radius: 9999px;
-        font-size: 1rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 16px rgba(44, 95, 45, 0.3);
+    .template-meta {
+        margin-top: 0.9rem;
+        padding-top: 0.75rem;
+        border-top: 1px solid #e1e8ed;
+        color: #2C5F2D;
+        font-size: 0.86rem;
+        font-weight: 800;
     }
 
-    .submit-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 24px rgba(44, 95, 45, 0.4);
-    }
-
-    .lab-location {
-        background: var(--bg-light);
-        padding: 2rem;
-        border-radius: 16px;
-        border-left: 4px solid var(--primary-color);
-        margin-top: 2rem;
-    }
-
-    .lab-location h3 {
-        color: var(--primary-color);
-        margin-bottom: 1rem;
-        font-size: 1.3rem;
-    }
-
-    .lab-location p {
-        color: var(--text-dark);
-        line-height: 1.6;
-        margin-bottom: 0.5rem;
-    }
-
-    .back-link {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        color: var(--primary-color);
-        text-decoration: none;
-        font-weight: 500;
-        margin-top: 2rem;
-        padding: 0.8rem 1.5rem;
-        background: white;
-        border: 2px solid var(--primary-color);
-        border-radius: 9999px;
-        transition: all 0.3s ease;
-    }
-
-    .back-link:hover {
-        background: var(--gradient-primary);
-        color: white;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 16px rgba(44, 95, 45, 0.3);
-    }
-
-    /* Animation for scroll reveal */
-    .fade-in {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: all 0.6s ease;
-    }
-
-    .fade-in.visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    /* Responsive Design */
     @media (max-width: 768px) {
-        .contact-grid {
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
+        .template-page {
+            padding: 0 1rem 3rem;
         }
-        
-        .contact-title {
-            font-size: 2rem;
-        }
-        
-        .contact-header {
-            padding: 1.5rem;
-        }
-        
-        .contact-card {
-            padding: 1.5rem;
-        }
-        
-        .contact-form {
-            padding: 1.5rem;
-        }
-    }
 
-    @media (max-width: 480px) {
-        .contact-container {
-            padding: 1rem 0.75rem;
-        }
-        
-        .contact-header {
-            padding: 1rem;
-        }
-        
-        .contact-title {
-            font-size: 1.8rem;
+        .template-section-head,
+        .template-grid {
+            grid-template-columns: 1fr;
         }
     }
 </style>
 
-<div class="contact-container">
-    <div class="contact-header fade-in">
-        <h1 class="contact-title">Contact Us</h1>
-        <p class="contact-subtitle">We welcome inquiries about our research, collaborations, and opportunities. Please feel free to reach out through any of the channels below.</p>
-    </div>
-    <div class="contact-section">
-        <div class="contact-grid">
-            
-            <div class="contact-card fade-in">
-                <h3 class="contact-method">
-                    <svg class="contact-icon" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
-                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
-                    </svg>
-                    Email
-                </h3>
-                <div class="contact-details">
-                    <p>For research inquiries and collaborations:</p>
-                    <a href="mailto:fengyuanqing@cpu.edu.cn" class="contact-link">fengyuanqing@cpu.edu.cn</a>
-                </div>
-            </div>
-            
-            <div class="contact-card fade-in">
-                <h3 class="contact-method">
-                    <svg class="contact-icon" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
-                    </svg>
-                    Address
-                </h3>
-                <div class="contact-details">
-                    <p>China Pharmaceutical University<br>
-                    School of Basic and Clinical Medicine</p>
-                </div>
-            </div>
+<div class="template-page">
+    <section class="template-hero">
+        <p class="template-eyebrow">Contact</p>
+        <h1>Contact Us</h1>
+        <p>For research collaborations, recruitment, platform access, and general inquiries, please contact the Center.</p>
+    </section>
 
-            <div class="contact-card fade-in">
-                <h3 class="contact-method">
-                    <svg class="contact-icon" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
-                    </svg>
-                    Map
-                </h3>
-                <div class="contact-details">
-                    <iframe class="map-iframe" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=%E4%B8%AD%E5%9B%BD%E8%8D%AF%E7%A7%91%E5%A4%A7%E5%AD%A6%E6%B1%9F%E5%AE%81%E6%A0%A1%E5%8C%BA&output=embed"></iframe>
-                </div>
+    <section class="template-section">
+        <div class="template-section-head">
+            <div>
+                <p class="template-eyebrow">Inquiries</p>
+                <h2>Contact Channels</h2>
             </div>
-            
+            <p>Keep contact information simple and current. Additional named contacts can be added later if different programs require separate routing.</p>
         </div>
-        
-    </div>
-    
-    <div style="text-align: center; margin-top: 3rem;">
-        <a href="/" class="back-link">
-            <i class="fas fa-home"></i>
-            Back to Homepage
-        </a>
-    </div>
+        <div class="template-grid">
+            <article class="template-card">
+                <h3>General Email</h3>
+                <p><a href="mailto:hangao@cpu.edu.cn">hangao@cpu.edu.cn</a></p>
+                <div class="template-meta">Research | Recruitment | Collaboration</div>
+            </article>
+            <article class="template-card">
+                <h3>Location</h3>
+                <p>Jiangning Campus, China Pharmaceutical University, 639 Longmian Avenue, Jiangning District, Nanjing 211198, China.</p>
+                <div class="template-meta">China Pharmaceutical University</div>
+            </article>
+            <article class="template-card">
+                <h3>Collaboration</h3>
+                <p>Add a short note about hospital, industry, academic, and international collaboration routes.</p>
+                <div class="template-meta">Partnerships</div>
+            </article>
+        </div>
+    </section>
 </div>
-
-<script>
-    // Intersection Observer for fade-in animations
-    document.addEventListener('DOMContentLoaded', function() {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.classList.add('visible');
-                    }, index * 100);
-                }
-            });
-        }, { threshold: 0.1 });
-        
-        const fadeElements = document.querySelectorAll('.fade-in');
-        fadeElements.forEach(el => observer.observe(el));
-    });
-</script>

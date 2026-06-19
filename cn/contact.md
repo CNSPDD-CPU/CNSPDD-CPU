@@ -5,224 +5,146 @@ permalink: /cn/contact/
 ---
 
 <style>
-    :root {
-        --primary-color: #2C5F2D;
-        --secondary-color: #1E2761;
-        --accent-color: #735DA5;
-        --gradient-primary: linear-gradient(135deg, #2C5F2D 0%, #31473A 100%);
-        --gradient-secondary: linear-gradient(135deg, #1E2761 0%, #2C3E6E 100%);
-        --gradient-accent: linear-gradient(135deg, #735DA5 0%, #8B7CB5 100%);
-        --text-dark: #2D3748;
-        --text-light: #4A5568;
-        --bg-light: #F7FAFC;
-        --border-color: #E2E8F0;
-    }
-
-    .contact-container {
-        margin: 0 auto;
-        padding: 0.5rem 2rem;
+    .template-page {
         max-width: 1200px;
-        box-sizing: border-box;
-    }
-
-    .contact-header {
-        text-align: center;
-        margin-top: 0.1rem;
-        margin-bottom: 0.8rem;
-        padding: 0.8rem;
-        background: transparent;
-        border-radius: 16px;
-        color: inherit;
-        box-shadow: none;
-    }
-
-    .contact-title {
-        font-size: 2rem;
-        margin-top: 0.1rem;
-        margin-bottom: 0.5rem;
-        font-weight: 700;
-        color: var(--heading-color);
-    }
-
-    .contact-subtitle {
-        font-size: 1.05rem;
-        opacity: 0.9;
-        max-width: 650px;
         margin: 0 auto;
-        line-height: 1.6;
-        color: var(--text-light);
+        padding: 0 2rem 4rem;
     }
 
-    .contact-section {
-        margin: 2rem 0;
+    .template-hero {
+        padding: 4rem 0 2.5rem;
+        border-bottom: 1px solid #e1e8ed;
     }
 
-    .contact-grid {
+    .template-eyebrow {
+        margin: 0 0 0.45rem;
+        color: #735DA5;
+        font-size: 0.82rem;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+
+    .template-hero h1 {
+        max-width: 820px;
+        margin: 0 0 1rem;
+        color: #1E2761;
+        font-size: clamp(2.1rem, 4vw, 3.6rem);
+        line-height: 1.1;
+        text-align: left;
+        background: none;
+        -webkit-text-fill-color: currentColor;
+    }
+
+    .template-hero p,
+    .template-section-head p,
+    .template-card p {
+        color: #526071;
+        line-height: 1.75;
+    }
+
+    .template-section {
+        margin: 2.8rem 0 0;
+    }
+
+    .template-section-head {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 2rem;
-        margin-top: 2rem;
+        grid-template-columns: minmax(220px, 0.8fr) minmax(320px, 1.2fr);
+        gap: 1.4rem;
+        align-items: end;
+        margin-bottom: 1.2rem;
     }
 
-    .contact-card {
-        background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-        padding: 2rem;
-        border-radius: 16px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        border: 1px solid var(--border-color);
-        transition: all 0.3s ease;
-        position: relative;
-        overflow: hidden;
+    .template-section-head h2 {
+        margin: 0;
+        color: #1E2761;
+        font-size: 1.8rem;
+        line-height: 1.2;
+        text-align: left;
     }
 
-    .contact-card::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 4px;
-        height: 100%;
-        background: var(--gradient-accent);
+    .template-section-head p:not(.template-eyebrow) {
+        margin: 0;
     }
 
-    .contact-card:hover {
-        transform: translateY(-8px) scale(1.02);
-        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
-        border-color: rgba(115, 93, 165, 0.2);
+    .template-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
     }
 
-    .contact-method {
-        font-size: 1.2rem;
-        color: var(--secondary-color);
-        margin-bottom: 1rem;
-        font-weight: 600;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
+    .template-card {
+        padding: 1.25rem;
+        border: 1px solid #e1e8ed;
+        border-radius: 8px;
+        background: #ffffff;
+        box-shadow: 0 2px 12px rgba(30, 39, 97, 0.08);
     }
 
-    .contact-icon {
-        width: 24px;
-        height: 24px;
-        color: var(--accent-color);
+    .template-card h3 {
+        margin: 0 0 0.55rem;
+        color: #1E2761;
+        font-size: 1.05rem;
+        line-height: 1.35;
+        text-align: left;
     }
 
-    .contact-details {
-        font-size: 1rem;
-        color: var(--text-light);
-        line-height: 1.6;
-        margin-bottom: 1rem;
+    .template-card p {
+        margin: 0;
     }
 
-    .map-iframe {
-        width: 100%;
-        height: 280px;
-        border: 0;
-        border-radius: 12px;
-    }
-
-    .contact-link {
-        color: var(--accent-color);
-        text-decoration: none;
-        font-weight: 500;
-        transition: color 0.3s ease;
-    }
-
-    .contact-link:hover {
-        color: var(--primary-color);
-        text-decoration: underline;
-    }
-
-    .back-link {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        color: var(--primary-color);
-        text-decoration: none;
-        font-weight: 500;
-        margin-top: 2rem;
-        padding: 0.8rem 1.5rem;
-        background: white;
-        border: 2px solid var(--primary-color);
-        border-radius: 9999px;
-        transition: all 0.3s ease;
-    }
-
-    .back-link:hover {
-        background: var(--gradient-primary);
-        color: white;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 16px rgba(44, 95, 45, 0.3);
+    .template-meta {
+        margin-top: 0.9rem;
+        padding-top: 0.75rem;
+        border-top: 1px solid #e1e8ed;
+        color: #2C5F2D;
+        font-size: 0.86rem;
+        font-weight: 800;
     }
 
     @media (max-width: 768px) {
-        .contact-grid {
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
+        .template-page {
+            padding: 0 1rem 3rem;
         }
-    }
 
-    @media (max-width: 480px) {
-        .contact-container {
-            padding: 1rem 0.75rem;
+        .template-section-head,
+        .template-grid {
+            grid-template-columns: 1fr;
         }
     }
 </style>
 
-<div class="contact-container">
-    <div class="contact-header">
-        <h1 class="contact-title">联系我们</h1>
-        <p class="contact-subtitle">
-                欢迎就本实验室的研究方向、科研合作或人才招聘等事宜与我们联系。联系方式如下：
-        </p>
-    </div>
-    <div class="contact-section">
-        <div class="contact-grid">
-            <div class="contact-card">
-                <h3 class="contact-method">
-                    <svg class="contact-icon" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
-                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
-                    </svg>
-                    电子邮件
-                </h3>
-                <div class="contact-details">
-                    <p>科研合作与课题相关咨询：</p>
-                    <a href="mailto:fengyuanqing@cpu.edu.cn" class="contact-link">fengyuanqing@cpu.edu.cn</a>
-                </div>
-            </div>
+<div class="template-page">
+    <section class="template-hero">
+        <p class="template-eyebrow">Contact</p>
+        <h1>联系我们</h1>
+        <p>欢迎就科研合作、人才招聘、平台使用和中心相关事务与我们联系。</p>
+    </section>
 
-            <div class="contact-card">
-                <h3 class="contact-method">
-                    <svg class="contact-icon" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
-                    </svg>
-                    通讯地址
-                </h3>
-                <div class="contact-details">
-                    <p>中国药科大学<br>
-                    基础医学与临床药学学院</p>
-                </div>
+    <section class="template-section">
+        <div class="template-section-head">
+            <div>
+                <p class="template-eyebrow">Inquiries</p>
+                <h2>联系渠道</h2>
             </div>
-
-            <div class="contact-card">
-                <h3 class="contact-method">
-                    <svg class="contact-icon" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
-                    </svg>
-                    地理位置
-                </h3>
-                <div class="contact-details">
-                    <iframe class="map-iframe" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=%E4%B8%AD%E5%9B%BD%E8%8D%AF%E7%A7%91%E5%A4%A7%E5%AD%A6%E6%B1%9F%E5%AE%81%E6%A0%A1%E5%8C%BA&output=embed"></iframe>
-                </div>
-            </div>
+            <p>建议保持联系方式清晰、稳定。后续如不同平台有专门联系人，可在此添加。</p>
         </div>
-    </div>
-
-    <div style="text-align: center; margin-top: 3rem;">
-        <a href="/cn/" class="back-link">
-            <i class="fas fa-home"></i>
-            返回主页
-        </a>
-    </div>
+        <div class="template-grid">
+            <article class="template-card">
+                <h3>联系邮箱</h3>
+                <p><a href="mailto:hangao@cpu.edu.cn">hangao@cpu.edu.cn</a></p>
+                <div class="template-meta">科研合作 | 招聘 | 平台咨询</div>
+            </article>
+            <article class="template-card">
+                <h3>地址</h3>
+                <p>中国药科大学江宁校区：南京市江宁区龙眠大道639号 211198</p>
+                <div class="template-meta">中国药科大学</div>
+            </article>
+            <article class="template-card">
+                <h3>合作</h3>
+                <p>可补充医院、企业、学术机构和国际合作的联系说明。</p>
+                <div class="template-meta">合作交流</div>
+            </article>
+        </div>
+    </section>
 </div>

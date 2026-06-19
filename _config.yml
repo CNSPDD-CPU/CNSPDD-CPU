@@ -1,9 +1,9 @@
 title: Center for Neuroscience and Precision Drug Development
-email: fengyuanqing@cpu.edu.cn
-description: >- 
-  I am a professor at China Pharmaceutical University, focusing on genetic mechanisms underlying human phenotypic diversity, and disease susceptibility.
-baseurl: "/CNSPDD-CPU" # the subpath of your site, e.g. /blog
-url: "https://fenglab-cpu.github.io/" # the base hostname 
+email: hangao@cpu.edu.cn
+description: >-
+  The Center for Neuroscience and Precision Drug Development at China Pharmaceutical University advances mechanism-based, sex-informed precision therapies for neurological and psychiatric disorders.
+baseurl: "/CNSPDD-CPU"
+url: "https://cnspdd-cpu.github.io"
 
 # Build settings
 markdown: kramdown
@@ -15,7 +15,7 @@ plugins:
 navigation:
   - title: Home
     url: /
-  - title: Research
+  - title: Research and Platforms
     url: /research/
   - title: Publications
     url: /publications/
@@ -34,14 +34,14 @@ navigation:
 navigation_cn:
   - title: 主页
     url: /cn/
-  - title: 研究
+  - title: 研究与平台
     url: /cn/research/
   - title: 论文
     url: /cn/publications/
   - title: 团队
     url: /cn/people/
   - title: PI团队
-    url: /cn/pi/ 
+    url: /cn/pi/
   - title: 新闻
     url: /cn/news/
   - title: 招聘
@@ -51,11 +51,11 @@ navigation_cn:
 
 # Social links
 social_links:
-  google_scholar: nWYWiVUAAAAJ
-  github: fenglab-cpu
-  linkedin: yuanqing-feng-a4384477
-  twitter: FengYuanqing
+  google_scholar:
+  github: CNSPDD-CPU
+  linkedin:
+  twitter:
 
 # Other settings
-show_excerpts: true 
+show_excerpts: true
 permalink: /:categories/:year/:month/:day/:title/
