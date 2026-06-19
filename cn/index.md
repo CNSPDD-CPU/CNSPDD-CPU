@@ -26,7 +26,7 @@ title: 首页
 
     .home-shell,
     .hero-content {
-        max-width: 1200px;
+        max-width: 1140px;
         margin: 0 auto;
         padding: 0 2rem;
         box-sizing: border-box;
@@ -113,16 +113,16 @@ title: 首页
         line-height: 1.45;
     }
 
-    .home-section { margin: 3rem 0; }
-    .section-head { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 1.5rem; align-items: end; margin-bottom: 1.4rem; }
-    .section-title { margin: 0; color: var(--navy); font-size: clamp(1.75rem, 3vw, 2.45rem); line-height: 1.2; text-align: left; background: none; -webkit-text-fill-color: currentColor; }
-    .section-copy { margin: 0; color: var(--muted); line-height: 1.8; }
-    .card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
-    .home-card { padding: 1.35rem; border: 1px solid var(--line); border-radius: 8px; background: #fff; box-shadow: 0 10px 28px rgba(23,32,51,0.07); }
-    .home-card::before { content: ""; display: block; width: 42px; height: 4px; margin-bottom: 1rem; border-radius: 999px; background: var(--green); }
+    .home-section { margin: 4rem auto; }
+    .section-head { max-width: 880px; margin: 0 auto 2rem; text-align: center; }
+    .section-title { margin: 0; color: var(--navy); font-size: clamp(1.75rem, 3vw, 2.45rem); line-height: 1.2; text-align: center; background: none; -webkit-text-fill-color: currentColor; }
+    .section-copy { max-width: 780px; margin: 0.9rem auto 0; color: var(--muted); line-height: 1.8; }
+    .card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; max-width: 1040px; margin: 0 auto; }
+    .home-card { padding: 1.45rem; border: 1px solid var(--line); border-radius: 8px; background: #fff; box-shadow: 0 10px 28px rgba(23,32,51,0.07); text-align: center; }
+    .home-card::before { content: ""; display: block; width: 42px; height: 4px; margin: 0 auto 1rem; border-radius: 999px; background: var(--green); }
     .home-card:nth-child(2)::before { background: var(--navy); }
     .home-card:nth-child(3)::before { background: var(--purple); }
-    .home-card h3 { margin: 0 0 0.7rem; color: var(--navy); font-size: 1.08rem; text-align: left; }
+    .home-card h3 { margin: 0 0 0.7rem; color: var(--navy); font-size: 1.08rem; text-align: center; }
     .home-card p { margin: 0; color: var(--muted); line-height: 1.75; }
 
     @media (max-width: 768px) {
