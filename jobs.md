@@ -5,355 +5,68 @@ permalink: /jobs/
 ---
 
 <style>
-    :root {
-        --primary-color: #2C5F2D;
-        --secondary-color: #1E2761;
-        --accent-color: #735DA5;
-        --gradient-primary: linear-gradient(135deg, #2C5F2D 0%, #31473A 100%);
-        --gradient-secondary: linear-gradient(135deg, #1E2761 0%, #2C3E6E 100%);
-        --text-dark: #2D3748;
-        --text-light: #4A5568;
-        --bg-light: #F7FAFC;
-        --border-color: #E2E8F0;
-    }
-
-    .jobs-container {
-        margin: 0 auto;
-        padding: 0.5rem 1rem;
-        max-width: 1200px;
-        box-sizing: border-box;
-    }
-
-    .jobs-header {
-        text-align: center;
-        margin-top: 0.1rem;
-        margin-bottom: 0.2rem;
-        padding: 0.8rem;
-        background: transparent;
-        border-radius: 16px;
-        color: inherit;
-        box-shadow: none;
-    }
-
-    .jobs-title {
-        font-size: 2rem;
-        margin-top: 0.2rem;
-        margin-bottom: 2rem;
-        font-weight: 700;
-        color: var(--heading-color);
-    }
-
-    .jobs-subtitle {
-        font-size: 1.1rem;
-        opacity: 0.9;
-        max-width: 600px;
-        margin: 0 auto;
-        line-height: 1.6;
-        color: var(--text-light);
-    }
-
-    .jobs-section {
-        margin: 2 rem 0;
-    }
-
-    .jobs-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-        gap: 2rem;
-        margin-top: 2rem;
-    }
-
-    .job-card {
-        background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-        padding: 2rem;
-        border-radius: 16px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        border: 1px solid var(--border-color);
-        transition: all 0.3s ease;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .job-card::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 4px;
-        height: 100%;
-        background: var(--gradient-accent);
-    }
-
-    .job-card:hover {
-        transform: translateY(-8px) scale(1.02);
-        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
-        border-color: rgba(115, 93, 165, 0.2);
-    }
-
-    .job-title {
-        font-size: 1.4rem;
-        color: var(--secondary-color);
-        margin-bottom: 0.5rem;
-        font-weight: 600;
-    }
-
-    .job-type {
-        display: inline-block;
-        background: var(--gradient-accent);
-        color: white;
-        padding: 0.3rem 0.8rem;
-        border-radius: 9999px;
-        font-size: 0.8rem;
-        font-weight: 500;
-        margin-bottom: 1rem;
-    }
-
-    .job-description {
-        font-size: 1rem;
-        color: var(--text-light);
-        line-height: 1.6;
-        margin-bottom: 1.5rem;
-    }
-
-    .job-requirements {
-        margin-bottom: 1.5rem;
-    }
-
-    .job-requirements h4 {
-        color: var(--primary-color);
-        font-size: 1rem;
-        margin-bottom: 0.5rem;
-        font-weight: 600;
-    }
-
-    .job-requirements ul {
-        list-style: none;
-        padding-left: 0;
-        margin: 0;
-    }
-
-    .job-requirements li {
-        position: relative;
-        padding-left: 1.5rem;
-        margin-bottom: 0.5rem;
-        font-size: 0.95rem;
-        color: var(--text-dark);
-    }
-
-    .job-requirements li::before {
-        content: '▸';
-        position: absolute;
-        left: 0;
-        color: var(--accent-color);
-        font-weight: bold;
-    }
-
-    .application-info {
-        background: var(--bg-light);
-        padding: 1.5rem;
-        border-radius: 12px;
-        border-left: 4px solid var(--primary-color);
-        margin-bottom: 1.5rem;
-    }
-
-    .application-info h4 {
-        color: var(--primary-color);
-        font-size: 1rem;
-        margin-bottom: 0.8rem;
-        font-weight: 600;
-    }
-
-    .application-info p {
-        font-size: 0.95rem;
-        color: var(--text-dark);
-        line-height: 1.5;
-        margin-bottom: 0.5rem;
-    }
-
-    .contact-email {
-        color: var(--accent-color);
-        text-decoration: none;
-        font-weight: 500;
-    }
-
-    .contact-email:hover {
-        color: var(--primary-color);
-        text-decoration: underline;
-    }
-
-    .back-link {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        color: var(--primary-color);
-        text-decoration: none;
-        font-weight: 500;
-        margin-top: 2rem;
-        padding: 0.8rem 1.5rem;
-        background: white;
-        border: 2px solid var(--primary-color);
-        border-radius: 9999px;
-        transition: all 0.3s ease;
-    }
-
-    .back-link:hover {
-        background: var(--gradient-primary);
-        color: white;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 16px rgba(44, 95, 45, 0.3);
-    }
-
-    .no-positions {
-        text-align: center;
-        padding: 3rem;
-        background: var(--bg-light);
-        border-radius: 16px;
-        border: 2px dashed var(--border-color);
-    }
-
-    .no-positions h3 {
-        color: var(--text-dark);
-        margin-bottom: 1rem;
-    }
-
-    .no-positions p {
-        color: var(--text-light);
-        max-width: 600px;
-        margin: 0 auto;
-    }
-
-    /* Animation for scroll reveal */
-    .fade-in {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: all 0.6s ease;
-    }
-
-    .fade-in.visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-        .jobs-grid {
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-        
-        .jobs-title {
-            font-size: 2rem;
-        }
-        
-        .jobs-header {
-            padding: 1rem;
-        }
-        
-        .job-card {
-            padding: 1rem;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .jobs-container {
-            padding: 1rem 0.75rem;
-        }
-        
-        .jobs-header {
-            padding: 1rem;
-        }
-        
-        .jobs-title {
-            font-size: 1.8rem;
-        }
-    }
+.template-page { max-width: 1200px; margin: 0 auto; padding: 0 2rem 4rem; }
+.template-hero { padding: 4rem 0 2.5rem; border-bottom: 1px solid #e1e8ed; }
+.template-eyebrow { margin: 0 0 .45rem; color: #735DA5; font-size: .82rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.template-hero h1 { max-width: 820px; margin: 0 0 1rem; color: #1E2761; font-size: clamp(2.1rem, 4vw, 3.6rem); line-height: 1.1; text-align: left; background: none; -webkit-text-fill-color: currentColor; }
+.template-hero p, .template-card p, .template-note p { color: #526071; line-height: 1.75; }
+.template-section { margin: 2.8rem 0 0; }
+.template-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.template-card, .template-note { padding: 1.25rem; border: 1px solid #e1e8ed; border-radius: 8px; background: #fff; box-shadow: 0 2px 12px rgba(30,39,97,.08); }
+.template-card h2, .template-note h2 { margin: 0 0 .7rem; color: #1E2761; font-size: 1.18rem; line-height: 1.35; text-align: left; }
+.template-card p, .template-note p { margin: 0 0 .7rem; }
+.template-card ul { margin: .75rem 0 0; padding-left: 1.15rem; color: #526071; line-height: 1.7; }
+.template-meta { margin-top: .9rem; padding-top: .75rem; border-top: 1px solid #e1e8ed; color: #2C5F2D; font-size: .86rem; font-weight: 800; }
+.template-note { margin-top: 1rem; }
+.template-note a { color: #735DA5; font-weight: 800; }
+@media (max-width: 768px) { .template-page { padding: 0 1rem 3rem; } .template-grid { grid-template-columns: 1fr; } }
 </style>
 
-<div class="jobs-container">
-    <div class="jobs-header fade-in">
-        <h1 class="jobs-title">Join Our Team</h1>
-        <p class="jobs-subtitle">We welcome motivated individuals to join our research group. </p>
-        <p> Contact <a href="mailto:fengyuanqing@cpu.edu.cn" class="contact-email">fengyuanqing@cpu.edu.cn</a></p>
-    </div>
-    
-    <div class="jobs-section">
-        <div class="jobs-grid">
-            
-            <div class="job-card fade-in">
-                <h3 class="job-title">Postdoctoral Researcher</h3>
-                <span class="job-type">Full-time</span>
-                <p class="job-description">
-                    We are seeking highly motivated postdoctoral researchers to join our functional genomics research program. The successful candidate will work on projects involving high-throughput screening, CRISPR technologies, and single-cell genomics.
-                </p>
-                
-                <div class="job-requirements">
-                    <h4>Requirements:</h4>
-                    <ul>
-                        <li>Ph.D. in Genetics, Biology, or related field</li>
-                        <li>Experience with functional genomics assays (e.g. CRISPR)</li>
-                        <li>Strong computational skills is a plus (Python/R)</li>
-                        <li>Track record of high-quality publications</li>
-                        <li>Excellent communication and collaboration skills</li>
-                    </ul>
-                </div>
+<div class="template-page">
+    <section class="template-hero">
+        <p class="template-eyebrow">Jobs</p>
+        <h1>Join CNSPDD</h1>
+        <p>We welcome outstanding candidates who are interested in neuroscience, precision pharmacology, translational disease models, and technology platforms for drug discovery.</p>
+    </section>
 
-                <div class="application-info">
-                    <h4>Compensation and Benefits:</h4>
-                    <p>1. Appointment as a “Xingyao Research Postdoctoral Fellow” at China Pharmaceutical University, with a starting annual salary from <span style="font-weight:600;">300,000 RMB</span>.</p>
-                    <p>2. Full access to university benefits, including medical insurance, housing fund, and additional welfare provided by the university trade union.</p>
-                </div>
+    <section class="template-section">
+        <div class="template-grid">
+            <article class="template-card">
+                <h2>Postdoctoral Fellows</h2>
+                <p>Projects may involve neural circuit mechanisms, electrophysiology, high-content imaging, organoid and iPSC-derived models, pharmacology, biomarkers, or computational biology.</p>
+                <ul>
+                    <li>Ph.D. in neuroscience, pharmacology, biology, medicine, bioengineering, computational biology, or related fields.</li>
+                    <li>Strong record of rigorous research and clear scientific communication.</li>
+                    <li>Interest in collaborative, platform-enabled translational research.</li>
+                </ul>
+                <div class="template-meta">Full-time</div>
+            </article>
+            <article class="template-card">
+                <h2>Graduate Students</h2>
+                <p>Graduate students and rotating students are encouraged to participate in interdisciplinary projects linking disease mechanisms with precision drug development.</p>
+                <ul>
+                    <li>Strong interest in neuroscience and drug discovery.</li>
+                    <li>Training in experimental biology, pharmacology, imaging, electrophysiology, or data science is welcome.</li>
+                    <li>Curiosity, reliability, and willingness to learn across disciplines.</li>
+                </ul>
+                <div class="template-meta">Graduate Training</div>
+            </article>
+            <article class="template-card">
+                <h2>Research Staff</h2>
+                <p>The center welcomes research assistants, engineers, and platform specialists to support model construction, assay development, instrument operation, and data workflows.</p>
+                <ul>
+                    <li>Experience with laboratory operations or platform technologies.</li>
+                    <li>Careful documentation and quality control habits.</li>
+                    <li>Ability to work closely with faculty, trainees, and collaborators.</li>
+                </ul>
+                <div class="template-meta">Platform Support</div>
+            </article>
+        </div>
 
-                <div class="application-info">
-                    <h4>Career Development:</h4>
-                    <p>1. Outstanding postdocs are strongly supported to apply for long‑term positions at China Pharmaceutical University, such as Special Research Fellow or tenure‑track Associate Professor / Research Associate Professor.</p>
-                    <p>2. The lab will support applications for competitive funding schemes (e.g., National Postdoctoral Fellow Programs, National Natural Science Foundation of China, Jiangsu Provincial Natural Science Foundation, Jiangsu Excellent Postdoctoral Program). Salary and funding from different sources can be stacked with no upper cap.</p>
-                    <p>3. Workplace: Jiangning Campus, China Pharmaceutical University, Nanjing.</p>
-                </div>
-                
-            </div>
-            
-            <div class="job-card fade-in">
-                <h3 class="job-title">Graduate Student</h3>
-                <span class="job-type">Full-time</span>
-                <p class="job-description">
-                    Graduate students interested in functional genomics, computational biology, or human genetics are welcome to rotate in our lab. We offer exciting projects at the intersection of experimental and computational biology.
-                </p>
-                
-                <div class="job-requirements">
-                    <h4>Requirements:</h4>
-                    <ul>
-                        <li>Current enrollment in a relevant graduate program</li>
-                        <li>Strong interest in genomics and molecular biology</li>
-                        <li>Basic programming skills preferred</li>
-                        <li>Enthusiasm for interdisciplinary research</li>
-                    </ul>
-                </div>
-            </div>         
+        <div class="template-note">
+            <h2>How to Apply</h2>
+            <p>Please send a curriculum vitae, a brief statement of research interests, and representative publications or project experience to <a href="mailto:hangao@cpu.edu.cn">hangao@cpu.edu.cn</a>.</p>
+            <p>Workplace: Jiangning Campus, China Pharmaceutical University, Nanjing, China.</p>
         </div>
-        
-        <div style="text-align: center; margin-top: 3rem;">
-            <a href="/" class="back-link">
-                <i class="fas fa-home"></i>
-                Back to Homepage
-            </a>
-        </div>
-    </div>
+    </section>
 </div>
-
-<script>
-    // Intersection Observer for fade-in animations
-    document.addEventListener('DOMContentLoaded', function() {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.classList.add('visible');
-                    }, index * 100);
-                }
-            });
-        }, { threshold: 0.1 });
-        
-        const fadeElements = document.querySelectorAll('.fade-in');
-        fadeElements.forEach(el => observer.observe(el));
-    });
-</script>
