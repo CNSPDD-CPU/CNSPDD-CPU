@@ -4,375 +4,479 @@ title: Home
 ---
 
 <style>
-    .hero-section {
-        text-align: center;
-        padding: 2.8rem 1.5rem 3.5rem;
-        background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-        border-radius: 24px;
+    .home-page {
+        --home-ink: #172033;
+        --home-muted: #526071;
+        --home-line: #dce5ee;
+        --home-soft: #f5f8fb;
+        --home-green: #2C5F2D;
+        --home-navy: #1E2761;
+        --home-purple: #735DA5;
+        --home-red: #962E2A;
+        color: var(--home-ink);
+    }
+
+    .home-shell {
         max-width: 1200px;
-        margin: 1.25rem auto 2rem;
+        margin: 0 auto;
+        padding: 0 2rem;
+        box-sizing: border-box;
+    }
+
+    .hero-section {
         position: relative;
         overflow: hidden;
-        box-shadow: 0 24px 70px rgba(23, 37, 84, 0.1);
-        min-height: clamp(420px, 63vh, 644px);
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
+        min-height: clamp(520px, 72vh, 720px);
+        margin: 0 auto 2.5rem;
+        display: grid;
         align-items: center;
-        gap: 1.4rem;
-        box-sizing: border-box;
+        color: #ffffff;
+        background:
+            linear-gradient(90deg, rgba(18, 30, 52, 0.9) 0%, rgba(18, 30, 52, 0.74) 44%, rgba(18, 30, 52, 0.34) 100%),
+            url('{{ "/assets/images/cnspdd-neuroscience-hero.png" | relative_url }}') center 44% / cover no-repeat;
     }
-    
-    .hero-section::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 6px;
-        background: var(--gradient-secondary);
-        border-radius: 3px 3px 0 0;
-        z-index: 2;
+
+    .hero-content {
+        width: min(760px, calc(100% - 4rem));
+        margin-left: max(2rem, calc((100vw - 1200px) / 2 + 2rem));
+        padding: 4rem 0;
     }
-    
-    .hero-section::after {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background-image: url('/assets/images/background2.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: 50% 45%;
-        opacity: 0.3;
-        filter: brightness(0.95);
-        z-index: 0;
-        transform: none;
-    }
-    
-    .hero-section > * {
-        position: relative;
-        z-index: 1;
-    }
-    
-    .hero-title {
-        font-size: clamp(3rem, 4vw, 4.25rem);
+
+    .hero-kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+        padding: 0.45rem 0.75rem;
+        border: 1px solid rgba(255, 255, 255, 0.32);
+        border-radius: 999px;
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 0.86rem;
         font-weight: 700;
-        margin-bottom: 1.05rem;
-        background: var(--gradient-secondary);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        letter-spacing: -0.02em;
-        line-height: 1.1;
-        margin-top: -0.5rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 1.4rem;
-        color: var(--text-dark);
-        margin-bottom: 2.1rem;
-        font-weight: 600;
-        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-        max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
-        line-height: 1.6;
-    }
-
-    .hero-tags {
-        width: 100%;
-        max-width: 800px;
-        margin: 1.5rem auto 0.75rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.6rem;
-        padding: 0 1.5rem;
-        box-sizing: border-box;
-    }
-
-    .hero-tag {
-        display: inline-block;
-        padding: 0.35rem 0.9rem;
-        border-radius: 9999px;
-        border: 1px solid rgba(148, 163, 184, 0.9);
-        background: transparent;
-        font-size: 0.95rem;
-        font-weight: 600;
         letter-spacing: 0.06em;
-        color: #111827;
-        text-transform: none;
+        text-transform: uppercase;
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(12px);
     }
-    
-    .btn {
+
+    .hero-title {
+        margin: 1.25rem 0 1rem;
+        color: #ffffff;
+        font-size: clamp(2.75rem, 5.8vw, 5.25rem);
+        line-height: 1.02;
+        letter-spacing: 0;
+        text-align: left;
+        background: none;
+        -webkit-text-fill-color: currentColor;
+    }
+
+    .hero-subtitle {
+        max-width: 720px;
+        margin: 0 0 1.8rem;
+        color: rgba(255, 255, 255, 0.88);
+        font-size: 1.18rem;
+        line-height: 1.72;
+        font-weight: 500;
+    }
+
+    .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.85rem;
+        margin-bottom: 2rem;
+    }
+
+    .home-btn {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        padding: 0.875rem 2rem;
-        border: none;
-        border-radius: 9999px;
-        font-weight: 600;
+        gap: 0.55rem;
+        min-height: 46px;
+        padding: 0.8rem 1.1rem;
+        border-radius: 999px;
+        font-weight: 800;
         text-decoration: none;
-        transition: all 0.3s ease;
-        cursor: pointer;
-        font-size: 1rem;
-        line-height: 1;
-        position: relative;
-        overflow: hidden;
-        min-width: 140px;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
     }
-    
-    .btn-primary {
-        background: var(--gradient-primary);
-        color: white;
-        box-shadow: var(--shadow-light);
+
+    .home-btn::after {
+        display: none;
     }
-    
-    .btn-primary:hover {
-        transform: translateY(-3px) scale(1.05);
-        box-shadow: var(--shadow-medium);
-        color: white;
+
+    .home-btn.primary {
+        color: #ffffff;
+        background: var(--home-green);
+        box-shadow: 0 14px 30px rgba(44, 95, 45, 0.35);
     }
-    
-    .hero-ticker {
-        width: min(720px, 90vw);
-        background: rgba(255, 255, 255, 0.8);
-        border-radius: 24px;
-        padding: 0.72rem 1.3rem;
-        display: flex;
-        align-items: center;
-        gap: 1.5rem;
-        border: 1px solid rgba(134, 151, 214, 0.4);
-        box-shadow: 0 20px 45px rgba(30, 41, 59, 0.15);
-        backdrop-filter: blur(14px);
-        margin: 1.5rem auto 0;
-        min-height: 51px;
+
+    .home-btn.secondary {
+        color: #ffffff;
+        border: 1px solid rgba(255, 255, 255, 0.42);
+        background: rgba(255, 255, 255, 0.08);
     }
-    
-    .ticker-label {
-        font-weight: 700;
+
+    .home-btn:hover {
+        transform: translateY(-2px);
+        color: #ffffff;
+    }
+
+    .hero-tags {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.7rem;
+        max-width: 760px;
+    }
+
+    .hero-tag {
+        padding: 0.75rem 0.85rem;
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        border-radius: 8px;
+        color: rgba(255, 255, 255, 0.9);
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(12px);
         font-size: 0.95rem;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        color: #2f3f7f;
+        font-weight: 700;
+        line-height: 1.35;
     }
-    
-    .ticker-track {
-        flex: 1;
-        position: relative;
-        overflow: hidden;
-        height: 2.56rem;
+
+    .home-section {
+        margin: 3rem 0;
+    }
+
+    .section-head {
         display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 1.5rem;
+        margin-bottom: 1.4rem;
+    }
+
+    .section-eyebrow {
+        margin: 0 0 0.35rem;
+        color: var(--home-purple);
+        font-size: 0.82rem;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+
+    .section-title {
+        margin: 0;
+        color: var(--home-navy);
+        font-size: clamp(1.75rem, 3vw, 2.45rem);
+        line-height: 1.15;
+        text-align: left;
+        background: none;
+        -webkit-text-fill-color: currentColor;
+    }
+
+    .section-copy {
+        max-width: 660px;
+        margin: 0;
+        color: var(--home-muted);
+        line-height: 1.7;
+    }
+
+    .research-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1rem;
+    }
+
+    .research-card,
+    .platform-card,
+    .signal-card {
+        position: relative;
+        min-height: 100%;
+        padding: 1.35rem;
+        border: 1px solid var(--home-line);
+        border-radius: 8px;
+        background: #ffffff;
+        box-shadow: 0 10px 28px rgba(23, 32, 51, 0.07);
+        box-sizing: border-box;
+    }
+
+    .research-card::before,
+    .platform-card::before,
+    .signal-card::before {
+        content: "";
+        display: block;
+        width: 42px;
+        height: 4px;
+        margin-bottom: 1rem;
+        border-radius: 999px;
+        background: var(--home-green);
+    }
+
+    .research-card:nth-child(2)::before,
+    .platform-card:nth-child(2)::before {
+        background: var(--home-navy);
+    }
+
+    .research-card:nth-child(3)::before,
+    .platform-card:nth-child(3)::before {
+        background: var(--home-purple);
+    }
+
+    .research-card:nth-child(4)::before {
+        background: var(--home-red);
+    }
+
+    .card-title {
+        margin: 0 0 0.7rem;
+        color: var(--home-navy);
+        font-size: 1.08rem;
+        line-height: 1.35;
+        text-align: left;
+    }
+
+    .card-copy {
+        margin: 0;
+        color: var(--home-muted);
+        line-height: 1.65;
+        font-size: 0.98rem;
+    }
+
+    .platform-band {
+        padding: 2.2rem 0;
+        background: linear-gradient(180deg, #f7fafc 0%, #eef4f8 100%);
+        border-top: 1px solid var(--home-line);
+        border-bottom: 1px solid var(--home-line);
+    }
+
+    .platform-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+    }
+
+    .signal-row {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 1rem;
+        align-items: stretch;
+    }
+
+    .news-panel {
+        padding: 1.4rem;
+        border: 1px solid var(--home-line);
+        border-radius: 8px;
+        background: #ffffff;
+        box-shadow: 0 10px 28px rgba(23, 32, 51, 0.07);
+    }
+
+    .hero-ticker {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        gap: 1rem;
         align-items: center;
     }
-    
-    .ticker-track::before,
-    .ticker-track::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        right: 0;
-        height: 18px;
-        pointer-events: none;
-        z-index: 2;
+
+    .ticker-label {
+        color: var(--home-purple);
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-size: 0.82rem;
     }
-    
-    .ticker-track::before {
-        top: 0;
-        background: linear-gradient(180deg, rgba(248, 250, 255, 0.85), transparent);
+
+    .ticker-track {
+        position: relative;
+        overflow: hidden;
+        min-height: 2rem;
     }
-    
-    .ticker-track::after {
-        bottom: 0;
-        background: linear-gradient(0deg, rgba(248, 250, 255, 0.85), transparent);
-    }
-    
+
     .ticker-inner {
         display: flex;
-        flex-direction: column;
-        gap: 0;
-        animation: tickerScrollY 20s linear infinite;
-        animation-play-state: running;
+        gap: 1.5rem;
+        white-space: nowrap;
+        animation: tickerScrollX 24s linear infinite;
     }
 
     .hero-ticker:hover .ticker-inner {
         animation-play-state: paused;
     }
-    
+
     .ticker-item {
-        white-space: nowrap;
-        font-weight: 600;
-        color: #1f2a44;
-        font-size: 0.98rem;
-        display: flex;
-        align-items: center;
-        gap: 0.65rem;
-        min-height: 1.92rem;
-        padding: 0.2rem 0;
-        text-decoration: none;
-    }
-    
-    .ticker-date {
-        font-size: 0.85rem;
-        font-weight: 700;
-        color: #5a6bb0;
-        letter-spacing: 0.05em;
-    }
-    
-    .ticker-title {
-        color: #1f2a44;
-    }
-    
-    .ticker-item:hover .ticker-title {
-        color: #243b80;
-        text-decoration: underline;
-    }
-    
-    .ticker-link {
-        font-weight: 600;
-        color: #4c6ef5;
-        text-decoration: none;
         display: inline-flex;
-        align-items: center;
-        gap: 0.25rem;
+        gap: 0.55rem;
+        color: var(--home-ink);
+        font-weight: 700;
+        text-decoration: none;
     }
-    
-    .ticker-link:hover {
-        text-decoration: underline;
+
+    .ticker-item::after,
+    .ticker-link::after {
+        display: none;
     }
-    
-    @keyframes tickerScrollY {
-        0% { transform: translateY(0); }
-        100% { transform: translateY(-50%); }
+
+    .ticker-date {
+        color: var(--home-green);
     }
-    
-    .btn-secondary {
-        background: var(--gradient-secondary);
-        color: white;
-        box-shadow: var(--shadow-light);
+
+    .ticker-link {
+        color: var(--home-navy);
+        font-weight: 800;
     }
-    
-    .btn-secondary:hover {
-        transform: translateY(-3px) scale(1.05);
-        box-shadow: var(--shadow-medium);
-        color: white;
+
+    @keyframes tickerScrollX {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
     }
-    
-    .btn-accent {
-        background: var(--gradient-accent);
-        color: white;
-        box-shadow: var(--shadow-light);
+
+    .join-card {
+        padding: 1.4rem;
+        border-radius: 8px;
+        color: #ffffff;
+        background: linear-gradient(135deg, #1E2761 0%, #2C5F2D 100%);
+        box-shadow: 0 18px 40px rgba(30, 39, 97, 0.18);
     }
-    
-    .btn-accent:hover {
-        transform: translateY(-3px) scale(1.05);
-        box-shadow: var(--shadow-medium);
-        color: white;
+
+    .join-card h2 {
+        margin: 0 0 0.7rem;
+        color: #ffffff;
+        font-size: 1.45rem;
+        text-align: left;
     }
-    /* Responsive design */
-    @media (max-width: 768px) {
-        .hero-section {
-            padding: 2rem 1rem 2.5rem;
-            margin: 1rem auto 1.25rem;
-            min-height: auto;
-        }
-        
-        .hero-title {
-            font-size: 2.6rem;
-        }
-        
-        .hero-subtitle {
-            font-size: 1.2rem;
-            text-align: center;
+
+    .join-card p {
+        margin: 0 0 1rem;
+        color: rgba(255, 255, 255, 0.86);
+        line-height: 1.65;
+    }
+
+    @media (max-width: 900px) {
+        .hero-content {
+            width: min(720px, calc(100% - 2rem));
+            margin: 0 auto;
         }
 
-        .hero-tags {
-            margin: 1.2rem auto 1.5rem;
+        .research-grid,
+        .platform-grid,
+        .signal-row {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .home-shell {
             padding: 0 1rem;
         }
-        
+
+        .hero-section {
+            min-height: auto;
+        }
+
+        .hero-content {
+            padding: 3rem 0;
+        }
+
+        .hero-title {
+            font-size: 2.35rem;
+        }
+
+        .hero-tags,
+        .research-grid,
+        .platform-grid,
+        .signal-row,
         .hero-ticker {
-            flex-direction: column;
-            align-items: stretch;
-            gap: 0.75rem;
-            border-radius: 24px;
-            width: 100%;
+            grid-template-columns: 1fr;
         }
-        
-        .ticker-track,
+
+        .section-head {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
         .ticker-inner {
-            flex-direction: column;
-            gap: 0.75rem;
             animation: none;
-        }
-        
-        .ticker-track::before,
-        .ticker-track::after {
-            display: none;
-        }
-        
-        .ticker-item {
             white-space: normal;
+            flex-direction: column;
+            gap: 0.8rem;
         }
 
         .ticker-duplicate {
             display: none;
         }
     }
-    
-    @media (max-width: 480px) {
-        .hero-title {
-            font-size: 2rem;
-        }
-        
-        .hero-subtitle {
-            font-size: 1rem;
-            text-align: center;
-        }
-        
-        .hero-ticker {
-            padding: 1rem;
-        }
-    }
 </style>
 
-<div class="hero-section">
-    <h1 class="hero-title">Center for Neuroscience and Precision Drug Development</h1>
-    <p class="hero-subtitle">Center for Neuroscience and Precision Drug Development (CNSPDD) is dedicated to uncovering sex-specific mechanisms of multicellular, multi-regional, and central–peripheral interactions across the nervous system and the body. By decoding cell-specific intracellular and intercellular signaling networks, the Center advances the precise modulation of neural circuits and biological pathways, elucidates the in vivo mechanisms of promising therapeutic compounds, and translates these discoveries into next-generation precision therapies. Through interdisciplinary innovation, CNSPDD aims to transform the understanding, prevention, and treatment of neurological and psychiatric disorders.
-</p>
-    <div class="hero-tags">
-        <span class="hero-tag">Systems Neurophysiology and Circuit Pathology</span>
-        <span class="hero-tag">Multicellular Interactions and Neurovascular Mechanisms</span>
-        <span class="hero-tag">Advanced Technologies for Neuroscience Research</span>
-        <span class="hero-tag">Precision Diagnostics and Therapeutic Discovery</span>
-    </div>
-</div>
-
-<!-- News Ticker moved below hero -->
-{% assign news_page = site.pages | where: "path", "news.md" | first %}
-{% if news_page and news_page.news_items and news_page.news_items.size > 0 %}
-<div class="hero-ticker">
-    <span class="ticker-label">What's New</span>
-    <div class="ticker-track">
-        <div class="ticker-inner">
-            {% for item in news_page.news_items limit: 4 %}
-            <a class="ticker-item" href="/news/">
-                <span class="ticker-date">{{ item.date }}</span>
-                <span class="ticker-title">{{ item.title }}</span>
-            </a>
-            {% endfor %}
-            <span class="ticker-duplicate">
-            {% for item in news_page.news_items limit: 4 %}
-            <a class="ticker-item" href="/news/">
-                <span class="ticker-date">{{ item.date }}</span>
-                <span class="ticker-title">{{ item.title }}</span>
-            </a>
-            {% endfor %}
-            </span>
+<div class="home-page">
+    <section class="hero-section" aria-labelledby="home-title">
+        <div class="hero-content">
+            <div class="hero-kicker">China Pharmaceutical University</div>
+            <h1 class="hero-title" id="home-title">Center for Neuroscience and Precision Drug Development</h1>
+            <p class="hero-subtitle">CNSPDD advances mechanism-based, sex-informed precision therapies for neurological and psychiatric disorders by decoding neuron-glia communication, disease vulnerability, and drug action across development, adulthood, and aging.</p>
+            <div class="hero-actions">
+                <a class="home-btn primary" href="{{ '/research/' | relative_url }}"><i class="fas fa-microscope"></i> Research and Platforms</a>
+                <a class="home-btn secondary" href="{{ '/jobs/' | relative_url }}"><i class="fas fa-user-plus"></i> Join the Center</a>
+            </div>
+            <div class="hero-tags" aria-label="Research themes">
+                <span class="hero-tag">Sex-informed precision drug discovery</span>
+                <span class="hero-tag">Dynamic neuron-glia communication</span>
+                <span class="hero-tag">Early disease-modifying intervention windows</span>
+                <span class="hero-tag">Cell-specific delivery and modulation</span>
+            </div>
         </div>
-    </div>
-    <a class="ticker-link" href="/news/">View all →</a>
-</div>
-{% endif %}
+    </section>
 
-<!-- Language switch handled globally in header -->
+    <section class="home-section home-shell">
+        <div class="section-head">
+            <div>
+                <p class="section-eyebrow">Center Mission</p>
+                <h2 class="section-title">A connected path from brain mechanisms to compound validation</h2>
+            </div>
+            <p class="section-copy">CNSPDD organizes its work across three complementary directions: investigator-driven basic research, organized precision drug development, and service-oriented testing of novel compounds that modulate brain function.</p>
+        </div>
+        <div class="platform-grid">
+            <article class="platform-card">
+                <h3 class="card-title">Basic Research</h3>
+                <p class="card-copy">Individual projects define mechanisms of brain function in health and disease, with emphasis on sex-specific neuron-glia interactions and early multicellular disease processes.</p>
+            </article>
+            <article class="platform-card">
+                <h3 class="card-title">Drug Development</h3>
+                <p class="card-copy">Organized projects develop cell-specific strategies to target intracellular signaling and intercellular communication in defined neuronal and glial populations.</p>
+            </article>
+            <article class="platform-card">
+                <h3 class="card-title">Compound Validation</h3>
+                <p class="card-copy">A service-oriented platform tests novel compounds for their ability to modulate brain function, circuit activity, and disease-relevant cellular communication.</p>
+            </article>
+        </div>
+    </section>
+
+    <section class="home-section home-shell">
+        <div class="signal-row">
+            {% assign news_page = site.pages | where: "path", "news.md" | first %}
+            {% if news_page and news_page.news_items and news_page.news_items.size > 0 %}
+            <div class="news-panel">
+                <div class="hero-ticker">
+                    <span class="ticker-label">What's New</span>
+                    <div class="ticker-track">
+                        <div class="ticker-inner">
+                            {% for item in news_page.news_items limit: 4 %}
+                            <a class="ticker-item" href="{{ '/news/' | relative_url }}">
+                                <span class="ticker-date">{{ item.date }}</span>
+                                <span class="ticker-title">{{ item.title }}</span>
+                            </a>
+                            {% endfor %}
+                            <span class="ticker-duplicate">
+                            {% for item in news_page.news_items limit: 4 %}
+                            <a class="ticker-item" href="{{ '/news/' | relative_url }}">
+                                <span class="ticker-date">{{ item.date }}</span>
+                                <span class="ticker-title">{{ item.title }}</span>
+                            </a>
+                            {% endfor %}
+                            </span>
+                        </div>
+                    </div>
+                    <a class="ticker-link" href="{{ '/news/' | relative_url }}">View all</a>
+                </div>
+            </div>
+            {% endif %}
+            <aside class="join-card">
+                <h2>Build with us</h2>
+                <p>We are building an interdisciplinary team across electrophysiology, imaging, organoid technology, systems neuroscience, pharmacology, computational biology, and sex differences research.</p>
+                <a class="home-btn secondary" href="{{ '/contact/' | relative_url }}"><i class="fas fa-envelope"></i> Contact Us</a>
+            </aside>
+        </div>
+    </section>
+</div>
