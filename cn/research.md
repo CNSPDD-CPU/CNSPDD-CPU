@@ -1,357 +1,287 @@
 ---
 layout: default
-title: 研究
+title: 研究与平台
 permalink: /cn/research/
 ---
 
 <style>
-    :root {
-        --primary-color: #2C5F2D;
-        --secondary-color: #1E2761;
-        --accent-color: #735DA5;
-        --gradient-primary: linear-gradient(135deg, #2C5F2D 0%, #31473A 100%);
-        --gradient-secondary: linear-gradient(135deg, #1E2761 0%, #2C3E6E 100%);
-        --gradient-accent: linear-gradient(135deg, #735DA5 0%, #8B7CB5 100%);
-        --text-dark: #2D3748;
-        --text-light: #4A5568;
-        --bg-light: #F7FAFC;
-        --border-color: #E2E8F0;
+    .rp-page {
+        --rp-ink: #172033;
+        --rp-muted: #526071;
+        --rp-line: #dce5ee;
+        --rp-green: #2C5F2D;
+        --rp-navy: #1E2761;
+        --rp-purple: #735DA5;
+        --rp-red: #962E2A;
+        color: var(--rp-ink);
     }
 
-    .research-container {
+    .rp-shell {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 0.5rem 2rem;
+        padding: 0 2rem;
         box-sizing: border-box;
     }
 
-    .research-header {
-        background: white;
-        border-radius: 16px;
-        padding: 0.75rem 2.5rem 2.5rem 2.5rem;
-        margin-bottom: 0.3rem;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        border: 1px solid #e2e8f0;
+    .rp-hero {
+        margin: 0 auto 2.8rem;
+        padding: 4rem 0;
+        background: linear-gradient(135deg, #eef5f2 0%, #f7f9fc 48%, #eef0f7 100%);
+        border-bottom: 1px solid var(--rp-line);
     }
 
-    .research-header h1 {
-        font-size: 2rem;
-        color: var(--primary-color);
-        margin-bottom: 0.45rem;
-        margin-top: 0.75rem;
-        font-weight: 700;
-        text-align: center;
+    .rp-kicker {
+        margin: 0 0 0.5rem;
+        color: var(--rp-purple);
+        font-size: 0.82rem;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
     }
 
-    .research-header h1::after {
-        content: '';
-        display: block;
-        width: clamp(120px, 30vw, 360px);
-        height: 4px;
-        background: var(--gradient-primary);
-        border-radius: 2px;
-        margin: 0.6rem auto 0;
-    }
-
-    .research-intro-layout {
-        max-width: 1100px;
-        margin: 2rem auto 2.5rem;
-    }
-
-    .research-intro-text {
-        font-size: 1.05rem;
-        line-height: 1.8;
-        color: var(--text-dark);
-        margin-bottom: 3rem;
-        padding: 2rem;
-        background: var(--bg-light);
-        border-radius: 12px;
-        border-left: 4px solid var(--primary-color);
-    }
-
-    .research-intro-image {
-        float: right;
-        width: 28%;
-        max-width: 360px;
-        height: auto;
-        max-height: 320px;
-        object-fit: contain;
-        margin: 0.25rem 0 0.5rem 1.25rem;
-        border: none;
-        border-radius: 2;
+    .rp-title {
+        max-width: 850px;
+        margin: 0 0 1rem;
+        color: var(--rp-navy);
+        font-size: clamp(2.2rem, 4.5vw, 4rem);
+        line-height: 1.1;
+        text-align: left;
         background: none;
+        -webkit-text-fill-color: currentColor;
     }
 
-    .research-section {
-        margin-top: 1.5rem;
+    .rp-lead {
+        max-width: 820px;
+        margin: 0;
+        color: var(--rp-muted);
+        font-size: 1.12rem;
+        line-height: 1.85;
+    }
+
+    .rp-section {
+        margin: 3rem 0;
+    }
+
+    .section-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 1.5rem;
+        margin-bottom: 1.4rem;
+    }
+
+    .section-eyebrow {
+        margin: 0 0 0.35rem;
+        color: var(--rp-purple);
+        font-size: 0.82rem;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
     }
 
     .section-title {
-        font-size: 2rem;
-        color: var(--secondary-color);
-        margin-bottom: 1.5rem;
-        font-weight: 700;
-        text-align: center;
-    }
-
-    .research-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        align-items: start;
-    }
-
-    .research-card {
-        background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
-        border-radius: 20px;
-        padding: 2.25rem;
-        margin-bottom: 2rem;
-        box-shadow: 0 8px 24px rgba(17, 24, 39, 0.08);
-        border: 1px solid #e6edf5;
-        transition: box-shadow 0.3s ease, transform 0.2s ease;
-        overflow-wrap: break-word;
-        box-sizing: border-box;
-    }
-
-    .research-card:hover {
-        box-shadow: 0 16px 40px rgba(17, 24, 39, 0.12);
-        transform: translateY(-2px);
-    }
-
-    .card-header {
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        margin-bottom: 1.5rem;
-        gap: clamp(0.75rem, 2vw, 1.5rem);
-        flex-wrap: nowrap;
-    }
-
-    .card-content {
-        flex: 1;
-        text-align: left;
-        padding-left: 2rem;
-        line-height: 1.7;
-        box-sizing: border-box;
-    }
-
-    .card-figure {
-        flex: 0 0 20%;
-        max-width: 20%;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         margin: 0;
+        color: var(--rp-navy);
+        font-size: clamp(1.75rem, 3vw, 2.45rem);
+        line-height: 1.2;
+        text-align: left;
+        background: none;
+        -webkit-text-fill-color: currentColor;
     }
 
-    .card-figure img {
-        width: 70%;
-        max-width: 70%;
-        height: auto;
-        min-height: 120px;
-        object-fit: cover;
-        border-radius: 12px;
-        background: #f8fafc;
-        border: 1px solid #e5e7eb;
-        box-shadow: 0 6px 18px rgba(17, 24, 39, 0.08);
+    .section-copy {
+        max-width: 660px;
+        margin: 0;
+        color: var(--rp-muted);
+        line-height: 1.8;
+    }
+
+    .rp-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1rem;
+    }
+
+    .platform-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+    }
+
+    .rp-card {
+        min-height: 100%;
+        padding: 1.35rem;
+        border: 1px solid var(--rp-line);
+        border-radius: 8px;
+        background: #ffffff;
+        box-shadow: 0 10px 28px rgba(23, 32, 51, 0.07);
+        box-sizing: border-box;
+    }
+
+    .rp-card::before {
+        content: "";
+        display: block;
+        width: 42px;
+        height: 4px;
+        margin-bottom: 1rem;
+        border-radius: 999px;
+        background: var(--rp-green);
+    }
+
+    .rp-card:nth-child(2)::before {
+        background: var(--rp-navy);
+    }
+
+    .rp-card:nth-child(3)::before {
+        background: var(--rp-purple);
+    }
+
+    .rp-card:nth-child(4)::before {
+        background: var(--rp-red);
     }
 
     .card-title {
-        font-size: 1.1rem;
-        color: #1e3a8a;
-        background: #dbeafe;
-        padding: 0.5rem 1rem;
-        border-radius: 9999px;
-        font-weight: 600;
-        text-align: center;
-        margin: 0 auto 1.25rem;
-        box-shadow: 0 2px 4px rgba(30, 64, 175, 0.15);
-        word-break: break-word;
-    }
-
-    .card-lead {
-        font-size: 1.02rem;
-        line-height: 1.8;
-        color: #374151;
-        margin: 0 0 1.25rem 0;
+        margin: 0 0 0.7rem;
+        color: var(--rp-navy);
+        font-size: 1.08rem;
+        line-height: 1.4;
         text-align: left;
     }
 
-    .card-list {
-        list-style: none;
-        padding-left: 0;
-        margin: 1.25rem 0 0 0;
-        text-align: left;
+    .card-copy {
+        margin: 0;
+        color: var(--rp-muted);
+        line-height: 1.75;
+        font-size: 0.98rem;
     }
 
-    .card-list li {
-        position: relative;
-        padding-left: 1.75rem;
-        margin-bottom: 1rem;
-        line-height: 1.7;
-        color: #374151;
-        font-size: 1rem;
+    .program-band {
+        padding: 2.2rem 0;
+        background: linear-gradient(180deg, #f7fafc 0%, #eef4f8 100%);
+        border-top: 1px solid var(--rp-line);
+        border-bottom: 1px solid var(--rp-line);
     }
 
-    .card-list li::before {
-        content: '▸';
-        position: absolute;
-        left: 0;
-        color: var(--accent-color);
-        font-weight: bold;
+    @media (max-width: 900px) {
+        .rp-grid,
+        .platform-grid {
+            grid-template-columns: 1fr 1fr;
+        }
     }
 
-    /* Responsive Design */
-    @media (max-width: 768px) {
-        .research-container {
-            padding: 1rem 1rem;
+    @media (max-width: 640px) {
+        .rp-shell {
+            padding: 0 1rem;
         }
 
-        .research-header h1 {
-            font-size: 2rem;
+        .rp-grid,
+        .platform-grid {
+            grid-template-columns: 1fr;
         }
 
-        .research-intro-image {
-            float: none;
-            display: block;
-            width: 60%;
-            max-width: 320px;
-            margin: 1rem auto;
-        }
-
-        .card-header {
+        .section-head {
+            align-items: flex-start;
             flex-direction: column;
-            align-items: stretch;
-            gap: 1.25rem;
-        }
-
-        .card-content {
-            width: 100%;
-            max-width: 100%;
-            padding-left: 0;
-        }
-
-        .card-figure {
-            flex: none;
-            width: 100%;
-            max-width: 100%;
-            margin-top: 0.5rem;
-        }
-
-        .card-figure img {
-            height: auto;
-            width: clamp(220px, 70vw, 320px);
-        }
-    }
-
-    @media (max-width: 480px) {
-        .research-intro-image {
-            width: 80%;
-            max-width: 280px;
-        }
-
-        .research-card {
-            padding: 1rem;
-        }
-
-        .card-title {
-            font-size: 1rem;
-            padding: 0.4rem 0.8rem;
-        }
-
-        .card-lead {
-            font-size: 0.95rem;
-        }
-
-        .card-list li {
-            font-size: 0.95rem;
-            padding-left: 1.5rem;
-        }
-
-        .card-figure img {
-            width: 100%;
-            max-width: 220px;
-            height: auto;
-        }
-
-        .card-header {
-            column-gap: 0.75rem;
         }
     }
 </style>
 
-<div class="research-container">
-    <div class="research-header">
-        <h1>研究方向简介</h1>
-        <div class="research-intro-layout">
-            <div class="research-intro-text">
-                <img src="/assets/images/background.jpg" alt="基因组功能研究示意图" class="research-intro-image">
-                <p>我们的研究聚焦于深入理解基因组功能，致力于阐明遗传变异如何影响人类的表型多样性、多种疾病风险以及进化适应过程。遗传变异是人类生物多样性的基础，然而，当前通过全基因组关联分析（GWAS）和群体基因组学鉴定出的大多数与性状和疾病相关的突变，尤其是广泛分布于非编码调控区的突变，仍缺乏系统的功能注释。</p>
-                <p>许多突变源于人类对历史环境的适应性选择，在塑造表型多样性方面曾发挥关键作用，但在现代环境中却可能增加复杂疾病的易感性。因此，系统性地解析这些突变的分子功能，并建立其与表型和疾病之间的精确因果联系，是当前精准医学领域面临的重大挑战。</p>
-                <p>为攻克这一难题，我们整合高通量功能基因组学平台，包括大规模并行报告基因实验（MPRA）、深度突变扫描（DMS）、基于CRISPR的扰动筛选、单细胞组学与长读长测序，并结合群体遗传学和计算分析。通过这一多维度、高通量的研究框架，我们希望系统鉴定功能性突变及其靶基因，深入解析影响人类性状和疾病风险的分子机制，为疾病的精准预防和治疗提供新策略。</p>
+<div class="rp-page">
+    <section class="rp-hero">
+        <div class="rp-shell">
+            <p class="rp-kicker">Research and Platforms</p>
+            <h1 class="rp-title">面向精准药物发现的机制神经科学研究</h1>
+            <p class="rp-lead">中心整合独立基础研究、组织化药物开发课题和化合物验证服务，解析健康与疾病状态下的脑功能机制，并将机制认知转化为细胞特异性、兼顾性别差异的治疗策略。</p>
+        </div>
+    </section>
+
+    <section class="rp-section rp-shell">
+        <div class="section-head">
+            <div>
+                <p class="section-eyebrow">Program Architecture</p>
+                <h2 class="section-title">三个相互衔接的研究方向</h2>
+            </div>
+            <p class="section-copy">中心将发现科学与转化验证贯通，形成从疾病机制解析到化合物评价的连续研究管线。</p>
+        </div>
+        <div class="platform-grid">
+            <article class="rp-card">
+                <h3 class="card-title">基础研究</h3>
+                <p class="card-copy">通过独立课题解析健康与疾病状态下的脑功能机制，重点关注性别特异性神经元-胶质细胞互作和早期多细胞疾病过程。</p>
+            </article>
+            <article class="rp-card">
+                <h3 class="card-title">药物开发</h3>
+                <p class="card-copy">通过组织化课题发展细胞特异性策略，精准靶向特定神经元和胶质细胞群体的细胞内信号与细胞间通讯。</p>
+            </article>
+            <article class="rp-card">
+                <h3 class="card-title">化合物验证</h3>
+                <p class="card-copy">建设服务型验证平台，系统测试新型化合物对脑功能、环路活动和疾病相关细胞通讯的调控能力。</p>
+            </article>
+        </div>
+    </section>
+
+    <section class="program-band">
+        <div class="rp-shell">
+            <div class="section-head">
+                <div>
+                    <p class="section-eyebrow">Research Focus</p>
+                    <h2 class="section-title">从神经元-胶质机制到性别特异性精准治疗</h2>
+                </div>
+                <p class="section-copy">中心将大脑视为高度互作的多细胞网络，把“性别作为生物学变量”贯穿疾病机制、药理评价和治疗设计全过程。</p>
+            </div>
+            <div class="rp-grid">
+                <article class="rp-card">
+                    <h3 class="card-title">神经元-胶质细胞通讯</h3>
+                    <p class="card-copy">解析神经元、星形胶质细胞、小胶质细胞、少突胶质细胞及特定神经元亚型在健康、易感和疾病状态下的相互作用。</p>
+                </article>
+                <article class="rp-card">
+                    <h3 class="card-title">性别特异性疾病生物学</h3>
+                    <p class="card-copy">研究雌雄个体在受体表达、细胞内信号、网络整合和疾病进程中的差异。</p>
+                </article>
+                <article class="rp-card">
+                    <h3 class="card-title">早期干预窗口</h3>
+                    <p class="card-copy">聚焦神经退行性改变或临床症状出现前的早期多细胞通讯事件，推动疾病修饰和预防性干预。</p>
+                </article>
+                <article class="rp-card">
+                    <h3 class="card-title">精准治疗策略</h3>
+                    <p class="card-copy">发展细胞特异性递送与调控方法，优化剂量、给药途径、制剂形式、标志物和伴随诊断。</p>
+                </article>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="research-section">
-        <h2 class="section-title">当前研究内容</h2>
-
-        <div class="research-card">
-            <h3 class="card-title">功能基因组学与技术开发</h3>
-            <div class="card-header">
-                <div class="card-content">
-                    <p class="card-lead">
-                    我们开发并应用高通量功能基因组学方法，系统研究基因调控机制和遗传变异的功能。
-                    </p>
-                <ul class="card-list">
-                    <li>利用 MPRA、Hi-C 等技术，绘制基因调控元件及其作用靶点的图谱。</li>
-                    <li>构建高通量CRISPR编辑平台，并在疾病相关模型中开展功能筛选。</li>
-                    <li>结合单细胞组学和计算分析，深入解析细胞异质性及其复杂的调控网络。</li>
-                </ul>
-                </div>
-                <div class="card-figure">
-                    <img src="/assets/images/biotech.jpg" alt="功能基因组学技术示意图">
-                </div>
+    <section class="rp-section rp-shell">
+        <div class="section-head">
+            <div>
+                <p class="section-eyebrow">Platforms</p>
+                <h2 class="section-title">支撑机制驱动药物发现的技术平台</h2>
             </div>
+            <p class="section-copy">中心将分子与细胞机制、环路动态、行为学、药理学和人源相关模型贯通，并在雌雄系统中系统量化性别差异。</p>
         </div>
-
-        <div class="research-card">
-            <h3 class="card-title">复杂性状与疾病的遗传学</h3>
-            <div class="card-header">
-                <div class="card-content">
-                <p class="card-lead">
-                    我们结合功能基因组学与统计遗传学方法，解析人类复杂疾病和性状的遗传基础。
-                </p>
-                <ul class="card-list">
-                    <li>利用功能基因组学实验，建立疾病相关突变与其调控功能之间的直接联系。</li>
-                    <li>整合转录组、表观组等多组学数据，构建从突变到分子表型的多层次关联网络。</li>
-                    <li>利用细胞和动物模型，深入研究关键突变和基因的致病机制，发现潜在治疗靶点。</li>
-                </ul>
-                </div>
-                <div class="card-figure">
-                    <img src="/assets/images/gwas.jpg" alt="复杂疾病遗传学示意图">
-                </div>
-            </div>
+        <div class="platform-grid">
+            <article class="rp-card">
+                <h3 class="card-title">先进显微成像</h3>
+                <p class="card-copy">共聚焦、超分辨、双光子、头戴式双光子、全切片扫描和荧光寿命光纤记录等平台。</p>
+            </article>
+            <article class="rp-card">
+                <h3 class="card-title">环路生理学</h3>
+                <p class="card-copy">光遗传学、Neuropixels 群体记录、多电极阵列和膜片钳电生理技术。</p>
+            </article>
+            <article class="rp-card">
+                <h3 class="card-title">人源相关模型</h3>
+                <p class="card-copy">脑类器官、诱导多能干细胞来源培养体系、离体制备和雌雄动物体内研究。</p>
+            </article>
+            <article class="rp-card">
+                <h3 class="card-title">精准药理学</h3>
+                <p class="card-copy">整合靶点发现、药物化学、制剂科学以及性别依赖的药代和药效学分析。</p>
+            </article>
+            <article class="rp-card">
+                <h3 class="card-title">标志物与伴随诊断</h3>
+                <p class="card-copy">建立能够反映性别特异性疾病机制和治疗反应的诊断与疗效读出。</p>
+            </article>
+            <article class="rp-card">
+                <h3 class="card-title">计算生物学</h3>
+                <p class="card-copy">对性别特异性疾病通路进行定量建模，并整合细胞、环路、行为和药理数据。</p>
+            </article>
         </div>
-
-        <div class="research-card">
-            <h3 class="card-title">适应性进化与群体遗传学</h3>
-            <div class="card-header">
-                <div class="card-content">
-                <p class="card-lead">
-                    结合群体遗传学和功能研究，探究人类对多样环境的适应性进化过程，以及这些适应性突变如何影响现代人群的健康状况。
-                </p>
-                <ul class="card-list">
-                    <li>鉴定受到自然选择作用的突变和关键基因。</li>
-                    <li>研究人群中适应性突变的功能后果及其对表型的影响。</li>
-                    <li>探索历史进化压力如何影响不同人群的疾病风险。</li>
-                </ul>
-                </div>
-                <div class="card-figure">
-                    <img src="/assets/images/evo.png" alt="人类进化与适应性遗传学示意图">
-                </div>
-            </div>
-        </div>
-    </div>
+    </section>
 </div>
