@@ -11,6 +11,9 @@
 <body>
     <header class="site-header">
         <div class="header-container">
+            <a href="{{ site.baseurl }}{% if page.url contains '/cn/' %}/cn/{% else %}/{% endif %}" class="site-logo" aria-label="CNSPDD home">
+                <img src="{{ '/assets/images/cnspdd-logo.png' | relative_url }}" alt="CNSPDD Center for Neuroscience and Precision Drug Development">
+            </a>
             <nav class="main-nav">
                 {% if page.url contains '/cn/' and site.navigation_cn %}
                     {% assign nav_items = site.navigation_cn %}
