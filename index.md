@@ -136,17 +136,16 @@ title: Home
     <section class="hero-section" aria-labelledby="home-title">
         <div class="hero-content">
             <div class="hero-kicker">China Pharmaceutical University</div>
-            <h1 class="hero-title" id="home-title">Center for Neuroscience and Precision Drug Development</h1>
-            <p class="hero-subtitle">CNSPDD advances mechanism-based, sex-informed precision therapies for neurological and psychiatric disorders by decoding neuron-glia communication, disease vulnerability, and drug action across development, adulthood, and aging.</p>
+            <h1 class="hero-title" id="home-title">{{ home.hero.title }}</h1>
+            <p class="hero-subtitle">{{ home.hero.subtitle }}</p>
             <div class="hero-actions">
-                <a class="home-btn primary" href="{{ '/research/' | relative_url }}"><i class="fas fa-microscope"></i> Research and Platforms</a>
-                <a class="home-btn secondary" href="{{ '/jobs/' | relative_url }}"><i class="fas fa-user-plus"></i> Join the Center</a>
+                <a class="home-btn primary" href="{{ '/research/' | relative_url }}"><i class="fas fa-microscope"></i> {{ home.hero.primary_button }}</a>
+                <a class="home-btn secondary" href="{{ '/jobs/' | relative_url }}"><i class="fas fa-user-plus"></i> {{ home.hero.secondary_button }}</a>
             </div>
             <div class="hero-tags" aria-label="Research themes">
-                <span class="hero-tag">Sex-informed precision drug discovery</span>
-                <span class="hero-tag">Dynamic neuron-glia communication</span>
-                <span class="hero-tag">Early disease-modifying intervention windows</span>
-                <span class="hero-tag">Cell-specific delivery and modulation</span>
+                {% for tag in home.hero.tags %}
+                <span class="hero-tag">{{ tag }}</span>
+                {% endfor %}
             </div>
         </div>
     </section>

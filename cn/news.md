@@ -187,7 +187,7 @@ permalink: /cn/news/
 <div class="news-container">
     {% assign news_items = site.data.news.cn %}
     <div class="news-header fade-in">
-        <h1 class="news-title">?????</h1>
+        <h1 class="news-title">新闻与动态</h1>
     </div>
     <div class="news-section">
         <div class="news-grid">

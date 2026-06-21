@@ -137,17 +137,16 @@ title: 首页
     <section class="hero-section" aria-labelledby="home-title">
         <div class="hero-content">
             <div class="hero-kicker">China Pharmaceutical University</div>
-            <h1 class="hero-title" id="home-title">?????????????</h1>
-            <p class="hero-subtitle">?????????????????-??????????????????????????????????????????????</p>
+            <h1 class="hero-title" id="home-title">{{ home.hero.title }}</h1>
+            <p class="hero-subtitle">{{ home.hero.subtitle }}</p>
             <div class="hero-actions">
-                <a class="home-btn primary" href="{{ '/cn/research/' | relative_url }}"><i class="fas fa-microscope"></i> ?????</a>
-                <a class="home-btn secondary" href="{{ '/cn/jobs/' | relative_url }}"><i class="fas fa-user-plus"></i> ????</a>
+                <a class="home-btn primary" href="{{ '/cn/research/' | relative_url }}"><i class="fas fa-microscope"></i> {{ home.hero.primary_button }}</a>
+                <a class="home-btn secondary" href="{{ '/cn/jobs/' | relative_url }}"><i class="fas fa-user-plus"></i> {{ home.hero.secondary_button }}</a>
             </div>
-            <div class="hero-tags" aria-label="????">
-                <span class="hero-tag">?????????????</span>
-                <span class="hero-tag">?????-??????</span>
-                <span class="hero-tag">???????????</span>
-                <span class="hero-tag">??????????</span>
+            <div class="hero-tags" aria-label="研究主题">
+                {% for tag in home.hero.tags %}
+                <span class="hero-tag">{{ tag }}</span>
+                {% endfor %}
             </div>
         </div>
     </section>
