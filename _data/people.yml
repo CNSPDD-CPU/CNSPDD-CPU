@@ -1,0 +1,38 @@
+en:
+  hero:
+    eyebrow: People
+    title: Center Team
+    copy: CNSPDD is building an interdisciplinary team across neuroscience, pharmacology, imaging, electrophysiology, human-relevant models, computational biology, and translational drug discovery.
+  section:
+    eyebrow: Faculty and Staff
+    title: Team Directory
+    copy: This page is prepared as a structured template for principal investigators, platform leads, postdoctoral fellows, graduate students, technicians, visiting scholars, and administrative staff.
+  groups:
+    - title: Principal Investigators
+      copy: Add PI profiles, research programs, selected publications, and contact links.
+      meta: Leadership
+    - title: Platform Leads
+      copy: Add leads for imaging, electrophysiology, organoid, pharmacology, biomarker, and computational platforms.
+      meta: Research Platforms
+    - title: Trainees and Staff
+      copy: Add postdoctoral fellows, graduate students, research assistants, technicians, and visiting scholars.
+      meta: Center Members
+cn:
+  hero:
+    eyebrow: People
+    title: 中心团队
+    copy: CNSPDD 正在建设一支跨神经科学、药理学、成像、电生理、人源化模型、计算生物学与转化药物研发的交叉研究团队。
+  section:
+    eyebrow: Faculty and Staff
+    title: 团队目录
+    copy: 本页保留为正式团队信息模板，后续可用于展示中心负责人、平台负责人、博士后、研究生、技术人员、访问学者与行政支持人员。
+  groups:
+    - title: 中心负责人
+      copy: 可添加负责人简介、研究方向、代表性成果、联系方式与个人主页链接。
+      meta: Leadership
+    - title: 平台负责人
+      copy: 可添加成像、电生理、类器官、药理评价、生物标志物与计算平台负责人信息。
+      meta: Research Platforms
+    - title: 学生与科研人员
+      copy: 可添加博士后、研究生、科研助理、实验技术人员和访问学者信息。
+      meta: Center Members

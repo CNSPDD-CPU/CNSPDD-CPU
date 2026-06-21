@@ -14,40 +14,39 @@ permalink: /publications/
 .template-section-head { display: grid; grid-template-columns: minmax(220px, .8fr) minmax(320px, 1.2fr); gap: 1.4rem; align-items: end; margin-bottom: 1.2rem; }
 .template-section-head h2 { margin: 0; color: #1E2761; font-size: 1.8rem; line-height: 1.2; text-align: left; }
 .template-section-head p:not(.template-eyebrow) { margin: 0; }
+.template-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
 .template-list { display: grid; gap: 1rem; }
 .template-card { padding: 1.25rem; border: 1px solid #e1e8ed; border-radius: 8px; background: #fff; box-shadow: 0 2px 12px rgba(30,39,97,.08); }
 .template-card h3 { margin: 0 0 .55rem; color: #1E2761; font-size: 1.05rem; line-height: 1.35; text-align: left; }
 .template-card p { margin: 0; }
 .template-meta { margin-top: .9rem; padding-top: .75rem; border-top: 1px solid #e1e8ed; color: #2C5F2D; font-size: .86rem; font-weight: 800; }
-@media (max-width: 768px) { .template-page { padding: 0 1rem 3rem; } .template-section-head { grid-template-columns: 1fr; } }
+@media (max-width: 768px) { .template-page { padding: 0 1rem 3rem; } .template-section-head, .template-grid { grid-template-columns: 1fr; } }
 </style>
 
 <div class="template-page">
+    {% assign publications = site.data.publications.en %}
     <section class="template-hero">
-        <p class="template-eyebrow">Publications</p>
-        <h1>Selected Publications</h1>
-        <p>This page is reserved for peer-reviewed publications, preprints, patents, datasets, and other research outputs from CNSPDD.</p>
+        <p class="template-eyebrow">{{ publications.hero.eyebrow }}</p>
+        <h1>{{ publications.hero.title }}</h1>
+        <p>{{ publications.hero.copy }}</p>
     </section>
 
     <section class="template-section">
         <div class="template-section-head">
             <div>
-                <p class="template-eyebrow">Research Outputs</p>
-                <h2>Publication Template</h2>
+                <p class="template-eyebrow">{{ publications.section.eyebrow }}</p>
+                <h2>{{ publications.section.title }}</h2>
             </div>
-            <p>Future entries can be organized by year, platform, research theme, or publication type, with DOI, PMID, graphical abstract, and full citation links.</p>
+            <p>{{ publications.section.copy }}</p>
         </div>
         <div class="template-list">
+            {% for item in publications.items %}
             <article class="template-card">
-                <h3>Journal Articles</h3>
-                <p>Add peer-reviewed papers with title, authors, journal, year, DOI, PMID, and related platform or research theme.</p>
-                <div class="template-meta">Peer-reviewed Research</div>
+                <h3>{{ item.title }}</h3>
+                <p>{{ item.copy }}</p>
+                <div class="template-meta">{{ item.meta }}</div>
             </article>
-            <article class="template-card">
-                <h3>Preprints, Patents, and Datasets</h3>
-                <p>Add early research outputs, intellectual property, public datasets, software tools, and validated protocols.</p>
-                <div class="template-meta">Translational Outputs</div>
-            </article>
+            {% endfor %}
         </div>
     </section>
 </div>

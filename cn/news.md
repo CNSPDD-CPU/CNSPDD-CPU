@@ -2,12 +2,8 @@
 layout: default
 title: 新闻
 permalink: /cn/news/
-news_items:
-  - date: "2026年4月"
-    title: "入职中国药科大学"
-    excerpt: "于 2026 年 4 月入职中国药科大学，担任教授（博士生导师）。"
-    category: "position"
 ---
+
 
 <style>
     :root {
@@ -189,13 +185,14 @@ news_items:
 </style>
 
 <div class="news-container">
-    <div class="news-header">
-        <h1 class="news-title">新闻与动态</h1>
+    {% assign news_items = site.data.news.cn %}
+    <div class="news-header fade-in">
+        <h1 class="news-title">?????</h1>
     </div>
     <div class="news-section">
         <div class="news-grid">
-            {% for item in page.news_items %}
-            <div class="news-item">
+            {% for item in news_items %}
+            <div class="news-item fade-in">
                 <div class="news-date">{{ item.date }}</div>
                 {% if item.category %}
                 <span class="news-category {{ item.category }}">{{ item.category }}</span>
@@ -204,18 +201,34 @@ news_items:
                 <div class="news-excerpt">{{ item.excerpt }}</div>
                 {% if item.link %}
                 <div class="news-links">
-                    <a href="{{ item.link }}" class="pmid-link" target="_blank" rel="noopener noreferrer">PMID: {{ item.pmid }}</a>
+                    <a href="{{ item.link }}" class="pmid-link" target="_blank" rel="noopener noreferrer">{% if item.pmid %}PMID: {{ item.pmid }}{% else %}Read more{% endif %}</a>
                 </div>
                 {% endif %}
             </div>
             {% endfor %}
         </div>
-
         <div style="text-align: center; margin-top: 3rem;">
-            <a href="/cn/" class="back-link">
+            <a href="{{ "/cn/" | relative_url }}" class="back-link">
                 <i class="fas fa-home"></i>
-                返回主页
+                {{ "/cn/" | relative_url }}_TEXT
             </a>
         </div>
     </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, index * 100);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        fadeElements.forEach(el => observer.observe(el));
+    });
+</script>

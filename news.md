@@ -2,12 +2,8 @@
 layout: default
 title: News
 permalink: /news/
-news_items:
-  - date: "APR 2026"
-    title: "Joined China Pharmaceutical University"
-    excerpt: "Started as Professor (Ph.D. Advisor) at China Pharmaceutical University in April 2026."
-    category: "position"
 ---
+
 
 <style>
     :root {
@@ -242,12 +238,13 @@ news_items:
 </style>
 
 <div class="news-container">
+    {% assign news_items = site.data.news.en %}
     <div class="news-header fade-in">
         <h1 class="news-title">News and Updates</h1>
     </div>
     <div class="news-section">
         <div class="news-grid">
-            {% for item in page.news_items %}
+            {% for item in news_items %}
             <div class="news-item fade-in">
                 <div class="news-date">{{ item.date }}</div>
                 {% if item.category %}
@@ -257,17 +254,16 @@ news_items:
                 <div class="news-excerpt">{{ item.excerpt }}</div>
                 {% if item.link %}
                 <div class="news-links">
-                    <a href="{{ item.link }}" class="pmid-link" target="_blank" rel="noopener noreferrer">PMID: {{ item.pmid }}</a>
+                    <a href="{{ item.link }}" class="pmid-link" target="_blank" rel="noopener noreferrer">{% if item.pmid %}PMID: {{ item.pmid }}{% else %}Read more{% endif %}</a>
                 </div>
                 {% endif %}
             </div>
             {% endfor %}
         </div>
-        
         <div style="text-align: center; margin-top: 3rem;">
-            <a href="/" class="back-link">
+            <a href="{{ "/" | relative_url }}" class="back-link">
                 <i class="fas fa-home"></i>
-                Back to Homepage
+                {{ "/" | relative_url }}_TEXT
             </a>
         </div>
     </div>

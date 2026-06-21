@@ -133,20 +133,21 @@ title: 首页
 </style>
 
 <div class="home-page">
+    {% assign home = site.data.home.cn %}
     <section class="hero-section" aria-labelledby="home-title">
         <div class="hero-content">
             <div class="hero-kicker">China Pharmaceutical University</div>
-            <h1 class="hero-title" id="home-title">神经科学与精准药物发现中心</h1>
-            <p class="hero-subtitle">中心面向神经与精神疾病，围绕神经元-胶质细胞通讯、性别特异性疾病易感性和药物作用机制，发展机制驱动、兼顾性别差异的精准治疗策略。</p>
+            <h1 class="hero-title" id="home-title">?????????????</h1>
+            <p class="hero-subtitle">?????????????????-??????????????????????????????????????????????</p>
             <div class="hero-actions">
-                <a class="home-btn primary" href="{{ '/cn/research/' | relative_url }}"><i class="fas fa-microscope"></i> 研究与平台</a>
-                <a class="home-btn secondary" href="{{ '/cn/jobs/' | relative_url }}"><i class="fas fa-user-plus"></i> 加入我们</a>
+                <a class="home-btn primary" href="{{ '/cn/research/' | relative_url }}"><i class="fas fa-microscope"></i> ?????</a>
+                <a class="home-btn secondary" href="{{ '/cn/jobs/' | relative_url }}"><i class="fas fa-user-plus"></i> ????</a>
             </div>
-            <div class="hero-tags" aria-label="研究主题">
-                <span class="hero-tag">兼顾性别差异的精准药物发现</span>
-                <span class="hero-tag">动态神经元-胶质细胞通讯</span>
-                <span class="hero-tag">早期疾病修饰与预防窗口</span>
-                <span class="hero-tag">细胞特异性递送与调控</span>
+            <div class="hero-tags" aria-label="????">
+                <span class="hero-tag">?????????????</span>
+                <span class="hero-tag">?????-??????</span>
+                <span class="hero-tag">???????????</span>
+                <span class="hero-tag">??????????</span>
             </div>
         </div>
     </section>
@@ -154,24 +155,18 @@ title: 首页
     <section class="home-section home-shell">
         <div class="section-head">
             <div>
-                <p class="section-eyebrow">Center Mission</p>
-                <h2 class="section-title">从脑功能机制到化合物验证的连续创新路径</h2>
+                <p class="section-eyebrow">{{ home.mission.eyebrow }}</p>
+                <h2 class="section-title">{{ home.mission.title }}</h2>
             </div>
-            <p class="section-copy">中心围绕三个互补方向开展工作：面向机制问题的基础研究、组织化推进的精准药物开发，以及服务于新型化合物评价的脑功能调控验证平台。</p>
+            <p class="section-copy">{{ home.mission.copy }}</p>
         </div>
         <div class="card-grid">
+            {% for card in home.mission.cards %}
             <article class="home-card">
-                <h3>基础研究</h3>
-                <p>通过独立课题解析健康与疾病状态下的脑功能机制，重点关注性别特异性神经元-胶质细胞互作和早期多细胞疾病过程。</p>
+                <h3>{{ card.title }}</h3>
+                <p>{{ card.copy }}</p>
             </article>
-            <article class="home-card">
-                <h3>药物开发</h3>
-                <p>通过组织化课题发展细胞特异性策略，精准靶向特定神经元和胶质细胞群体的细胞内信号与细胞间通讯。</p>
-            </article>
-            <article class="home-card">
-                <h3>化合物验证</h3>
-                <p>建设服务型验证平台，系统测试新型化合物对脑功能、环路活动和疾病相关细胞通讯的调控能力。</p>
-            </article>
+            {% endfor %}
         </div>
     </section>
 </div>

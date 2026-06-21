@@ -15,6 +15,7 @@ permalink: /people/
 .template-section-head h2 { margin: 0; color: #1E2761; font-size: 1.8rem; line-height: 1.2; text-align: left; }
 .template-section-head p:not(.template-eyebrow) { margin: 0; }
 .template-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.template-list { display: grid; gap: 1rem; }
 .template-card { padding: 1.25rem; border: 1px solid #e1e8ed; border-radius: 8px; background: #fff; box-shadow: 0 2px 12px rgba(30,39,97,.08); }
 .template-card h3 { margin: 0 0 .55rem; color: #1E2761; font-size: 1.05rem; line-height: 1.35; text-align: left; }
 .template-card p { margin: 0; }
@@ -23,36 +24,29 @@ permalink: /people/
 </style>
 
 <div class="template-page">
+    {% assign people = site.data.people.en %}
     <section class="template-hero">
-        <p class="template-eyebrow">People</p>
-        <h1>Center Team</h1>
-        <p>CNSPDD is building an interdisciplinary team across neuroscience, pharmacology, imaging, electrophysiology, human-relevant models, computational biology, and translational drug discovery.</p>
+        <p class="template-eyebrow">{{ people.hero.eyebrow }}</p>
+        <h1>{{ people.hero.title }}</h1>
+        <p>{{ people.hero.copy }}</p>
     </section>
 
     <section class="template-section">
         <div class="template-section-head">
             <div>
-                <p class="template-eyebrow">Faculty and Staff</p>
-                <h2>Team Directory</h2>
+                <p class="template-eyebrow">{{ people.section.eyebrow }}</p>
+                <h2>{{ people.section.title }}</h2>
             </div>
-            <p>This page is prepared as a structured template for principal investigators, platform leads, postdoctoral fellows, graduate students, technicians, visiting scholars, and administrative staff.</p>
+            <p>{{ people.section.copy }}</p>
         </div>
         <div class="template-grid">
+            {% for group in people.groups %}
             <article class="template-card">
-                <h3>Principal Investigators</h3>
-                <p>Add PI profiles, research programs, selected publications, and contact links.</p>
-                <div class="template-meta">Leadership</div>
+                <h3>{{ group.title }}</h3>
+                <p>{{ group.copy }}</p>
+                <div class="template-meta">{{ group.meta }}</div>
             </article>
-            <article class="template-card">
-                <h3>Platform Leads</h3>
-                <p>Add leads for imaging, electrophysiology, organoid, pharmacology, biomarker, and computational platforms.</p>
-                <div class="template-meta">Research Platforms</div>
-            </article>
-            <article class="template-card">
-                <h3>Trainees and Staff</h3>
-                <p>Add postdoctoral fellows, graduate students, research assistants, technicians, and visiting scholars.</p>
-                <div class="template-meta">Center Members</div>
-            </article>
+            {% endfor %}
         </div>
     </section>
 </div>

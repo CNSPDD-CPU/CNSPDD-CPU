@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 团队
+title: ??
 permalink: /cn/people/
 ---
 
@@ -15,6 +15,7 @@ permalink: /cn/people/
 .template-section-head h2 { margin: 0; color: #1E2761; font-size: 1.8rem; line-height: 1.2; text-align: left; }
 .template-section-head p:not(.template-eyebrow) { margin: 0; }
 .template-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.template-list { display: grid; gap: 1rem; }
 .template-card { padding: 1.25rem; border: 1px solid #e1e8ed; border-radius: 8px; background: #fff; box-shadow: 0 2px 12px rgba(30,39,97,.08); }
 .template-card h3 { margin: 0 0 .55rem; color: #1E2761; font-size: 1.05rem; line-height: 1.35; text-align: left; }
 .template-card p { margin: 0; }
@@ -23,36 +24,29 @@ permalink: /cn/people/
 </style>
 
 <div class="template-page">
+    {% assign people = site.data.people.cn %}
     <section class="template-hero">
-        <p class="template-eyebrow">People</p>
-        <h1>中心团队</h1>
-        <p>CNSPDD 正在建设一支跨神经科学、药理学、成像、电生理、人源化模型、计算生物学与转化药物研发的交叉研究团队。</p>
+        <p class="template-eyebrow">{{ people.hero.eyebrow }}</p>
+        <h1>{{ people.hero.title }}</h1>
+        <p>{{ people.hero.copy }}</p>
     </section>
 
     <section class="template-section">
         <div class="template-section-head">
             <div>
-                <p class="template-eyebrow">Faculty and Staff</p>
-                <h2>团队目录</h2>
+                <p class="template-eyebrow">{{ people.section.eyebrow }}</p>
+                <h2>{{ people.section.title }}</h2>
             </div>
-            <p>本页保留为正式团队信息模板，后续可用于展示中心负责人、平台负责人、博士后、研究生、技术人员、访问学者与行政支持人员。</p>
+            <p>{{ people.section.copy }}</p>
         </div>
         <div class="template-grid">
+            {% for group in people.groups %}
             <article class="template-card">
-                <h3>中心负责人</h3>
-                <p>可添加负责人简介、研究方向、代表性成果、联系方式与个人主页链接。</p>
-                <div class="template-meta">Leadership</div>
+                <h3>{{ group.title }}</h3>
+                <p>{{ group.copy }}</p>
+                <div class="template-meta">{{ group.meta }}</div>
             </article>
-            <article class="template-card">
-                <h3>平台负责人</h3>
-                <p>可添加成像、电生理、类器官、药理评价、生物标志物与计算平台负责人信息。</p>
-                <div class="template-meta">Research Platforms</div>
-            </article>
-            <article class="template-card">
-                <h3>学生与科研人员</h3>
-                <p>可添加博士后、研究生、科研助理、实验技术人员和访问学者信息。</p>
-                <div class="template-meta">Center Members</div>
-            </article>
+            {% endfor %}
         </div>
     </section>
 </div>

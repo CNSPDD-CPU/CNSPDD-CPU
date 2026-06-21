@@ -190,35 +190,30 @@ permalink: /research/
 </style>
 
 <div class="rp-page">
+    {% assign research = site.data.research.en %}
     <section class="rp-hero">
         <div class="rp-shell">
-            <p class="rp-kicker">Research and Platforms</p>
-            <h1 class="rp-title">Mechanism-based neuroscience for precision drug discovery</h1>
-            <p class="rp-lead">CNSPDD integrates individual basic research, organized drug-development projects, and compound-validation services to understand brain function in health and disease and translate that understanding into cell-specific, sex-informed therapeutic strategies.</p>
+            <p class="rp-kicker">{{ research.hero.kicker }}</p>
+            <h1 class="rp-title">{{ research.hero.title }}</h1>
+            <p class="rp-lead">{{ research.hero.lead }}</p>
         </div>
     </section>
 
     <section class="rp-section rp-shell">
         <div class="section-head">
             <div>
-                <p class="section-eyebrow">Program Architecture</p>
-                <h2 class="section-title">Three connected directions</h2>
+                <p class="section-eyebrow">{{ research.program.eyebrow }}</p>
+                <h2 class="section-title">{{ research.program.title }}</h2>
             </div>
-            <p class="section-copy">The Center links discovery science to translational testing, creating a pipeline from disease mechanism to compound evaluation.</p>
+            <p class="section-copy">{{ research.program.copy }}</p>
         </div>
         <div class="platform-grid">
+            {% for card in research.program.cards %}
             <article class="rp-card">
-                <h3 class="card-title">Basic Research</h3>
-                <p class="card-copy">Individual projects define mechanisms of brain function in health and disease, with emphasis on sex-specific neuron-glia interactions and early multicellular disease processes.</p>
+                <h3 class="card-title">{{ card.title }}</h3>
+                <p class="card-copy">{{ card.copy }}</p>
             </article>
-            <article class="rp-card">
-                <h3 class="card-title">Drug Development</h3>
-                <p class="card-copy">Organized projects develop cell-specific strategies to target intracellular signaling and intercellular communication in defined neuronal and glial populations.</p>
-            </article>
-            <article class="rp-card">
-                <h3 class="card-title">Compound Validation</h3>
-                <p class="card-copy">A service-oriented platform tests novel compounds for their ability to modulate brain function, circuit activity, and disease-relevant cellular communication.</p>
-            </article>
+            {% endfor %}
         </div>
     </section>
 
@@ -226,28 +221,18 @@ permalink: /research/
         <div class="rp-shell">
             <div class="section-head">
                 <div>
-                    <p class="section-eyebrow">Research Focus</p>
-                    <h2 class="section-title">From neuron-glia mechanisms to sex-informed therapies</h2>
+                    <p class="section-eyebrow">{{ research.focus.eyebrow }}</p>
+                    <h2 class="section-title">{{ research.focus.title }}</h2>
                 </div>
-                <p class="section-copy">The Center treats the brain as a highly interactive multicellular network and places sex as a biological variable at the center of disease mechanism, pharmacology, and therapeutic design.</p>
+                <p class="section-copy">{{ research.focus.copy }}</p>
             </div>
             <div class="rp-grid">
+                {% for card in research.focus.cards %}
                 <article class="rp-card">
-                    <h3 class="card-title">Neuron-Glia Communication</h3>
-                    <p class="card-copy">Uncovering how neurons, astrocytes, microglia, oligodendrocytes, and defined neuronal subtypes communicate in health, vulnerability, and disease.</p>
+                    <h3 class="card-title">{{ card.title }}</h3>
+                    <p class="card-copy">{{ card.copy }}</p>
                 </article>
-                <article class="rp-card">
-                    <h3 class="card-title">Sex-Specific Disease Biology</h3>
-                    <p class="card-copy">Dissecting how female and male brains differ in receptor expression, intracellular signaling, network integration, and disease trajectories.</p>
-                </article>
-                <article class="rp-card">
-                    <h3 class="card-title">Early Intervention Windows</h3>
-                    <p class="card-copy">Focusing on multicellular communication events that arise before overt neurodegeneration or clinical symptom onset.</p>
-                </article>
-                <article class="rp-card">
-                    <h3 class="card-title">Precision Therapeutics</h3>
-                    <p class="card-copy">Developing cell-specific delivery and modulation strategies with optimized dose, route, formulation, biomarkers, and companion diagnostics.</p>
-                </article>
+                {% endfor %}
             </div>
         </div>
     </section>
@@ -255,36 +240,18 @@ permalink: /research/
     <section class="rp-section rp-shell">
         <div class="section-head">
             <div>
-                <p class="section-eyebrow">Platforms</p>
-                <h2 class="section-title">Technology platforms for mechanism-based discovery</h2>
+                <p class="section-eyebrow">{{ research.platforms.eyebrow }}</p>
+                <h2 class="section-title">{{ research.platforms.title }}</h2>
             </div>
-            <p class="section-copy">CNSPDD connects molecular and cellular mechanisms to circuit dynamics, behavior, pharmacology, and human-relevant models in female and male systems.</p>
+            <p class="section-copy">{{ research.platforms.copy }}</p>
         </div>
         <div class="platform-grid">
+            {% for card in research.platforms.cards %}
             <article class="rp-card">
-                <h3 class="card-title">Advanced Microscopy</h3>
-                <p class="card-copy">Confocal, super-resolution, two-photon, head-mounted two-photon, whole-slide scanning, and fluorescence lifetime fiber photometry.</p>
+                <h3 class="card-title">{{ card.title }}</h3>
+                <p class="card-copy">{{ card.copy }}</p>
             </article>
-            <article class="rp-card">
-                <h3 class="card-title">Circuit Physiology</h3>
-                <p class="card-copy">Optogenetics, Neuropixels population recordings, multielectrode arrays, and patch-clamp electrophysiology.</p>
-            </article>
-            <article class="rp-card">
-                <h3 class="card-title">Human-Relevant Models</h3>
-                <p class="card-copy">Brain organoids, iPSC-derived cultures, ex vivo preparations, and in vivo female and male animal studies.</p>
-            </article>
-            <article class="rp-card">
-                <h3 class="card-title">Precision Pharmacology</h3>
-                <p class="card-copy">Target discovery, medicinal chemistry, formulation science, and sex-dependent pharmacokinetic and pharmacodynamic profiling.</p>
-            </article>
-            <article class="rp-card">
-                <h3 class="card-title">Biomarkers and Diagnostics</h3>
-                <p class="card-copy">Developing readouts that reflect sex-specific disease mechanisms and treatment responses.</p>
-            </article>
-            <article class="rp-card">
-                <h3 class="card-title">Computational Biology</h3>
-                <p class="card-copy">Quantitative modeling of sex-specific disease pathways and integration of cellular, circuit, behavioral, and pharmacological data.</p>
-            </article>
+            {% endfor %}
         </div>
     </section>
 </div>

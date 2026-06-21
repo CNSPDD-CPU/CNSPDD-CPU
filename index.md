@@ -132,6 +132,7 @@ title: Home
 </style>
 
 <div class="home-page">
+    {% assign home = site.data.home.en %}
     <section class="hero-section" aria-labelledby="home-title">
         <div class="hero-content">
             <div class="hero-kicker">China Pharmaceutical University</div>
@@ -153,24 +154,18 @@ title: Home
     <section class="home-section home-shell">
         <div class="section-head">
             <div>
-                <p class="section-eyebrow">Center Mission</p>
-                <h2 class="section-title">A connected path from brain mechanisms to compound validation</h2>
+                <p class="section-eyebrow">{{ home.mission.eyebrow }}</p>
+                <h2 class="section-title">{{ home.mission.title }}</h2>
             </div>
-            <p class="section-copy">CNSPDD organizes its work across three complementary directions: investigator-driven basic research, organized precision drug development, and service-oriented testing of novel compounds that modulate brain function.</p>
+            <p class="section-copy">{{ home.mission.copy }}</p>
         </div>
         <div class="card-grid">
+            {% for card in home.mission.cards %}
             <article class="home-card">
-                <h3>Basic Research</h3>
-                <p>Individual projects define mechanisms of brain function in health and disease, with emphasis on sex-specific neuron-glia interactions and early multicellular disease processes.</p>
+                <h3>{{ card.title }}</h3>
+                <p>{{ card.copy }}</p>
             </article>
-            <article class="home-card">
-                <h3>Drug Development</h3>
-                <p>Organized projects develop cell-specific strategies to target intracellular signaling and intercellular communication in defined neuronal and glial populations.</p>
-            </article>
-            <article class="home-card">
-                <h3>Compound Validation</h3>
-                <p>A service-oriented platform tests novel compounds for their ability to modulate brain function, circuit activity, and disease-relevant cellular communication.</p>
-            </article>
+            {% endfor %}
         </div>
     </section>
 </div>

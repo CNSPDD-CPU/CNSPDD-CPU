@@ -1,0 +1,92 @@
+en:
+  hero:
+    kicker: Research and Platforms
+    title: Mechanism-based neuroscience for precision drug discovery
+    lead: CNSPDD integrates individual basic research, organized drug-development projects, and compound-validation services to understand brain function in health and disease and translate that understanding into cell-specific, sex-informed therapeutic strategies.
+  program:
+    eyebrow: Program Architecture
+    title: Three connected directions
+    copy: The Center links discovery science to translational testing, creating a pipeline from disease mechanism to compound evaluation.
+    cards:
+      - title: Basic Research
+        copy: Individual projects define mechanisms of brain function in health and disease, with emphasis on sex-specific neuron-glia interactions and early multicellular disease processes.
+      - title: Drug Development
+        copy: Organized projects develop cell-specific strategies to target intracellular signaling and intercellular communication in defined neuronal and glial populations.
+      - title: Compound Validation
+        copy: A service-oriented platform tests novel compounds for their ability to modulate brain function, circuit activity, and disease-relevant cellular communication.
+  focus:
+    eyebrow: Research Focus
+    title: From neuron-glia mechanisms to sex-informed therapies
+    copy: The Center treats the brain as a highly interactive multicellular network and places sex as a biological variable at the center of disease mechanism, pharmacology, and therapeutic design.
+    cards:
+      - title: Neuron-Glia Communication
+        copy: Uncovering how neurons, astrocytes, microglia, oligodendrocytes, and defined neuronal subtypes communicate in health, vulnerability, and disease.
+      - title: Sex-Specific Disease Biology
+        copy: Dissecting how female and male brains differ in receptor expression, intracellular signaling, network integration, and disease trajectories.
+      - title: Early Intervention Windows
+        copy: Focusing on multicellular communication events that arise before overt neurodegeneration or clinical symptom onset.
+      - title: Precision Therapeutics
+        copy: Developing cell-specific delivery and modulation strategies with optimized dose, route, formulation, biomarkers, and companion diagnostics.
+  platforms:
+    eyebrow: Platforms
+    title: Technology platforms for mechanism-based discovery
+    copy: CNSPDD connects molecular and cellular mechanisms to circuit dynamics, behavior, pharmacology, and human-relevant models in female and male systems.
+    cards:
+      - title: Advanced Microscopy
+        copy: Confocal, super-resolution, two-photon, head-mounted two-photon, whole-slide scanning, and fluorescence lifetime fiber photometry.
+      - title: Circuit Physiology
+        copy: Optogenetics, Neuropixels population recordings, multielectrode arrays, and patch-clamp electrophysiology.
+      - title: Human-Relevant Models
+        copy: Brain organoids, iPSC-derived cultures, ex vivo preparations, and in vivo female and male animal studies.
+      - title: Precision Pharmacology
+        copy: Target discovery, medicinal chemistry, formulation science, and sex-dependent pharmacokinetic and pharmacodynamic profiling.
+      - title: Biomarkers and Diagnostics
+        copy: Developing readouts that reflect sex-specific disease mechanisms and treatment responses.
+      - title: Computational Biology
+        copy: Quantitative modeling of sex-specific disease pathways and integration of cellular, circuit, behavioral, and pharmacological data.
+cn:
+  hero:
+    kicker: Research and Platforms
+    title: 面向精准药物发现的机制神经科学研究
+    lead: 中心整合独立基础研究、组织化药物开发课题和化合物验证服务，解析健康与疾病状态下的脑功能机制，并将机制认知转化为细胞特异性、兼顾性别差异的治疗策略。
+  program:
+    eyebrow: Program Architecture
+    title: 三个相互衔接的研究方向
+    copy: 中心将发现科学与转化验证贯通，形成从疾病机制解析到化合物评价的连续研究管线。
+    cards:
+      - title: 基础研究
+        copy: 通过独立课题解析健康与疾病状态下的脑功能机制，重点关注性别特异性神经元-胶质细胞互作和早期多细胞疾病过程。
+      - title: 药物开发
+        copy: 通过组织化课题发展细胞特异性策略，精准靶向特定神经元和胶质细胞群体的细胞内信号与细胞间通讯。
+      - title: 化合物验证
+        copy: 建设服务型验证平台，系统测试新型化合物对脑功能、环路活动和疾病相关细胞通讯的调控能力。
+  focus:
+    eyebrow: Research Focus
+    title: 从神经元-胶质机制到性别特异性精准治疗
+    copy: 中心将大脑视为高度互动的多细胞网络，把“性别作为生物学变量”贯穿疾病机制、药理评价和治疗设计全过程。
+    cards:
+      - title: 神经元-胶质细胞通讯
+        copy: 解析神经元、星形胶质细胞、小胶质细胞、少突胶质细胞及特定神经元亚型在健康、易感和疾病状态下的相互作用。
+      - title: 性别特异性疾病生物学
+        copy: 研究雌雄个体在受体表达、细胞内信号、网络整合和疾病进程中的差异。
+      - title: 早期干预窗口
+        copy: 聚焦神经退行性改变或临床症状出现前的早期多细胞通讯事件，推动疾病修饰和预防性干预。
+      - title: 精准治疗策略
+        copy: 发展细胞特异性递送与调控方法，优化剂量、给药途径、制剂形式、标志物和伴随诊断。
+  platforms:
+    eyebrow: Platforms
+    title: 支撑机制驱动药物发现的技术平台
+    copy: 中心将分子与细胞机制、环路动态、行为学、药理学和人源相关模型贯通，并在雌雄系统中系统量化性别差异。
+    cards:
+      - title: 先进显微成像
+        copy: 共聚焦、超分辨、双光子、头戴式双光子、全切片扫描和荧光寿命光纤记录等平台。
+      - title: 环路生理学
+        copy: 光遗传学、Neuropixels 群体记录、多电极阵列和膜片钳电生理技术。
+      - title: 人源相关模型
+        copy: 脑类器官、诱导多能干细胞来源培养体系、离体制备和雌雄动物体内研究。
+      - title: 精准药理学
+        copy: 整合靶点发现、药物化学、制剂科学以及性别依赖的药代和药效学分析。
+      - title: 标志物与伴随诊断
+        copy: 建立能够反映性别特异性疾病机制和治疗反应的诊断与疗效读出。
+      - title: 计算生物学
+        copy: 对性别特异性疾病通路进行定量建模，并整合细胞、环路、行为和药理数据。
