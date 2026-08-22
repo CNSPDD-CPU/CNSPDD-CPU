@@ -312,6 +312,16 @@ permalink: /cn/pi/pin-li/
     background: linear-gradient(145deg, #fff 0%, #f7faf9 100%);
 }
 
+.pi-detail .pi-section-label {
+    margin: 0 0 .55rem;
+    color: var(--pi-primary);
+    font-size: .74rem;
+    line-height: 1.3;
+    letter-spacing: .13em;
+    text-align: left;
+    text-transform: uppercase;
+}
+
 .pi-detail-head {
     display: flex;
     align-items: flex-end;
