@@ -190,7 +190,7 @@ a {
 }
 
 .header-container {
-    width: min(1320px, calc(100% - 3rem));
+    width: min(1160px, calc(100% - 3rem));
     min-height: 78px;
     margin: 0 auto;
     display: flex;
@@ -231,21 +231,21 @@ a {
     flex-wrap: nowrap;
     justify-content: flex-start;
     align-items: center;
-    gap: .08rem;
+    gap: .14rem;
     min-width: 0;
-    padding: .25rem;
-    border: 1px solid rgba(203, 217, 232, .78);
-    border-radius: 13px;
-    background: rgba(255, 255, 255, .48);
-    box-shadow: 0 5px 18px rgba(7, 27, 51, .045);
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
 }
 
 .main-nav a {
     display: inline-flex;
-    min-height: 40px;
+    min-height: 42px;
     align-items: center;
     justify-content: center;
-    padding: .42rem .68rem;
+    padding: .48rem .7rem;
     border: 1px solid transparent;
     border-radius: 9px;
     color: var(--site-ink);
@@ -501,12 +501,12 @@ html[lang="zh"] .main-nav a {
 
     .main-nav {
         flex: 1 1 auto;
-        gap: 0;
-        padding: .2rem;
+        gap: .04rem;
+        padding: 0;
     }
 
     .main-nav a {
-        padding: .4rem .55rem;
+        padding: .42rem .5rem;
         font-size: .84rem;
     }
 
