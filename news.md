@@ -45,7 +45,7 @@ permalink: /news/
                         <time class="news-card-date" datetime="{{ item.iso_date }}">{{ item.date }}</time>
                         <span class="news-chip news-chip--{{ item.category_key }}">{{ item.category }}</span>
                     </div>
-                    <h3 class="news-card-title">{{ item.title }}</h3>
+                    <h3 class="news-card-title">{{ item.card_title | default: item.title }}</h3>
                     <p class="news-card-excerpt">{{ item.excerpt }}</p>
                     <span class="news-card-cta">Read full story <span aria-hidden="true">→</span></span>
                 </div>
