@@ -462,7 +462,7 @@ permalink: /cn/pi/
 <a class="pi-directory-card" href="{{ '/cn/pi/xianshu-bai/' | relative_url }}" aria-label="查看白贤淑教授详细资料">
                 <div class="pi-directory-media pi-directory-media--bai">
                     <img src="{{ '/assets/images/pi/xianshu-bai.jpg' | relative_url }}" alt="白贤淑教授照片" width="1602" height="2163" loading="lazy" decoding="async">
-                    <span class="pi-directory-stamp">PI 档案</span>
+                    <span class="pi-directory-stamp">PI 个人主页</span>
                 </div>
                 <div class="pi-directory-body">
                     <p class="pi-directory-label">实验平台 PI</p>
@@ -502,7 +502,7 @@ permalink: /cn/pi/
 <a class="pi-directory-card" href="{{ '/cn/pi/pin-li/' | relative_url }}" aria-label="查看李品教授详细资料">
                 <div class="pi-directory-media">
                     <img src="{{ '/assets/images/pi/pin-li.jpg' | relative_url }}" alt="李品教授照片" width="640" height="800" loading="eager" fetchpriority="high" decoding="async">
-                    <span class="pi-directory-stamp">PI 档案</span>
+                    <span class="pi-directory-stamp">PI 个人主页</span>
                 </div>
                 <div class="pi-directory-body">
                     <p class="pi-directory-label">实验平台 PI</p>
@@ -562,7 +562,7 @@ permalink: /cn/pi/
 <a class="pi-directory-card" href="{{ '/cn/pi/ziyang-zhang/' | relative_url }}" aria-label="查看张子洋教授详细资料">
                 <div class="pi-directory-media pi-directory-media--ziyang">
                     <img src="{{ '/assets/images/pi/ziyang-zhang.jpg' | relative_url }}" alt="张子洋教授照片" width="1220" height="1460" loading="lazy" decoding="async">
-                    <span class="pi-directory-stamp">PI 档案</span>
+                    <span class="pi-directory-stamp">PI 个人主页</span>
                 </div>
                 <div class="pi-directory-body">
                     <p class="pi-directory-label">实验平台 PI</p>
