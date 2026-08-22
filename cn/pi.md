@@ -163,7 +163,7 @@ permalink: /cn/pi/
 
 .pi-directory-card {
     display: grid;
-    grid-template-columns: minmax(220px, .7fr) minmax(0, 1.3fr);
+    grid-template-columns: minmax(200px, .64fr) minmax(0, 1.36fr);
     overflow: hidden;
     border: 1px solid var(--pi-line);
     border-radius: 24px;
@@ -194,7 +194,7 @@ permalink: /cn/pi/
 
 .pi-directory-media {
     position: relative;
-    min-height: 330px;
+    min-height: 300px;
     overflow: hidden;
     background: linear-gradient(155deg, #1E2761 0%, #2C5F2D 100%);
 }
@@ -215,7 +215,7 @@ permalink: /cn/pi/
     display: block;
     width: 100%;
     height: 100%;
-    min-height: 330px;
+    min-height: 300px;
     object-fit: cover;
     object-position: 50% 40%;
 }
@@ -242,7 +242,7 @@ permalink: /cn/pi/
     min-width: 0;
     flex-direction: column;
     justify-content: center;
-    padding: 2.1rem 2.3rem 2.25rem;
+    padding: 1.7rem 1.8rem 1.85rem;
 }
 
 .pi-directory-label {
@@ -252,7 +252,7 @@ permalink: /cn/pi/
 .pi-directory-name {
     margin: 0;
     color: var(--pi-ink);
-    font-size: clamp(2rem, 4vw, 3.1rem);
+    font-size: clamp(1.85rem, 3.4vw, 2.8rem);
     line-height: 1;
     letter-spacing: -.04em;
     text-wrap: balance;
@@ -275,9 +275,9 @@ permalink: /cn/pi/
 
 .pi-directory-summary {
     max-width: 650px;
-    margin: 1.05rem 0 1.15rem;
+    margin: .85rem 0 1rem;
     color: var(--pi-muted);
-    line-height: 1.78;
+    line-height: 1.7;
 }
 
 .pi-directory-tags {
@@ -303,7 +303,7 @@ permalink: /cn/pi/
     display: inline-flex;
     align-items: center;
     gap: .55rem;
-    margin-top: 1.6rem;
+    margin-top: 1.25rem;
     color: var(--pi-ink);
     font-size: .9rem;
     font-weight: 900;
@@ -335,6 +335,12 @@ permalink: /cn/pi/
 }
 .pi-directory-media--kirchhoff img {
     object-position: 50% 45%;
+}
+
+.pi-directory-media--bai img {
+    object-position: 50% 68%;
+    transform: scale(1.1);
+    transform-origin: 50% 100%;
 }
 
 @media (max-width: 980px) {
