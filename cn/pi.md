@@ -324,6 +324,9 @@ permalink: /cn/pi/
 .pi-directory-media--ziyang img {
     object-position: 50% 42%;
 }
+.pi-directory-media--yifei img {
+    object-position: 50% 42%;
+}
 
 @media (max-width: 980px) {
     .pi-directory-grid {
@@ -417,7 +420,7 @@ permalink: /cn/pi/
                 <p class="pi-overview-section-label">PI Directory</p>
                 <h2 id="pi-directory-title" tabindex="-1">实验平台 PI</h2>
             </div>
-            <p class="pi-overview-count">3 位 PI</p>
+            <p class="pi-overview-count">4 位 PI</p>
         </div>
 
         <div class="pi-directory-grid">
@@ -476,6 +479,25 @@ permalink: /cn/pi/
                         <span>蛋白质量控制</span>
                         <span>神经退行性疾病</span>
                         <span>靶向药物研发</span>
+                    </div>
+                    <span class="pi-directory-cta">查看完整资料 <span aria-hidden="true">→</span></span>
+                </div>
+            </a>
+            <a class="pi-directory-card" href="{{ '/cn/pi/yifei-zhou/' | relative_url }}" aria-label="查看周一飞个人主页">
+                <div class="pi-directory-media pi-directory-media--yifei">
+                    <img src="{{ '/assets/images/pi/yifei-zhou.jpg' | relative_url }}" alt="周一飞特聘研究员照片" width="1114" height="1392" loading="lazy" decoding="async">
+                    <span class="pi-directory-stamp">PI 个人主页</span>
+                </div>
+                <div class="pi-directory-body">
+                    <p class="pi-directory-label">实验平台 PI</p>
+                    <h3 class="pi-directory-name">周一飞</h3>
+                    <p class="pi-directory-subname">Yifei Zhou</p>
+                    <p class="pi-directory-role">特聘研究员 · 博士生导师<br>药学院 · 中国药科大学</p>
+                    <p class="pi-directory-summary">聚焦衰老分子机制、血–脑脊液屏障失衡与老年相关疾病干预靶点。</p>
+                    <div class="pi-directory-tags" aria-label="研究方向">
+                        <span>衰老机制</span>
+                        <span>血–脑脊液屏障</span>
+                        <span>老年疾病靶点</span>
                     </div>
                     <span class="pi-directory-cta">查看完整资料 <span aria-hidden="true">→</span></span>
                 </div>

@@ -324,6 +324,9 @@ permalink: /pi/
 .pi-directory-media--ziyang img {
     object-position: 50% 42%;
 }
+.pi-directory-media--yifei img {
+    object-position: 50% 42%;
+}
 
 @media (max-width: 980px) {
     .pi-directory-grid {
@@ -417,7 +420,7 @@ permalink: /pi/
                 <p class="pi-overview-section-label">Directory</p>
                 <h2 id="pi-directory-title" tabindex="-1">Principal investigators</h2>
             </div>
-            <p class="pi-overview-count">3 profiles</p>
+            <p class="pi-overview-count">4 profiles</p>
         </div>
 
         <div class="pi-directory-grid">
@@ -476,6 +479,25 @@ permalink: /pi/
                         <span>Protein quality control</span>
                         <span>Neurodegeneration</span>
                         <span>Drug discovery</span>
+                    </div>
+                    <span class="pi-directory-cta">View full profile <span aria-hidden="true">→</span></span>
+                </div>
+            </a>
+            <a class="pi-directory-card" href="{{ '/pi/yifei-zhou/' | relative_url }}" aria-label="View Yifei Zhou profile">
+                <div class="pi-directory-media pi-directory-media--yifei">
+                    <img src="{{ '/assets/images/pi/yifei-zhou.jpg' | relative_url }}" alt="Yifei Zhou, Principal Investigator at China Pharmaceutical University" width="1114" height="1392" loading="lazy" decoding="async">
+                    <span class="pi-directory-stamp">PI Profile</span>
+                </div>
+                <div class="pi-directory-body">
+                    <p class="pi-directory-label">Principal Investigator</p>
+                    <h3 class="pi-directory-name">Yifei Zhou</h3>
+                    <p class="pi-directory-subname">周一飞</p>
+                    <p class="pi-directory-role">Principal Investigator<br>School of Pharmacy · China Pharmaceutical University</p>
+                    <p class="pi-directory-summary">Molecular mechanisms of aging, blood–cerebrospinal fluid barrier dysfunction, and therapeutic targets for age-related disease.</p>
+                    <div class="pi-directory-tags" aria-label="Research focus">
+                        <span>Aging biology</span>
+                        <span>Blood-CSF barrier</span>
+                        <span>Therapeutic targets</span>
                     </div>
                     <span class="pi-directory-cta">View full profile <span aria-hidden="true">→</span></span>
                 </div>
