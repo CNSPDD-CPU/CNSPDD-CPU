@@ -17,10 +17,6 @@ permalink: /cn/news/
             <h1 class="news-archive-title" id="news-archive-title" tabindex="-1">新闻与动态</h1>
             <p class="news-archive-intro">记录中心近期的科研交流、平台建设、国际合作与团队活动，按时间查看新闻现场与完整报道。</p>
         </div>
-        <div class="news-archive-ledger" aria-label="新闻数量">
-            <strong>06</strong>
-            <span>篇中心新闻，持续更新</span>
-        </div>
     </section>
 
     <section class="news-archive-section" aria-labelledby="news-section-title">

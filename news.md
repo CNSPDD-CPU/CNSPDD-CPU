@@ -17,10 +17,6 @@ permalink: /news/
             <h1 class="news-archive-title" id="news-archive-title" tabindex="-1">News and updates</h1>
             <p class="news-archive-intro">A living record of the Center’s research exchange, platform building, international collaboration, and team life.</p>
         </div>
-        <div class="news-archive-ledger" aria-label="Number of stories">
-            <strong>06</strong>
-            <span>stories from the Center</span>
-        </div>
     </section>
 
     <section class="news-archive-section" aria-labelledby="news-section-title">
