@@ -338,8 +338,8 @@ permalink: /pi/
 }
 
 .pi-directory-media--bai img {
-    object-position: 50% 68%;
-    transform: scale(1.1);
+    object-position: 50% 80%;
+    transform: scale(1.2);
     transform-origin: 50% 100%;
 }
 
@@ -397,6 +397,13 @@ permalink: /pi/
 
     .pi-directory-body {
         padding: 1.45rem 1.25rem 1.6rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .pi-directory-media--bai img {
+        object-position: 50% 68%;
+        transform: scale(1.08);
     }
 }
 
