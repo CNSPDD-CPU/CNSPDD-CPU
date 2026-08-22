@@ -157,6 +157,7 @@ permalink: /pi/
 
 .pi-directory-grid {
     display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.2rem;
 }
 
@@ -320,6 +321,12 @@ permalink: /pi/
     transform: translateX(4px);
 }
 
+@media (max-width: 980px) {
+    .pi-directory-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 820px) {
     .pi-overview-page {
         padding: 0 1rem 3.5rem;
@@ -406,7 +413,7 @@ permalink: /pi/
                 <p class="pi-overview-section-label">Directory</p>
                 <h2 id="pi-directory-title" tabindex="-1">Principal investigators</h2>
             </div>
-            <p class="pi-overview-count">1 profile</p>
+            <p class="pi-overview-count">2 profiles</p>
         </div>
 
         <div class="pi-directory-grid">
@@ -425,6 +432,26 @@ permalink: /pi/
                         <span>Vascular biology</span>
                         <span>Stroke therapeutics</span>
                         <span>Drug target discovery</span>
+                    </div>
+                    <span class="pi-directory-cta">View full profile <span aria-hidden="true">→</span></span>
+                </div>
+            </a>
+
+            <a class="pi-directory-card" href="{{ '/pi/xianshu-bai/' | relative_url }}" aria-label="View Xianshu Bai profile">
+                <div class="pi-directory-media pi-directory-media--bai">
+                    <img src="{{ '/assets/images/pi/xianshu-bai.jpg' | relative_url }}" alt="Xianshu Bai, Professor at China Pharmaceutical University" width="1602" height="2163" loading="lazy" decoding="async">
+                    <span class="pi-directory-stamp">PI Profile</span>
+                </div>
+                <div class="pi-directory-body">
+                    <p class="pi-directory-label">Principal Investigator</p>
+                    <h3 class="pi-directory-name">Xianshu Bai</h3>
+                    <p class="pi-directory-subname">白贤淑</p>
+                    <p class="pi-directory-role">Professor · Doctoral Supervisor<br>China Pharmaceutical University</p>
+                    <p class="pi-directory-summary">Neuroglial control of neural networks, with a focus on oligodendrocyte biology, brain injury, and translational neurobiology.</p>
+                    <div class="pi-directory-tags" aria-label="Research focus">
+                        <span>Neuroglial biology</span>
+                        <span>Neural circuits</span>
+                        <span>Brain injury &amp; repair</span>
                     </div>
                     <span class="pi-directory-cta">View full profile <span aria-hidden="true">→</span></span>
                 </div>

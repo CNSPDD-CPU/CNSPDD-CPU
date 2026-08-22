@@ -157,6 +157,7 @@ permalink: /cn/pi/
 
 .pi-directory-grid {
     display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.2rem;
 }
 
@@ -320,6 +321,12 @@ permalink: /cn/pi/
     transform: translateX(4px);
 }
 
+@media (max-width: 980px) {
+    .pi-directory-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 820px) {
     .pi-overview-page {
         padding: 0 1rem 3.5rem;
@@ -406,7 +413,7 @@ permalink: /cn/pi/
                 <p class="pi-overview-section-label">PI Directory</p>
                 <h2 id="pi-directory-title" tabindex="-1">实验平台 PI</h2>
             </div>
-            <p class="pi-overview-count">1 位 PI</p>
+            <p class="pi-overview-count">2 位 PI</p>
         </div>
 
         <div class="pi-directory-grid">
@@ -425,6 +432,26 @@ permalink: /cn/pi/
                         <span>血管生物学</span>
                         <span>脑卒中药物开发</span>
                         <span>药物靶点发现</span>
+                    </div>
+                    <span class="pi-directory-cta">查看完整资料 <span aria-hidden="true">→</span></span>
+                </div>
+            </a>
+
+            <a class="pi-directory-card" href="{{ '/cn/pi/xianshu-bai/' | relative_url }}" aria-label="查看白贤淑教授详细资料">
+                <div class="pi-directory-media pi-directory-media--bai">
+                    <img src="{{ '/assets/images/pi/xianshu-bai.jpg' | relative_url }}" alt="白贤淑教授照片" width="1602" height="2163" loading="lazy" decoding="async">
+                    <span class="pi-directory-stamp">PI 档案</span>
+                </div>
+                <div class="pi-directory-body">
+                    <p class="pi-directory-label">实验平台 PI</p>
+                    <h3 class="pi-directory-name">白贤淑</h3>
+                    <p class="pi-directory-subname">Xianshu Bai</p>
+                    <p class="pi-directory-role">教授 · 博士生导师<br>中国药科大学</p>
+                    <p class="pi-directory-summary">聚焦神经胶质细胞对神经网络的调控机制，重点研究少突胶质细胞、脑损伤与转化神经生物学。</p>
+                    <div class="pi-directory-tags" aria-label="研究方向">
+                        <span>神经胶质细胞</span>
+                        <span>神经环路</span>
+                        <span>脑损伤与修复</span>
                     </div>
                     <span class="pi-directory-cta">查看完整资料 <span aria-hidden="true">→</span></span>
                 </div>
