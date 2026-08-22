@@ -11,7 +11,7 @@ permalink: /jobs/
 <div class="template-page">
     <section class="template-hero">
         <p class="template-eyebrow">Jobs</p>
-        <h1>Join CNSPDD</h1>
+        <h1>Join CNSIDD</h1>
         <p>We welcome outstanding candidates who are interested in neuroscience, precision pharmacology, translational disease models, and technology platforms for drug discovery.</p>
     </section>
 

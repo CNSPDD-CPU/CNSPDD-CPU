@@ -14,7 +14,7 @@ permalink: /news/targetome-conference/
         <a class="news-back-link" href="{{ '/news/' | relative_url }}">← Back to news archive</a>
     </div>
     <header class="news-article-header">
-        <p class="news-article-kicker">Center dispatch · CNSPDD</p>
+        <p class="news-article-kicker">Center dispatch · CNSIDD</p>
         <h1 class="news-article-title">2026 International Symposium on Targetome and Natural Medicines &amp; Inaugural Conference of the International Academic Community of Targetome Held in Haikou</h1>
         <p class="news-article-lead">China Pharmaceutical University hosted an international symposium on targetome research and natural medicines in Haikou.</p>
         <div class="news-article-meta">
@@ -33,8 +33,8 @@ permalink: /news/targetome-conference/
             
             <p>From June 22 to 23, 2026, the “2026 International Symposium on Targetome and Natural Medicines &amp; the Inaugural Conference of the International Academic Community of Targetome” was successfully held in Haikou, Hainan Province. The conference was hosted by China Pharmaceutical University and co-organized by Hainan Medical University, Hainan University, and the Administrative Committee of Haikou National High-tech Industrial Development Zone.</p>
 <p>The meeting focused on the latest advances in targetome research and natural medicines, with in-depth discussions on key scientific questions and future directions in the field. It brought together leading scholars from relevant disciplines worldwide.</p>
-<p>Professor Frank Kirchhoff, Director of the Center for Neuroscience and Precision Drug Discovery (CNSPDD) and Member of the Academia Europaea, was invited to deliver a keynote lecture at the conference, presenting his recent progress and insights in neuroscience-related research. In addition, during the textbook co-editorship and editorial board appointment ceremony, Professor Kirchhoff was appointed as a co-editor of the relevant textbook, contributing to the development and dissemination of the discipline.</p>
-<p>This conference provided an important platform for CNSPDD to engage in high-level academic exchange and collaboration with international research teams, and further enhanced the Center’s academic visibility in the field of targetome and natural product research.</p>
+<p>Professor Frank Kirchhoff, Director of the Center for Neuroscience and Innovative Drug Development (CNSIDD) and Member of the Academia Europaea, was invited to deliver a keynote lecture at the conference, presenting his recent progress and insights in neuroscience-related research. In addition, during the textbook co-editorship and editorial board appointment ceremony, Professor Kirchhoff was appointed as a co-editor of the relevant textbook, contributing to the development and dissemination of the discipline.</p>
+<p>This conference provided an important platform for CNSIDD to engage in high-level academic exchange and collaboration with international research teams, and further enhanced the Center’s academic visibility in the field of targetome and natural product research.</p>
         </div>
         <aside class="news-article-side" aria-label="At a glance">
             <p class="news-article-side-kicker">At a glance</p>

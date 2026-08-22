@@ -11,7 +11,7 @@ permalink: /cn/jobs/
 <div class="template-page">
     <section class="template-hero">
         <p class="template-eyebrow">Jobs</p>
-        <h1>加入 CNSPDD</h1>
+        <h1>加入 CNSIDD</h1>
         <p>中心欢迎对神经科学、精准药理学、转化疾病模型与药物研发技术平台感兴趣的优秀人才加入。</p>
     </section>
 

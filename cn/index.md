@@ -11,7 +11,7 @@ permalink: /cn/
     <section class="home-hero" aria-labelledby="home-title">
         <div class="home-shell home-hero-grid">
             <div class="home-hero-copy">
-                <p class="home-kicker">中国药科大学 · CNSPDD</p>
+                <p class="home-kicker">中国药科大学 · CNSIDD</p>
                 <h1 class="home-title" id="home-title">{{ home.hero.title }}</h1>
                 <p class="home-subtitle">{{ home.hero.subtitle }}</p>
                 <div class="home-actions">

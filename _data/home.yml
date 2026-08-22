@@ -1,7 +1,7 @@
 en:
   hero:
-    title: Center for Neuroscience and Precision Drug Development
-    subtitle: CNSPDD advances mechanism-based, sex-informed precision therapies for neurological and psychiatric disorders by decoding neuron-glia communication, disease vulnerability, and drug action across development, adulthood, and aging.
+    title: Center for Neuroscience and Innovative Drug Development
+    subtitle: CNSIDD advances mechanism-based, sex-informed precision therapies for neurological and psychiatric disorders by decoding neuron-glia communication, disease vulnerability, and drug action across development, adulthood, and aging.
     primary_button: Research and Platforms
     secondary_button: Join the Center
     tags:
@@ -12,7 +12,7 @@ en:
   mission:
     eyebrow: Center Mission
     title: A connected path from brain mechanisms to compound validation
-    copy: "CNSPDD organizes its work across three complementary directions: investigator-driven basic research, organized precision drug development, and service-oriented testing of novel compounds that modulate brain function."
+    copy: "CNSIDD organizes its work across three complementary directions: investigator-driven basic research, organized precision drug development, and service-oriented testing of novel compounds that modulate brain function."
     cards:
       - title: Basic Research
         copy: Individual projects define mechanisms of brain function in health and disease, with emphasis on sex-specific neuron-glia interactions and early multicellular disease processes.
@@ -22,7 +22,7 @@ en:
         copy: A service-oriented platform tests novel compounds for their ability to modulate brain function, circuit activity, and disease-relevant cellular communication.
 cn:
   hero:
-    title: 神经科学与精准药物发现中心
+    title: 神经科学与原创药物研发中心
     subtitle: 中心面向神经与精神疾病，围绕神经元-胶质细胞通讯、性别特异性疾病易感性和药物作用机制，发展机制驱动、兼顾性别差异的精准治疗策略。
     primary_button: 研究与平台
     secondary_button: 加入我们

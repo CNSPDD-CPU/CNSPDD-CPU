@@ -1,6 +1,6 @@
-# CNSPDD Website
+# CNSIDD Website
 
-Static bilingual website for the Center for Neuroscience and Precision Drug Development at China Pharmaceutical University.
+Static bilingual website for the Center for Neuroscience and Innovative Drug Development at China Pharmaceutical University.
 
 Live site: <https://cnspdd-cpu.github.io/CNSPDD-CPU/>
 

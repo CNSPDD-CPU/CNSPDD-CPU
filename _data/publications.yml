@@ -2,7 +2,7 @@ en:
   hero:
     eyebrow: Publications
     title: Selected Publications
-    copy: This page is reserved for peer-reviewed publications, preprints, patents, datasets, and other research outputs from CNSPDD.
+    copy: This page is reserved for peer-reviewed publications, preprints, patents, datasets, and other research outputs from CNSIDD.
   section:
     eyebrow: Research Outputs
     title: Publication Template
@@ -18,7 +18,7 @@ cn:
   hero:
     eyebrow: Publications
     title: 科研成果
-    copy: 本页用于展示 CNSPDD 发表的同行评议论文、预印本、专利、数据集及其他研究产出。
+    copy: 本页用于展示 CNSIDD 发表的同行评议论文、预印本、专利、数据集及其他研究产出。
   section:
     eyebrow: Research Outputs
     title: 成果模板

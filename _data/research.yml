@@ -2,7 +2,7 @@ en:
   hero:
     kicker: Research and Platforms
     title: Mechanism-based neuroscience for precision drug discovery
-    lead: CNSPDD integrates individual basic research, organized drug-development projects, and compound-validation services to understand brain function in health and disease and translate that understanding into cell-specific, sex-informed therapeutic strategies.
+    lead: CNSIDD integrates individual basic research, organized drug-development projects, and compound-validation services to understand brain function in health and disease and translate that understanding into cell-specific, sex-informed therapeutic strategies.
   program:
     eyebrow: Program Architecture
     title: Three connected directions
@@ -30,7 +30,7 @@ en:
   platforms:
     eyebrow: Platforms
     title: Technology platforms for mechanism-based discovery
-    copy: CNSPDD connects molecular and cellular mechanisms to circuit dynamics, behavior, pharmacology, and human-relevant models in female and male systems.
+    copy: CNSIDD connects molecular and cellular mechanisms to circuit dynamics, behavior, pharmacology, and human-relevant models in female and male systems.
     cards:
       - title: Advanced Microscopy
         copy: Confocal, super-resolution, two-photon, head-mounted two-photon, whole-slide scanning, and fluorescence lifetime fiber photometry.
