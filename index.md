@@ -24,11 +24,39 @@ permalink: /
                     {% endfor %}
                 </ul>
             </div>
-            <aside class="home-field-note" aria-label="Center activity">
-                <p class="home-field-label">Field note · Latest dispatches</p>
-                <span class="home-field-number">{{ site.data.news.en.size | prepend: '0' }}</span>
-                <p>Stories connecting the Center’s research rooms, platforms, collaborators, and people.</p>
-                <a class="home-field-route" href="{{ '/news/' | relative_url }}">Open the news archive →</a>
+            <aside class="home-field-note home-route-rotator"
+                   data-home-rotator
+                   data-interval="6500"
+                   data-pause-label="Pause"
+                   data-play-label="Play"
+                   role="region"
+                   aria-roledescription="carousel"
+                   aria-label="Explore the Center">
+                <div class="home-route-viewport" id="home-route-viewport">
+                    {% for route in home.routes %}
+                    <article class="home-route-slide{% if forloop.first %} is-active{% endif %}"
+                             data-home-route-slide
+                             data-route-name="{{ route.label }}"
+                             role="group"
+                             aria-roledescription="slide"
+                             aria-label="{{ forloop.index }} of {{ forloop.length }}"
+                             aria-hidden="{% if forloop.first %}false{% else %}true{% endif %}"
+                             {% unless forloop.first %}hidden{% endunless %}>
+                        <p class="home-field-label">Explore the Center · {{ route.label }}</p>
+                        <span class="home-field-number" aria-hidden="true">{{ route.number }}</span>
+                        <h2 class="home-route-title">{{ route.title }}</h2>
+                        <p>{{ route.copy }}</p>
+                        <a class="home-field-route" href="{{ route.url | relative_url }}"{% unless forloop.first %} tabindex="-1"{% endunless %}>{{ route.action }}</a>
+                    </article>
+                    {% endfor %}
+                </div>
+                <div class="home-route-controls" aria-label="Carousel controls">
+                    <button class="home-route-control" type="button" data-home-route-prev aria-label="Show previous section"><span aria-hidden="true">←</span></button>
+                    <span class="home-route-progress" aria-hidden="true"><strong data-home-route-current>01</strong><span>/ {{ home.routes.size | prepend: '0' }}</span></span>
+                    <button class="home-route-control" type="button" data-home-route-next aria-label="Show next section"><span aria-hidden="true">→</span></button>
+                    <button class="home-route-toggle" type="button" data-home-route-toggle aria-pressed="false">Pause</button>
+                </div>
+                <span class="sr-only" data-home-rotator-status aria-live="polite"></span>
             </aside>
         </div>
     </section>
@@ -72,7 +100,7 @@ permalink: /
                             <time datetime="{{ item.iso_date }}">{{ item.date }}</time>
                             <span>{{ item.category }}</span>
                         </div>
-                        <h3 class="home-news-title">{{ item.title }}</h3>
+                        <h3 class="home-news-title">{{ item.card_title | default: item.title }}</h3>
                         <p class="home-news-excerpt">{{ item.excerpt }}</p>
                     </div>
                 </a>
@@ -81,3 +109,5 @@ permalink: /
         </div>
     </section>
 </div>
+
+<script src="{{ '/assets/js/home-rotator.js' | relative_url }}?v=20260822-1" defer></script>
