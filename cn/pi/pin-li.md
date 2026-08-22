@@ -6,15 +6,50 @@ permalink: /cn/pi/pin-li/
 
 <style>
 .pi-page {
-    --pi-ink: #183047;
-    --pi-teal: #0f766e;
-    --pi-coral: #c76d4e;
-    --pi-mist: #f1f5f4;
-    --pi-line: #d8e5e5;
-    --pi-muted: #5e6d78;
+    --pi-ink: #1E2761;
+    --pi-primary: #2C5F2D;
+    --pi-accent: #735DA5;
+    --pi-mist: #f0f4f8;
+    --pi-line: #dce5ee;
+    --pi-muted: #526071;
     max-width: 1180px;
     margin: 0 auto;
     padding: 0 2rem 5rem;
+    box-sizing: border-box;
+    overflow-x: clip;
+}
+
+
+.pi-skip-link {
+    position: fixed;
+    top: .75rem;
+    left: 1rem;
+    z-index: 2000;
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: .6rem .9rem;
+    border-radius: 999px;
+    color: #fff;
+    background: var(--pi-ink);
+    box-shadow: 0 8px 20px rgba(30,39,97,.2);
+    text-decoration: none;
+    transform: translateY(-160%);
+    transition: transform .2s ease;
+}
+
+.pi-skip-link::after {
+    display: none;
+}
+
+.pi-skip-link:focus-visible {
+    outline: 3px solid var(--pi-accent);
+    outline-offset: 3px;
+    transform: translateY(0);
+}
+
+.pi-page [id] {
+    scroll-margin-top: 7rem;
 }
 
 .pi-hero {
@@ -31,7 +66,7 @@ permalink: /cn/pi/pin-li/
 .pi-person-label,
 .pi-evidence-label {
     margin: 0 0 .55rem;
-    color: var(--pi-teal);
+    color: var(--pi-primary);
     font-size: .74rem;
     font-weight: 900;
     letter-spacing: .13em;
@@ -45,6 +80,7 @@ permalink: /cn/pi/pin-li/
     font-size: clamp(2.3rem, 5vw, 4.4rem);
     line-height: 1.02;
     letter-spacing: -.045em;
+    text-wrap: balance;
     text-align: left;
     background: none;
     -webkit-text-fill-color: currentColor;
@@ -96,7 +132,7 @@ permalink: /cn/pi/pin-li/
     color: #fff;
     background:
         radial-gradient(circle at 88% 14%, rgba(199, 109, 78, .75) 0, rgba(199, 109, 78, 0) 34%),
-        linear-gradient(155deg, #183047 0%, #0f5d60 100%);
+        linear-gradient(155deg, #1E2761 0%, #2C5F2D 100%);
 }
 
 .pi-person::after {
@@ -204,13 +240,13 @@ permalink: /cn/pi/pin-li/
 
 .pi-evidence-item {
     padding: 1rem;
-    border-left: 3px solid var(--pi-coral);
+    border-left: 3px solid var(--pi-accent);
     background: var(--pi-mist);
 }
 
 .pi-evidence-label {
     margin-bottom: .25rem;
-    color: var(--pi-coral);
+    color: var(--pi-accent);
     font-size: .68rem;
 }
 
@@ -238,8 +274,8 @@ permalink: /cn/pi/pin-li/
 }
 
 .pi-tag {
-    border-color: rgba(15,118,110,.18);
-    color: var(--pi-teal);
+    border-color: rgba(44,95,45,.18);
+    color: var(--pi-primary);
     background: #fff;
 }
 
@@ -271,7 +307,7 @@ permalink: /cn/pi/pin-li/
     height: 1.35rem;
     border-radius: 50%;
     color: #fff;
-    background: var(--pi-teal);
+    background: var(--pi-primary);
     content: counter(pi-reference);
     counter-increment: pi-reference;
     font-size: .7rem;
@@ -291,7 +327,7 @@ permalink: /cn/pi/pin-li/
 }
 
 .pi-patents .pi-list li::before {
-    background: var(--pi-coral);
+    background: var(--pi-accent);
 }
 
 @media (max-width: 820px) {
@@ -356,7 +392,9 @@ permalink: /cn/pi/pin-li/
 
 @media (prefers-reduced-motion: reduce) {
     .pi-feature,
-    .pi-photo {
+    .pi-photo,
+    .pi-back-link,
+    .pi-skip-link {
         transition: none;
     }
 }
@@ -366,7 +404,11 @@ permalink: /cn/pi/pin-li/
     align-items: center;
     gap: .5rem;
     margin-top: 1.35rem;
-    color: #0f766e;
+    min-height: 44px;
+    padding: .55rem .1rem;
+    color: #2C5F2D;
+    touch-action: manipulation;
+    transition: color .2s ease, transform .2s ease;
     font-size: .88rem;
     font-weight: 900;
 }
@@ -376,18 +418,25 @@ permalink: /cn/pi/pin-li/
 }
 
 .pi-back-link:hover {
-    color: #183047;
+    color: #1E2761;
     transform: translateX(-3px);
+}
+
+.pi-back-link:focus-visible {
+    outline: 3px solid var(--pi-accent);
+    outline-offset: 4px;
+    border-radius: 8px;
 }
 
 </style>
 
 <div class="pi-page">
+    <a class="pi-skip-link" href="#pi-page-title">跳转到个人资料</a>
     <a class="pi-back-link" href="{{ '/cn/pi/' | relative_url }}">← 返回 PI团队总览</a>
     <section class="pi-hero" aria-labelledby="pi-page-title">
         <div>
             <p class="pi-eyebrow">PI个人主页 · 实验平台</p>
-            <h1 id="pi-page-title">李品</h1>
+            <h1 id="pi-page-title" tabindex="-1">李品</h1>
         </div>
         <div>
             <p class="pi-hero-copy">查看李品教授的研究方向、代表性成果与转化研究重点。</p>
@@ -402,7 +451,7 @@ permalink: /cn/pi/pin-li/
     <article class="pi-feature" aria-labelledby="pin-li-name">
         <div class="pi-person">
             <div class="pi-photo-frame">
-                <img class="pi-photo" src="{{ '/assets/images/pi/pin-li.jpg' | relative_url }}" alt="李品教授照片" loading="lazy" decoding="async">
+                <img class="pi-photo" src="{{ '/assets/images/pi/pin-li.jpg' | relative_url }}" alt="李品教授照片" width="640" height="800" loading="eager" fetchpriority="high" decoding="async">
             </div>
             <div class="pi-person-meta">
                 <p class="pi-person-label">实验平台 PI</p>
@@ -417,7 +466,7 @@ permalink: /cn/pi/pin-li/
             <p class="pi-section-label">个人简介</p>
             <p class="pi-lede">李品教授长期从事血管稳态维持、重构与再生机制研究，并围绕血管损伤相关疾病开展药物靶点发现与开发。研究聚焦代谢异常导致的血管损伤，包括糖尿病眼底病变、脑卒中、血栓与凝血异常，以及肿瘤血管微环境特征鉴定和新靶点发现，致力于推动血管损伤疾病的早期干预与药物开发。</p>
 
-            <div class="pi-evidence" aria-label="个人信息亮点">
+            <section class="pi-evidence" aria-label="个人信息亮点">
                 <div class="pi-evidence-item">
                     <p class="pi-evidence-label">学术职务</p>
                     <p class="pi-evidence-value">中国药科大学教授、博士生导师</p>
@@ -434,7 +483,7 @@ permalink: /cn/pi/pin-li/
                     <p class="pi-evidence-label">知识产权</p>
                     <p class="pi-evidence-value">获批授权国际专利 2 项</p>
                 </div>
-            </div>
+            </section>
 
             <section class="pi-focus" aria-labelledby="pin-li-focus">
                 <p class="pi-section-label" id="pin-li-focus">研究方向</p>
