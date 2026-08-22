@@ -21,25 +21,14 @@
     .rp-hero {
         margin: 0 auto 3.1rem;
         padding: clamp(3.7rem, 8vw, 5rem) 0 3.2rem;
-        background: linear-gradient(135deg, #eaf3fd 0%, #f8fbff 48%, #edf5fd 100%);
+        background:
+            linear-gradient(90deg, rgba(246, 249, 253, .97) 0%, rgba(246, 249, 253, .86) 44%, rgba(232, 241, 251, .22) 100%),
+            url("{{ '/assets/images/backgrounds/subpage-header-neural-blue.webp' | relative_url }}") center right / cover no-repeat;
         border-bottom: 1px solid var(--rp-line);
     }
 
     .rp-hero .rp-shell {
         position: relative;
-    }
-
-    .rp-hero .rp-shell::after {
-        position: absolute;
-        top: -1.5rem;
-        right: 1.5rem;
-        width: min(28vw, 22rem);
-        aspect-ratio: 1;
-        border: 1px solid rgba(11, 99, 206, .12);
-        border-radius: 50%;
-        box-shadow: inset 0 0 0 2.8rem rgba(0, 127, 175, .025);
-        content: "";
-        pointer-events: none;
     }
 
     .rp-kicker {
