@@ -1,12 +1,12 @@
 <style>
 
 .pi-overview-page {
-    --pi-ink: #193A5A;
-    --pi-primary: #2E6B4A;
-    --pi-accent: #6B5CA5;
-    --pi-mist: #EDF3EF;
-    --pi-line: #D7E1DB;
-    --pi-muted: #5B6B78;
+    --pi-ink: var(--site-navy);
+    --pi-primary: var(--site-blue);
+    --pi-accent: var(--site-cyan);
+    --pi-mist: var(--site-mist);
+    --pi-line: var(--site-line);
+    --pi-muted: var(--site-muted);
     max-width: 1160px;
     margin: 0 auto;
     padding: 0 0 5rem;
@@ -27,7 +27,7 @@
     border-radius: 999px;
     color: #fff;
     background: var(--pi-ink);
-    box-shadow: 0 8px 20px rgba(30,39,97,.2);
+    box-shadow: 0 8px 20px rgba(6, 40, 74,.2);
     text-decoration: none;
     transform: translateY(-160%);
     transition: transform .2s ease;
@@ -48,12 +48,26 @@
 }
 
 .pi-overview-hero {
+    position: relative;
+    isolation: isolate;
     display: grid;
     grid-template-columns: minmax(0, .9fr) minmax(320px, 1.1fr);
     gap: 2rem;
     align-items: end;
     padding: 4.3rem 0 2.8rem;
     border-bottom: 1px solid var(--pi-line);
+}
+
+.pi-overview-hero::before {
+    position: absolute;
+    inset: 1.05rem -1.25rem 1.25rem;
+    z-index: -1;
+    border: 1px solid rgba(11, 99, 206, .08);
+    border-radius: 24px;
+    background:
+        radial-gradient(circle at 90% 10%, rgba(0, 127, 175, .12), transparent 17rem),
+        linear-gradient(135deg, rgba(232, 241, 251, .74), rgba(255, 255, 255, .38));
+    content: "";
 }
 
 .pi-overview-kicker,
@@ -162,8 +176,8 @@
     border: 1px solid var(--pi-line);
     border-radius: 18px;
     color: inherit;
-    background: #fff;
-    box-shadow: 0 14px 38px rgba(19, 39, 58, .09);
+    background: linear-gradient(155deg, #fff 0%, #f7fbff 100%);
+    box-shadow: 0 14px 38px rgba(7, 27, 51, .09);
     text-decoration: none;
     cursor: pointer;
     touch-action: manipulation;
@@ -175,14 +189,14 @@
 }
 
 .pi-directory-card:hover {
-    border-color: rgba(44,95,45,.42);
-    box-shadow: 0 20px 48px rgba(19, 39, 58, .14);
+    border-color: rgba(11, 99, 206,.42);
+    box-shadow: 0 20px 48px rgba(7, 27, 51, .14);
     color: inherit;
     transform: translateY(-3px);
 }
 
 .pi-directory-card:focus-visible {
-    outline: 3px solid rgba(115,93,165,.55);
+    outline: 3px solid rgba(0, 127, 175,.55);
     outline-offset: 4px;
 }
 
@@ -190,7 +204,7 @@
     position: relative;
     min-height: 280px;
     overflow: hidden;
-    background: linear-gradient(155deg, #1E2761 0%, #2C5F2D 100%);
+    background: linear-gradient(155deg, var(--site-navy) 0%, var(--site-blue) 100%);
 }
 
 .pi-directory-media::after {
@@ -223,7 +237,7 @@
     border: 1px solid rgba(255,255,255,.3);
     border-radius: 999px;
     color: #fff;
-    background: rgba(30,39,97,.55);
+    background: rgba(6, 40, 74,.55);
     font-size: .72rem;
     font-weight: 900;
     letter-spacing: .1em;
@@ -285,7 +299,7 @@
     align-items: center;
     min-height: 2rem;
     padding: .35rem .65rem;
-    border: 1px solid rgba(44,95,45,.18);
+    border: 1px solid rgba(11, 99, 206,.18);
     border-radius: 999px;
     color: var(--pi-primary);
     background: var(--pi-mist);

@@ -1,12 +1,12 @@
 <style>
 .home-page {
-    --home-ink: #13273a;
-    --home-navy: #193a5a;
-    --home-green: #2e6b4a;
-    --home-violet: #6b5ca5;
-    --home-gold: #9a6b1f;
-    --home-line: #d7e1db;
-    --home-muted: #5b6b78;
+    --home-ink: var(--site-ink);
+    --home-navy: var(--site-navy);
+    --home-green: var(--site-blue);
+    --home-violet: var(--site-cyan);
+    --home-gold: var(--site-electric);
+    --home-line: var(--site-line);
+    --home-muted: var(--site-muted);
     color: var(--home-ink);
 }
 
@@ -21,7 +21,7 @@
     min-height: min(780px, 82vh);
     color: #fff;
     background:
-        linear-gradient(100deg, rgba(13, 31, 47, .94) 0%, rgba(19, 48, 69, .82) 48%, rgba(19, 48, 69, .32) 100%),
+        linear-gradient(100deg, rgba(3, 20, 42, .97) 0%, rgba(6, 46, 86, .88) 48%, rgba(7, 67, 122, .42) 100%),
         url('{{ "/assets/images/cnspdd-neuroscience-hero.jpg" | relative_url }}') center 44% / cover no-repeat;
 }
 
@@ -53,7 +53,7 @@
 .home-kicker,
 .home-section-marker {
     margin: 0 0 .8rem;
-    color: #d8cfee;
+    color: #b9ddff;
     font-size: .78rem;
     font-weight: 800;
     letter-spacing: .15em;
@@ -85,6 +85,7 @@
     text-align: left;
     background: none;
     -webkit-text-fill-color: currentColor;
+    text-shadow: 0 18px 46px rgba(0, 18, 42, .34);
 }
 
 .home-subtitle {
@@ -125,7 +126,7 @@
 
 .home-btn-primary:hover {
     color: #fff;
-    background: #3b805a;
+    background: var(--site-blue-dark);
     transform: translateY(-2px);
 }
 
@@ -168,7 +169,7 @@
     flex: 0 0 auto;
     border-radius: 50%;
     background: var(--home-violet);
-    box-shadow: 0 0 0 4px rgba(107, 92, 165, .18);
+    box-shadow: 0 0 0 4px rgba(0, 127, 175, .18);
     content: "";
 }
 
@@ -211,7 +212,7 @@
     margin-top: 1.5rem;
     padding-top: .8rem;
     border-top: 1px solid rgba(255, 255, 255, .24);
-    color: #d8cfee;
+    color: #b9ddff;
     font-size: .85rem;
     font-weight: 800;
     letter-spacing: .04em;
@@ -265,14 +266,14 @@
     padding: 1.45rem;
     border: 1px solid var(--home-line);
     border-radius: 16px;
-    background: #fff;
-    box-shadow: 0 8px 24px rgba(19, 39, 58, .05);
+    background: linear-gradient(155deg, #fff 0%, #f7fbff 100%);
+    box-shadow: 0 8px 24px rgba(7, 27, 51, .05);
     transition: transform .25s var(--ease-out), box-shadow .25s ease, border-color .25s ease;
 }
 
 .home-mission-card:hover {
-    border-color: rgba(46, 107, 74, .34);
-    box-shadow: 0 18px 42px rgba(19, 39, 58, .1);
+    border-color: rgba(11, 99, 206, .34);
+    box-shadow: 0 18px 42px rgba(7, 27, 51, .1);
     transform: translateY(-3px);
 }
 
@@ -314,7 +315,7 @@
 
 .home-news-band {
     border-top: 1px solid var(--home-line);
-    background: #eef3f0;
+    background: #edf5fd;
 }
 
 .home-news-head {
@@ -345,14 +346,14 @@
     border: 1px solid var(--home-line);
     border-radius: 16px;
     color: inherit;
-    background: #fff;
-    box-shadow: 0 8px 24px rgba(19, 39, 58, .05);
+    background: linear-gradient(155deg, #fff 0%, #f7fbff 100%);
+    box-shadow: 0 8px 24px rgba(7, 27, 51, .05);
 }
 
 .home-news-card:hover {
     color: inherit;
-    border-color: rgba(46, 107, 74, .35);
-    box-shadow: 0 18px 42px rgba(19, 39, 58, .1);
+    border-color: rgba(11, 99, 206, .35);
+    box-shadow: 0 18px 42px rgba(7, 27, 51, .1);
     transform: translateY(-3px);
 }
 

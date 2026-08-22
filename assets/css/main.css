@@ -1,20 +1,24 @@
-/* CNSPDD Research Atlas — global visual system */
+/* CNSIDD Blue Signal — global visual system */
 :root {
-    --site-ink: #13273a;
-    --site-navy: #193a5a;
-    --site-green: #2e6b4a;
-    --site-violet: #6b5ca5;
-    --site-gold: #9a6b1f;
-    --site-paper: #f7faf8;
+    --site-ink: #071b33;
+    --site-navy: #0b2d52;
+    --site-blue: #0b63ce;
+    --site-blue-dark: #084e9f;
+    --site-electric: #2f80ed;
+    --site-cyan: #007faf;
+    --site-green: var(--site-blue);
+    --site-violet: var(--site-cyan);
+    --site-gold: var(--site-electric);
+    --site-paper: #f3f7fc;
     --site-surface: #ffffff;
-    --site-mist: #edf3ef;
-    --site-line: #d7e1db;
-    --site-muted: #5b6b78;
-    --site-white-muted: rgba(255, 255, 255, .72);
-    --site-shadow-sm: 0 8px 24px rgba(19, 39, 58, .07);
-    --site-shadow-md: 0 18px 48px rgba(19, 39, 58, .12);
-    --font-display: "Crimson Pro", "Iowan Old Style", "Baskerville", Georgia, serif;
-    --font-body: "Atkinson Hyperlegible", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+    --site-mist: #e8f1fb;
+    --site-line: #cbd9e8;
+    --site-muted: #526a82;
+    --site-white-muted: rgba(255, 255, 255, .76);
+    --site-shadow-sm: 0 10px 28px rgba(7, 27, 51, .08);
+    --site-shadow-md: 0 22px 58px rgba(7, 27, 51, .14);
+    --font-display: "Noto Sans SC", "Noto Sans", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+    --font-body: "Noto Sans SC", "Noto Sans", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
     --ease-out: cubic-bezier(.22, .8, .25, 1);
 }
 
@@ -36,8 +40,11 @@ body {
     margin: 0;
     color: var(--site-ink);
     background:
-        linear-gradient(180deg, rgba(255, 255, 255, .82) 0, rgba(247, 250, 248, .96) 25rem),
-        var(--site-paper);
+        radial-gradient(circle at 82% -12%, rgba(11, 99, 206, .14), transparent 32rem),
+        linear-gradient(rgba(11, 99, 206, .028) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(11, 99, 206, .028) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(255, 255, 255, .92) 0, rgba(243, 247, 252, .98) 28rem);
+    background-size: auto, 72px 72px, 72px 72px, auto;
     font-family: var(--font-body);
     font-size: 16px;
     line-height: 1.65;
@@ -50,7 +57,7 @@ body {
 
 ::selection {
     color: #fff;
-    background: var(--site-violet);
+    background: var(--site-navy);
 }
 
 img,
@@ -71,9 +78,9 @@ h6 {
     margin: 2rem 0 1rem;
     color: var(--site-navy);
     font-family: var(--font-display);
-    font-weight: 600;
-    line-height: 1.16;
-    letter-spacing: -.02em;
+    font-weight: 700;
+    line-height: 1.14;
+    letter-spacing: -.035em;
     text-wrap: balance;
 }
 
@@ -114,7 +121,7 @@ a:hover {
 .content li a,
 .copyright a {
     text-decoration: underline;
-    text-decoration-color: rgba(46, 107, 74, .42);
+    text-decoration-color: rgba(11, 99, 206, .42);
     text-decoration-thickness: .08em;
     text-underline-offset: .18em;
 }
@@ -128,7 +135,7 @@ a:hover {
 a:focus-visible,
 button:focus-visible,
 [tabindex="-1"]:focus-visible {
-    outline: 3px solid rgba(107, 92, 165, .78);
+    outline: 3px solid rgba(0, 127, 175, .78);
     outline-offset: 4px;
 }
 
@@ -164,9 +171,9 @@ a {
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid rgba(215, 225, 219, .9);
-    background: rgba(247, 250, 248, .9);
-    box-shadow: 0 1px 0 rgba(255, 255, 255, .85);
+    border-bottom: 1px solid rgba(203, 217, 232, .9);
+    background: rgba(246, 249, 253, .88);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .9);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
 }
@@ -179,7 +186,7 @@ a {
 }
 
 .site-header.scrolled {
-    box-shadow: 0 10px 32px rgba(19, 39, 58, .09);
+    box-shadow: 0 10px 32px rgba(7, 27, 51, .09);
 }
 
 .header-container {
@@ -260,7 +267,7 @@ a {
 
 .main-nav a.active {
     color: var(--site-green);
-    border-color: rgba(46, 107, 74, .2);
+    border-color: rgba(11, 99, 206, .2);
     background: var(--site-mist);
     box-shadow: inset 0 -2px 0 var(--site-green);
 }
@@ -331,7 +338,7 @@ html[lang="zh"] .main-nav a {
 
 .btn-primary:hover {
     color: #fff;
-    background: #24563b;
+    background: var(--site-blue-dark);
     box-shadow: var(--site-shadow-md);
     transform: translateY(-2px);
 }
@@ -344,7 +351,7 @@ html[lang="zh"] .main-nav a {
 
 .btn-secondary:hover {
     color: var(--site-navy);
-    border-color: rgba(25, 58, 90, .35);
+    border-color: rgba(11, 45, 82, .35);
     background: var(--site-mist);
     transform: translateY(-2px);
 }
@@ -357,7 +364,7 @@ html[lang="zh"] .main-nav a {
 
 .btn-accent:hover {
     color: #fff;
-    background: #5d4f94;
+    background: #006b95;
     box-shadow: var(--site-shadow-md);
     transform: translateY(-2px);
 }
@@ -384,7 +391,7 @@ html[lang="zh"] .main-nav a {
 }
 
 .card:hover {
-    border-color: rgba(46, 107, 74, .3);
+    border-color: rgba(11, 99, 206, .3);
     box-shadow: var(--site-shadow-md);
     transform: translateY(-3px);
 }
@@ -457,8 +464,20 @@ html[lang="zh"] .main-nav a {
     transform: translateY(0);
 }
 
+.motion-enabled .reveal-item {
+    opacity: 0;
+    translate: 0 16px;
+    transition: opacity .52s var(--ease-out), translate .52s var(--ease-out);
+    transition-delay: var(--reveal-delay, 0ms);
+}
+
+.motion-enabled .reveal-item.is-visible {
+    opacity: 1;
+    translate: 0 0;
+}
+
 .loading-shimmer {
-    background: linear-gradient(90deg, #edf2ef 25%, #f7faf8 50%, #edf2ef 75%);
+    background: linear-gradient(90deg, #e6eef8 25%, #f5f9fd 50%, #e6eef8 75%);
     background-size: 200px 100%;
     animation: shimmer 1.5s infinite;
 }
@@ -513,9 +532,18 @@ html[lang="zh"] .main-nav a {
 
     .main-nav {
         grid-column: 1 / -1;
+        flex-wrap: nowrap;
         justify-content: flex-start;
+        max-width: 100%;
         padding-top: .25rem;
-        border-top: 1px solid rgba(215, 225, 219, .8);
+        overflow-x: auto;
+        border-top: 1px solid rgba(203, 217, 232, .86);
+        scrollbar-width: none;
+        overscroll-behavior-inline: contain;
+    }
+
+    .main-nav::-webkit-scrollbar {
+        display: none;
     }
 
     .main-nav a {
