@@ -333,6 +333,9 @@ permalink: /pi/
 .pi-directory-media--feng img {
     object-position: 50% 45%;
 }
+.pi-directory-media--kirchhoff img {
+    object-position: 50% 45%;
+}
 
 @media (max-width: 980px) {
     .pi-directory-grid {
@@ -426,7 +429,7 @@ permalink: /pi/
                 <p class="pi-overview-section-label">Directory</p>
                 <h2 id="pi-directory-title" tabindex="-1">Principal investigators</h2>
             </div>
-            <p class="pi-overview-count">6 profiles</p>
+            <p class="pi-overview-count">7 profiles</p>
         </div>
 
         <div class="pi-directory-grid">
@@ -543,6 +546,26 @@ permalink: /pi/
                         <span>Human genetics</span>
                         <span>Functional genomics</span>
                         <span>Precision medicine</span>
+                    </div>
+                    <span class="pi-directory-cta">View full profile <span aria-hidden="true">→</span></span>
+                </div>
+            </a>
+
+            <a class="pi-directory-card" href="{{ '/pi/frank-kirchhoff/' | relative_url }}" aria-label="View Frank Kirchhoff profile">
+                <div class="pi-directory-media pi-directory-media--kirchhoff">
+                    <img src="{{ '/assets/images/pi/frank-kirchhoff.jpg' | relative_url }}" alt="Frank Kirchhoff, Chief Scientist at China Pharmaceutical University" width="901" height="1200" loading="lazy" decoding="async">
+                    <span class="pi-directory-stamp">PI Profile</span>
+                </div>
+                <div class="pi-directory-body">
+                    <p class="pi-directory-label">Principal Investigator</p>
+                    <h3 class="pi-directory-name">Frank Kirchhoff</h3>
+                    <p class="pi-directory-subname">弗兰克·基尔霍夫</p>
+                    <p class="pi-directory-role">Chief Scientist · Center Director<br>China Pharmaceutical University</p>
+                    <p class="pi-directory-summary">Neuron–glia communication, glial neuromodulation, and advanced models of brain function and disease.</p>
+                    <div class="pi-directory-tags" aria-label="Research focus">
+                        <span>Glial biology</span>
+                        <span>Neuron–glia communication</span>
+                        <span>Brain injury</span>
                     </div>
                     <span class="pi-directory-cta">View full profile <span aria-hidden="true">→</span></span>
                 </div>

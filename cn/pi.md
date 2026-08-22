@@ -333,6 +333,9 @@ permalink: /cn/pi/
 .pi-directory-media--feng img {
     object-position: 50% 45%;
 }
+.pi-directory-media--kirchhoff img {
+    object-position: 50% 45%;
+}
 
 @media (max-width: 980px) {
     .pi-directory-grid {
@@ -426,7 +429,7 @@ permalink: /cn/pi/
                 <p class="pi-overview-section-label">PI Directory</p>
                 <h2 id="pi-directory-title" tabindex="-1">实验平台 PI</h2>
             </div>
-            <p class="pi-overview-count">6 位 PI</p>
+            <p class="pi-overview-count">7 位 PI</p>
         </div>
 
         <div class="pi-directory-grid">
@@ -543,6 +546,26 @@ permalink: /cn/pi/
                         <span>人类遗传学</span>
                         <span>功能基因组学</span>
                         <span>精准医疗</span>
+                    </div>
+                    <span class="pi-directory-cta">查看完整资料 <span aria-hidden="true">→</span></span>
+                </div>
+            </a>
+
+            <a class="pi-directory-card" href="{{ '/cn/pi/frank-kirchhoff/' | relative_url }}" aria-label="查看弗兰克·基尔霍夫个人主页">
+                <div class="pi-directory-media pi-directory-media--kirchhoff">
+                    <img src="{{ '/assets/images/pi/frank-kirchhoff.jpg' | relative_url }}" alt="弗兰克·基尔霍夫教授照片" width="901" height="1200" loading="lazy" decoding="async">
+                    <span class="pi-directory-stamp">PI 个人主页</span>
+                </div>
+                <div class="pi-directory-body">
+                    <p class="pi-directory-label">实验平台 PI</p>
+                    <h3 class="pi-directory-name">弗兰克·基尔霍夫</h3>
+                    <p class="pi-directory-subname">Frank Kirchhoff</p>
+                    <p class="pi-directory-role">首席科学家 · 中心主任<br>中国药科大学</p>
+                    <p class="pi-directory-summary">聚焦胶质细胞神经调控、神经元–胶质细胞通信与脑功能及脑疾病机制。</p>
+                    <div class="pi-directory-tags" aria-label="研究方向">
+                        <span>胶质细胞生物学</span>
+                        <span>神经元–胶质通信</span>
+                        <span>脑损伤</span>
                     </div>
                     <span class="pi-directory-cta">查看完整资料 <span aria-hidden="true">→</span></span>
                 </div>
