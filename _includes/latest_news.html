@@ -1,13 +1,14 @@
-{% comment %} Get latest news items from news page front matter {% endcomment %}
-{% assign news_page = site.pages | where_exp: "page", "page.path contains 'news.md'" | first %}
+{% if page.url contains '/cn/' %}
+{% assign latest_items = site.data.news.cn %}
+{% else %}
+{% assign latest_items = site.data.news.en %}
+{% endif %}
 
-<div class="news-grid">
-  {% for item in news_page.news_items limit: 3 %}
-    <a href="/news/" class="news-item fade-in-up">
+<div class="news-grid" aria-label="{% if page.url contains '/cn/' %}最新新闻{% else %}Latest news{% endif %}">
+  {% for item in latest_items limit: 3 %}
+    <a href="{{ item.url | relative_url }}" class="news-item">
       <div class="news-date">{{ item.date }}</div>
-      {% if item.category %}
-      <span class="news-category {{ item.category }}">{{ item.category }}</span>
-      {% endif %}
+      <span class="news-category {{ item.category_key }}">{{ item.category }}</span>
       <div class="news-title">{{ item.title }}</div>
       <div class="news-excerpt">{{ item.excerpt | truncate: 150 }}</div>
     </a>

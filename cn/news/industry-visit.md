@@ -1,7 +1,7 @@
 ---
 layout: default
-title: News
-permalink: /news/
+title: "神经科学与精准药物研发中心主任一行赴药大制药、药大健康开展调研交流"
+permalink: /cn/news/industry-visit/
 ---
 
 <style>
@@ -630,54 +630,65 @@ permalink: /news/
 </style>
 
 
-<div class="news-archive-page">
-    <a class="news-skip-link" href="#news-archive-title">Skip to news archive</a>
-    <section class="news-archive-hero" aria-labelledby="news-archive-title">
-        <div>
-            <p class="news-archive-kicker">Center dispatches · 2026</p>
-            <h1 class="news-archive-title" id="news-archive-title" tabindex="-1">News and updates</h1>
-            <p class="news-archive-intro">A living record of the Center’s research exchange, platform building, international collaboration, and team life.</p>
+<div class="news-article-page">
+    <div class="news-article-back">
+        <a class="news-back-link" href="{{ '/cn/news/' | relative_url }}">← 返回新闻汇总</a>
+    </div>
+    <header class="news-article-header">
+        <p class="news-article-kicker">中心动态 · CNSPDD</p>
+        <h1 class="news-article-title">神经科学与精准药物研发中心主任一行赴药大制药、药大健康开展调研交流</h1>
+        <p class="news-article-lead">Frank Kirchhoff 教授一行赴药大制药、药大健康开展调研，围绕科研转化和校企协同进行交流。</p>
+        <div class="news-article-meta">
+            <time datetime="2026-06-25">2026年6月25日</time>
+            <span class="news-chip news-chip--industry">产学研交流</span>
         </div>
-        <div class="news-archive-ledger" aria-label="Number of stories">
-            <strong>06</strong>
-            <span>stories from the Center</span>
-        </div>
-    </section>
+    </header>
 
-    <section class="news-archive-section" aria-labelledby="news-section-title">
-        <div class="news-section-head">
-            <div>
-                <p class="news-section-label">News archive</p>
-                <h2 class="news-section-title" id="news-section-title" tabindex="-1">From research rooms to global exchange</h2>
+    <figure class="news-article-hero">
+        <img src="{{ '/assets/images/news/industry-visit.jpg' | relative_url }}" alt="Frank Kirchhoff教授一行开展调研交流" width="1600" height="1067" loading="eager" decoding="async">
+        <figcaption class="news-figure-caption">Frank Kirchhoff教授一行开展调研交流</figcaption>
+    </figure>
+
+    <div class="news-article-content">
+        <div class="news-article-copy">
+            
+            <p>2026年6月25日，神经科学与精准药物研发中心主任、欧洲科学院院士Frank Kirchhoff教授一行赴药大制药、药大健康开展调研交流。神经科学与精准药物研发中心PI白贤淑教授、主任助理高涵参加调研。</p>
+<p>调研期间，Frank Kirchhoff教授一行实地了解了药大制药、药大健康在企业发展、产品布局、研发转化和生命健康产业服务等方面的情况，并围绕神经科学研究转化、创新药物研发、健康产品开发、产学研协同及国际合作等内容与相关负责人进行了交流。</p>
+<p>交流中，双方结合神经科学与精准药物研发中心的研究方向和平台优势，就如何进一步推动基础研究与产业需求对接、促进科研成果转化、拓展校企合作模式等进行了探讨。Frank Kirchhoff教授表示，神经科学研究的发展不仅需要高水平基础研究支撑，也需要面向真实应用场景加强交叉合作与转化探索。</p>
+<p>此次调研进一步加深了神经科学与精准药物研发中心对学校相关产业平台和生命健康领域转化实践的了解，也为中心后续围绕神经科学、精准药物研发和健康产业应用开展协同创新提供了新的思路。中心将继续发挥国际化人才和学科交叉优势，积极推动科研平台建设、成果转化和产学研合作，为学校生命健康领域高质量发展贡献力量。</p>
+        </div>
+        <aside class="news-article-side" aria-label="信息速览">
+            <p class="news-article-side-kicker">信息速览</p>
+            <div class="news-article-side-line">
+                <span>发布时间</span>
+                <strong>2026年6月25日</strong>
             </div>
-            <p class="news-section-count">6 stories</p>
-        </div>
+            <div class="news-article-side-line">
+                <span>报道类型</span>
+                <strong>产学研交流</strong>
+            </div>
+            <div class="news-article-side-line">
+                <span>图片</span>
+                <strong>4 张图片</strong>
+            </div>
+        </aside>
+    </div>
 
-        <div class="news-card-grid">
-            {% assign news_items = site.data.news.en %}
-            {% for item in news_items %}
-            <a class="news-card{% if forloop.first %} news-card--feature{% endif %}" href="{{ item.url | relative_url }}" aria-label="View {{ item.title }}">
-                <div class="news-card-media">
-                    <img src="{{ item.image | relative_url }}" alt="{{ item.image_alt }}" width="{{ item.width }}" height="{{ item.height }}" {% if forloop.first %}loading="eager" fetchpriority="high"{% else %}loading="lazy"{% endif %} decoding="async">
-                    <span class="news-card-index">0{{ forloop.index }}</span>
-                </div>
-                <div class="news-card-body">
-                    <div class="news-card-meta">
-                        <time class="news-card-date" datetime="{{ item.iso_date }}">{{ item.date }}</time>
-                        <span class="news-chip news-chip--{{ item.category_key }}">{{ item.category }}</span>
-                    </div>
-                    <h3 class="news-card-title">{{ item.title }}</h3>
-                    <p class="news-card-excerpt">{{ item.excerpt }}</p>
-                    <span class="news-card-cta">Read full story <span aria-hidden="true">→</span></span>
-                </div>
-            </a>
-            {% endfor %}
-        </div>
-
-        <div class="news-archive-footer">
-            <span class="news-archive-footer-mark" aria-hidden="true"></span>
-            <span>Each dispatch keeps the full bilingual source story, image gallery, and captions.</span>
-        </div>
-    </section>
-    <a class="news-back-link" href="{{ '/' | relative_url }}">← Back to home</a>
+        <section class="news-article-gallery" aria-labelledby="industry-visit-gallery-title">
+            <h2 class="news-article-gallery-title" id="industry-visit-gallery-title">现场图集</h2>
+            <div class="news-gallery-grid">
+                <figure class="news-figure">
+                <img src="{{ '/assets/images/news/industry-products.jpg' | relative_url }}" alt="调研人员实地了解企业产品布局和研发转化情况" width="1600" height="1067" loading="lazy" decoding="async">
+                <figcaption>调研人员实地了解企业产品布局和研发转化情况</figcaption>
+            </figure>
+<figure class="news-figure">
+                <img src="{{ '/assets/images/news/industry-collaboration.jpg' | relative_url }}" alt="调研人员实地了解企业产品布局和研发转化情况" width="1600" height="1067" loading="lazy" decoding="async">
+                <figcaption>调研人员实地了解企业产品布局和研发转化情况</figcaption>
+            </figure>
+<figure class="news-figure">
+                <img src="{{ '/assets/images/news/industry-discussion.jpg' | relative_url }}" alt="双方围绕生命健康产业发展与产学研合作进行交流" width="1600" height="1067" loading="lazy" decoding="async">
+                <figcaption>双方围绕生命健康产业发展与产学研合作进行交流</figcaption>
+            </figure>
+            </div>
+        </section>
 </div>

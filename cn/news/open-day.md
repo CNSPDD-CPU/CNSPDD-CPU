@@ -1,7 +1,7 @@
 ---
 layout: default
-title: News
-permalink: /news/
+title: "神经科学与精准药物研发中心举办开放日活动"
+permalink: /cn/news/open-day/
 ---
 
 <style>
@@ -630,54 +630,48 @@ permalink: /news/
 </style>
 
 
-<div class="news-archive-page">
-    <a class="news-skip-link" href="#news-archive-title">Skip to news archive</a>
-    <section class="news-archive-hero" aria-labelledby="news-archive-title">
-        <div>
-            <p class="news-archive-kicker">Center dispatches · 2026</p>
-            <h1 class="news-archive-title" id="news-archive-title" tabindex="-1">News and updates</h1>
-            <p class="news-archive-intro">A living record of the Center’s research exchange, platform building, international collaboration, and team life.</p>
+<div class="news-article-page">
+    <div class="news-article-back">
+        <a class="news-back-link" href="{{ '/cn/news/' | relative_url }}">← 返回新闻汇总</a>
+    </div>
+    <header class="news-article-header">
+        <p class="news-article-kicker">中心动态 · CNSPDD</p>
+        <h1 class="news-article-title">神经科学与精准药物研发中心举办开放日活动</h1>
+        <p class="news-article-lead">本科生代表走进中心实验室，了解科研环境、实验平台和主要研究方向。</p>
+        <div class="news-article-meta">
+            <time datetime="2026-06-11">2026年6月11日</time>
+            <span class="news-chip news-chip--center">中心动态</span>
         </div>
-        <div class="news-archive-ledger" aria-label="Number of stories">
-            <strong>06</strong>
-            <span>stories from the Center</span>
-        </div>
-    </section>
+    </header>
 
-    <section class="news-archive-section" aria-labelledby="news-section-title">
-        <div class="news-section-head">
-            <div>
-                <p class="news-section-label">News archive</p>
-                <h2 class="news-section-title" id="news-section-title" tabindex="-1">From research rooms to global exchange</h2>
+    <figure class="news-article-hero">
+        <img src="{{ '/assets/images/news/open-day-1.jpg' | relative_url }}" alt="本科生代表参观神经科学与精准药物研发中心实验室" width="1600" height="1200" loading="eager" decoding="async">
+        <figcaption class="news-figure-caption">本科生代表参观神经科学与精准药物研发中心实验室</figcaption>
+    </figure>
+
+    <div class="news-article-content">
+        <div class="news-article-copy">
+            
+            <p>2026年6月11日上午，神经科学与精准药物研发中心开放日活动在生物楼五楼举行。本次活动面向相关专业本科生开展，旨在帮助学生近距离了解中心科研环境、实验平台和主要研究方向，增进学生对神经科学与精准药物研发交叉领域的认识。</p>
+<p>活动期间，本科生代表参观了中心实验室。中心教师和研究生代表结合实验室功能布局、平台建设和科研工作开展情况，介绍了中心在细胞与分子生物学实验技术、神经科学研究平台以及精准药物研发相关方向上的基础条件和特色优势。通过现场讲解和实地参观，同学们对科研实验室的运行环境、常用实验技术及科研项目开展流程有了更加直观的了解。</p>
+<p>参观过程中，中心师生还围绕科研训练、研究方向选择、研究生阶段学习规划等内容与同学们进行了交流，并就学生关心的问题进行了现场解答。本次开放日活动为本科生走近科研平台、了解中心建设和感受科研氛围提供了机会，也为后续参与科研训练和研究生阶段学习奠定了良好基础。</p>
+<p>未来，神经科学与精准药物研发中心将继续加强科研平台开放与师生交流，依托中心实验平台和学科交叉优势，为有志于从事神经科学、药物研发及相关交叉学科研究的学生提供良好的学习和科研环境。</p>
+        </div>
+        <aside class="news-article-side" aria-label="信息速览">
+            <p class="news-article-side-kicker">信息速览</p>
+            <div class="news-article-side-line">
+                <span>发布时间</span>
+                <strong>2026年6月11日</strong>
             </div>
-            <p class="news-section-count">6 stories</p>
-        </div>
+            <div class="news-article-side-line">
+                <span>报道类型</span>
+                <strong>中心动态</strong>
+            </div>
+            <div class="news-article-side-line">
+                <span>图片</span>
+                <strong>1 张图片</strong>
+            </div>
+        </aside>
+    </div>
 
-        <div class="news-card-grid">
-            {% assign news_items = site.data.news.en %}
-            {% for item in news_items %}
-            <a class="news-card{% if forloop.first %} news-card--feature{% endif %}" href="{{ item.url | relative_url }}" aria-label="View {{ item.title }}">
-                <div class="news-card-media">
-                    <img src="{{ item.image | relative_url }}" alt="{{ item.image_alt }}" width="{{ item.width }}" height="{{ item.height }}" {% if forloop.first %}loading="eager" fetchpriority="high"{% else %}loading="lazy"{% endif %} decoding="async">
-                    <span class="news-card-index">0{{ forloop.index }}</span>
-                </div>
-                <div class="news-card-body">
-                    <div class="news-card-meta">
-                        <time class="news-card-date" datetime="{{ item.iso_date }}">{{ item.date }}</time>
-                        <span class="news-chip news-chip--{{ item.category_key }}">{{ item.category }}</span>
-                    </div>
-                    <h3 class="news-card-title">{{ item.title }}</h3>
-                    <p class="news-card-excerpt">{{ item.excerpt }}</p>
-                    <span class="news-card-cta">Read full story <span aria-hidden="true">→</span></span>
-                </div>
-            </a>
-            {% endfor %}
-        </div>
-
-        <div class="news-archive-footer">
-            <span class="news-archive-footer-mark" aria-hidden="true"></span>
-            <span>Each dispatch keeps the full bilingual source story, image gallery, and captions.</span>
-        </div>
-    </section>
-    <a class="news-back-link" href="{{ '/' | relative_url }}">← Back to home</a>
 </div>

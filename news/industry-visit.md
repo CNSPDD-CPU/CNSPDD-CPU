@@ -1,7 +1,7 @@
 ---
 layout: default
-title: News
-permalink: /news/
+title: "Director of CNSPDD and Delegation Visit CPU Pharma and CPU Health for Research and Exchange"
+permalink: /news/industry-visit/
 ---
 
 <style>
@@ -630,54 +630,65 @@ permalink: /news/
 </style>
 
 
-<div class="news-archive-page">
-    <a class="news-skip-link" href="#news-archive-title">Skip to news archive</a>
-    <section class="news-archive-hero" aria-labelledby="news-archive-title">
-        <div>
-            <p class="news-archive-kicker">Center dispatches · 2026</p>
-            <h1 class="news-archive-title" id="news-archive-title" tabindex="-1">News and updates</h1>
-            <p class="news-archive-intro">A living record of the Center’s research exchange, platform building, international collaboration, and team life.</p>
+<div class="news-article-page">
+    <div class="news-article-back">
+        <a class="news-back-link" href="{{ '/news/' | relative_url }}">← Back to news archive</a>
+    </div>
+    <header class="news-article-header">
+        <p class="news-article-kicker">Center dispatch · CNSPDD</p>
+        <h1 class="news-article-title">Director of CNSPDD and Delegation Visit CPU Pharma and CPU Health for Research and Exchange</h1>
+        <p class="news-article-lead">Frank Kirchhoff and a CNSPDD delegation visited CPU Pharma and CPU Health to explore translational neuroscience and university–industry collaboration.</p>
+        <div class="news-article-meta">
+            <time datetime="2026-06-25">JUN 25, 2026</time>
+            <span class="news-chip news-chip--industry">Industry connection</span>
         </div>
-        <div class="news-archive-ledger" aria-label="Number of stories">
-            <strong>06</strong>
-            <span>stories from the Center</span>
-        </div>
-    </section>
+    </header>
 
-    <section class="news-archive-section" aria-labelledby="news-section-title">
-        <div class="news-section-head">
-            <div>
-                <p class="news-section-label">News archive</p>
-                <h2 class="news-section-title" id="news-section-title" tabindex="-1">From research rooms to global exchange</h2>
+    <figure class="news-article-hero">
+        <img src="{{ '/assets/images/news/industry-visit.jpg' | relative_url }}" alt="Professor Frank Kirchhoff and the delegation conduct a research and exchange visit" width="1600" height="1067" loading="eager" decoding="async">
+        <figcaption class="news-figure-caption">Professor Frank Kirchhoff and the delegation conduct a research and exchange visit</figcaption>
+    </figure>
+
+    <div class="news-article-content">
+        <div class="news-article-copy">
+            
+            <p>On June 25, 2026, Professor Frank Kirchhoff, Member of the Academia Europaea and Director of the Center for Neuroscience and Precision Drug Discovery (CNSPDD), led a delegation to visit CPU Pharma and CPU Health for research and exchange. Professor Xianshu Bai, PI of CNSPDD, and Han Gao, Assistant to the Director, also joined the visit.</p>
+<p>During the visit, Professor Kirchhoff and the delegation learned about the development of the two companies, their product portfolios, research and translational activities, and practices in serving the life and health industry. The delegation also exchanged views with relevant representatives on translational neuroscience research, innovative drug discovery, health product development, industry–university–research collaboration, and international cooperation.</p>
+<p>The discussions focused on how to better connect fundamental research with industrial needs, promote the translation of scientific achievements, and explore new models of collaboration between the Center and university-affiliated enterprises. Professor Kirchhoff noted that the development of neuroscience requires not only high-level basic research, but also interdisciplinary collaboration and translational exploration oriented toward real-world applications.</p>
+<p>The visit further deepened CNSPDD’s understanding of the university’s industrial platforms and translational practices in the life and health sector. It also provided new perspectives for the Center to promote collaborative innovation in neuroscience, precision drug discovery, and health-related applications. Moving forward, CNSPDD will continue to leverage its international talent resources and interdisciplinary strengths to advance research platform development, technology translation, and industry–university–research cooperation, contributing to the high-quality development of the university in the life and health field.</p>
+        </div>
+        <aside class="news-article-side" aria-label="At a glance">
+            <p class="news-article-side-kicker">At a glance</p>
+            <div class="news-article-side-line">
+                <span>Published</span>
+                <strong>June 25, 2026</strong>
             </div>
-            <p class="news-section-count">6 stories</p>
-        </div>
+            <div class="news-article-side-line">
+                <span>Format</span>
+                <strong>Industry connection</strong>
+            </div>
+            <div class="news-article-side-line">
+                <span>Gallery</span>
+                <strong>4 images</strong>
+            </div>
+        </aside>
+    </div>
 
-        <div class="news-card-grid">
-            {% assign news_items = site.data.news.en %}
-            {% for item in news_items %}
-            <a class="news-card{% if forloop.first %} news-card--feature{% endif %}" href="{{ item.url | relative_url }}" aria-label="View {{ item.title }}">
-                <div class="news-card-media">
-                    <img src="{{ item.image | relative_url }}" alt="{{ item.image_alt }}" width="{{ item.width }}" height="{{ item.height }}" {% if forloop.first %}loading="eager" fetchpriority="high"{% else %}loading="lazy"{% endif %} decoding="async">
-                    <span class="news-card-index">0{{ forloop.index }}</span>
-                </div>
-                <div class="news-card-body">
-                    <div class="news-card-meta">
-                        <time class="news-card-date" datetime="{{ item.iso_date }}">{{ item.date }}</time>
-                        <span class="news-chip news-chip--{{ item.category_key }}">{{ item.category }}</span>
-                    </div>
-                    <h3 class="news-card-title">{{ item.title }}</h3>
-                    <p class="news-card-excerpt">{{ item.excerpt }}</p>
-                    <span class="news-card-cta">Read full story <span aria-hidden="true">→</span></span>
-                </div>
-            </a>
-            {% endfor %}
-        </div>
-
-        <div class="news-archive-footer">
-            <span class="news-archive-footer-mark" aria-hidden="true"></span>
-            <span>Each dispatch keeps the full bilingual source story, image gallery, and captions.</span>
-        </div>
-    </section>
-    <a class="news-back-link" href="{{ '/' | relative_url }}">← Back to home</a>
+        <section class="news-article-gallery" aria-labelledby="industry-visit-gallery-title">
+            <h2 class="news-article-gallery-title" id="industry-visit-gallery-title">Field notes</h2>
+            <div class="news-gallery-grid">
+                <figure class="news-figure">
+                <img src="{{ '/assets/images/news/industry-products.jpg' | relative_url }}" alt="The delegation learns about product portfolios and translational research activities" width="1600" height="1067" loading="lazy" decoding="async">
+                <figcaption>The delegation learns about product portfolios and translational research activities</figcaption>
+            </figure>
+<figure class="news-figure">
+                <img src="{{ '/assets/images/news/industry-collaboration.jpg' | relative_url }}" alt="The delegation learns about product portfolios and translational research activities" width="1600" height="1067" loading="lazy" decoding="async">
+                <figcaption>The delegation learns about product portfolios and translational research activities</figcaption>
+            </figure>
+<figure class="news-figure">
+                <img src="{{ '/assets/images/news/industry-discussion.jpg' | relative_url }}" alt="Representatives exchange views on the life and health industry and industry–university–research collaboration" width="1600" height="1067" loading="lazy" decoding="async">
+                <figcaption>Representatives exchange views on the life and health industry and industry–university–research collaboration</figcaption>
+            </figure>
+            </div>
+        </section>
 </div>

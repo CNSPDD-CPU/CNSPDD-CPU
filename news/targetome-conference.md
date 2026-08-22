@@ -1,7 +1,7 @@
 ---
 layout: default
-title: News
-permalink: /news/
+title: "2026 International Symposium on Targetome and Natural Medicines & Inaugural Conference of the International Academic Community of Targetome Held in Haikou"
+permalink: /news/targetome-conference/
 ---
 
 <style>
@@ -630,54 +630,65 @@ permalink: /news/
 </style>
 
 
-<div class="news-archive-page">
-    <a class="news-skip-link" href="#news-archive-title">Skip to news archive</a>
-    <section class="news-archive-hero" aria-labelledby="news-archive-title">
-        <div>
-            <p class="news-archive-kicker">Center dispatches · 2026</p>
-            <h1 class="news-archive-title" id="news-archive-title" tabindex="-1">News and updates</h1>
-            <p class="news-archive-intro">A living record of the Center’s research exchange, platform building, international collaboration, and team life.</p>
+<div class="news-article-page">
+    <div class="news-article-back">
+        <a class="news-back-link" href="{{ '/news/' | relative_url }}">← Back to news archive</a>
+    </div>
+    <header class="news-article-header">
+        <p class="news-article-kicker">Center dispatch · CNSPDD</p>
+        <h1 class="news-article-title">2026 International Symposium on Targetome and Natural Medicines &amp; Inaugural Conference of the International Academic Community of Targetome Held in Haikou</h1>
+        <p class="news-article-lead">China Pharmaceutical University hosted an international symposium on targetome research and natural medicines in Haikou.</p>
+        <div class="news-article-meta">
+            <time datetime="2026-06-22">JUN 22–23, 2026</time>
+            <span class="news-chip news-chip--academic">Academic exchange</span>
         </div>
-        <div class="news-archive-ledger" aria-label="Number of stories">
-            <strong>06</strong>
-            <span>stories from the Center</span>
-        </div>
-    </section>
+    </header>
 
-    <section class="news-archive-section" aria-labelledby="news-section-title">
-        <div class="news-section-head">
-            <div>
-                <p class="news-section-label">News archive</p>
-                <h2 class="news-section-title" id="news-section-title" tabindex="-1">From research rooms to global exchange</h2>
+    <figure class="news-article-hero">
+        <img src="{{ '/assets/images/news/targetome-venue.jpg' | relative_url }}" alt="Conference venue" width="1600" height="1066" loading="eager" decoding="async">
+        <figcaption class="news-figure-caption">Conference venue</figcaption>
+    </figure>
+
+    <div class="news-article-content">
+        <div class="news-article-copy">
+            
+            <p>From June 22 to 23, 2026, the “2026 International Symposium on Targetome and Natural Medicines &amp; the Inaugural Conference of the International Academic Community of Targetome” was successfully held in Haikou, Hainan Province. The conference was hosted by China Pharmaceutical University and co-organized by Hainan Medical University, Hainan University, and the Administrative Committee of Haikou National High-tech Industrial Development Zone.</p>
+<p>The meeting focused on the latest advances in targetome research and natural medicines, with in-depth discussions on key scientific questions and future directions in the field. It brought together leading scholars from relevant disciplines worldwide.</p>
+<p>Professor Frank Kirchhoff, Director of the Center for Neuroscience and Precision Drug Discovery (CNSPDD) and Member of the Academia Europaea, was invited to deliver a keynote lecture at the conference, presenting his recent progress and insights in neuroscience-related research. In addition, during the textbook co-editorship and editorial board appointment ceremony, Professor Kirchhoff was appointed as a co-editor of the relevant textbook, contributing to the development and dissemination of the discipline.</p>
+<p>This conference provided an important platform for CNSPDD to engage in high-level academic exchange and collaboration with international research teams, and further enhanced the Center’s academic visibility in the field of targetome and natural product research.</p>
+        </div>
+        <aside class="news-article-side" aria-label="At a glance">
+            <p class="news-article-side-kicker">At a glance</p>
+            <div class="news-article-side-line">
+                <span>Published</span>
+                <strong>June 22–23, 2026</strong>
             </div>
-            <p class="news-section-count">6 stories</p>
-        </div>
+            <div class="news-article-side-line">
+                <span>Format</span>
+                <strong>Academic exchange</strong>
+            </div>
+            <div class="news-article-side-line">
+                <span>Gallery</span>
+                <strong>4 images</strong>
+            </div>
+        </aside>
+    </div>
 
-        <div class="news-card-grid">
-            {% assign news_items = site.data.news.en %}
-            {% for item in news_items %}
-            <a class="news-card{% if forloop.first %} news-card--feature{% endif %}" href="{{ item.url | relative_url }}" aria-label="View {{ item.title }}">
-                <div class="news-card-media">
-                    <img src="{{ item.image | relative_url }}" alt="{{ item.image_alt }}" width="{{ item.width }}" height="{{ item.height }}" {% if forloop.first %}loading="eager" fetchpriority="high"{% else %}loading="lazy"{% endif %} decoding="async">
-                    <span class="news-card-index">0{{ forloop.index }}</span>
-                </div>
-                <div class="news-card-body">
-                    <div class="news-card-meta">
-                        <time class="news-card-date" datetime="{{ item.iso_date }}">{{ item.date }}</time>
-                        <span class="news-chip news-chip--{{ item.category_key }}">{{ item.category }}</span>
-                    </div>
-                    <h3 class="news-card-title">{{ item.title }}</h3>
-                    <p class="news-card-excerpt">{{ item.excerpt }}</p>
-                    <span class="news-card-cta">Read full story <span aria-hidden="true">→</span></span>
-                </div>
-            </a>
-            {% endfor %}
-        </div>
-
-        <div class="news-archive-footer">
-            <span class="news-archive-footer-mark" aria-hidden="true"></span>
-            <span>Each dispatch keeps the full bilingual source story, image gallery, and captions.</span>
-        </div>
-    </section>
-    <a class="news-back-link" href="{{ '/' | relative_url }}">← Back to home</a>
+        <section class="news-article-gallery" aria-labelledby="targetome-conference-gallery-title">
+            <h2 class="news-article-gallery-title" id="targetome-conference-gallery-title">Field notes</h2>
+            <div class="news-gallery-grid">
+                <figure class="news-figure">
+                <img src="{{ '/assets/images/news/targetome-keynote.jpg' | relative_url }}" alt="Keynote lecture by Professor Frank Kirchhoff" width="1600" height="1066" loading="lazy" decoding="async">
+                <figcaption>Keynote lecture by Professor Frank Kirchhoff</figcaption>
+            </figure>
+<figure class="news-figure">
+                <img src="{{ '/assets/images/news/targetome-ceremony.jpg' | relative_url }}" alt="Keynote lecture by Professor Frank Kirchhoff" width="1600" height="1066" loading="lazy" decoding="async">
+                <figcaption>Keynote lecture by Professor Frank Kirchhoff</figcaption>
+            </figure>
+<figure class="news-figure">
+                <img src="{{ '/assets/images/news/targetome-extra.jpg' | relative_url }}" alt="Textbook co-editorship and editorial board appointment ceremony" width="1600" height="1064" loading="lazy" decoding="async">
+                <figcaption>Textbook co-editorship and editorial board appointment ceremony</figcaption>
+            </figure>
+            </div>
+        </section>
 </div>

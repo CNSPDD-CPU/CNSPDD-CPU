@@ -1,7 +1,7 @@
 ---
 layout: default
-title: News
-permalink: /news/
+title: "China Pharmaceutical University and the Center for Memory and Glioscience, Institute for Basic Science, Sign Memorandum of Understanding"
+permalink: /news/mou-signing/
 ---
 
 <style>
@@ -630,54 +630,61 @@ permalink: /news/
 </style>
 
 
-<div class="news-archive-page">
-    <a class="news-skip-link" href="#news-archive-title">Skip to news archive</a>
-    <section class="news-archive-hero" aria-labelledby="news-archive-title">
-        <div>
-            <p class="news-archive-kicker">Center dispatches · 2026</p>
-            <h1 class="news-archive-title" id="news-archive-title" tabindex="-1">News and updates</h1>
-            <p class="news-archive-intro">A living record of the Center’s research exchange, platform building, international collaboration, and team life.</p>
+<div class="news-article-page">
+    <div class="news-article-back">
+        <a class="news-back-link" href="{{ '/news/' | relative_url }}">← Back to news archive</a>
+    </div>
+    <header class="news-article-header">
+        <p class="news-article-kicker">Center dispatch · CNSPDD</p>
+        <h1 class="news-article-title">China Pharmaceutical University and the Center for Memory and Glioscience, Institute for Basic Science, Sign Memorandum of Understanding</h1>
+        <p class="news-article-lead">China Pharmaceutical University and the Center for Memory and Glioscience at IBS signed an MoU on neuroscience, talent development, and international collaboration.</p>
+        <div class="news-article-meta">
+            <time datetime="2026-06-24">JUN 24, 2026</time>
+            <span class="news-chip news-chip--collaboration">International collaboration</span>
         </div>
-        <div class="news-archive-ledger" aria-label="Number of stories">
-            <strong>06</strong>
-            <span>stories from the Center</span>
-        </div>
-    </section>
+    </header>
 
-    <section class="news-archive-section" aria-labelledby="news-section-title">
-        <div class="news-section-head">
-            <div>
-                <p class="news-section-label">News archive</p>
-                <h2 class="news-section-title" id="news-section-title" tabindex="-1">From research rooms to global exchange</h2>
+    <figure class="news-article-hero">
+        <img src="{{ '/assets/images/news/mou-signing.jpg' | relative_url }}" alt="China Pharmaceutical University and the Center for Memory and Glioscience, Institute for Basic Science, sign the Memorandum of Understanding." width="1600" height="1200" loading="eager" decoding="async">
+        <figcaption class="news-figure-caption">China Pharmaceutical University and the Center for Memory and Glioscience, Institute for Basic Science, sign the Memorandum of Understanding.</figcaption>
+    </figure>
+
+    <div class="news-article-content">
+        <div class="news-article-copy">
+            <aside class="news-article-brief">
+                <p class="news-article-brief-label">Brief summary</p>
+                <p>On June 24, 2026, China Pharmaceutical University and the Center for Memory and Glioscience, Institute for Basic Science, Republic of Korea, held a meeting for the signing of a Memorandum of Understanding. The two sides exchanged views on neuroscience research, talent development, and international cooperation, and reached a shared understanding on future collaboration in student exchange, research cooperation, joint academic activities, and platform-based international partnership.</p>
+            </aside>
+            <p>On June 24, 2026, a meeting was held to mark the signing of a Memorandum of Understanding (MoU) between China Pharmaceutical University (CPU) and the Center for Memory and Glioscience (CMG), Institute for Basic Science (IBS), Republic of Korea. The two sides held in-depth discussions on frontier research in neuroscience, talent development, and international collaboration, and formally signed the MoU, marking an important step forward in their cooperation in brain science and related interdisciplinary fields.</p>
+<p>The meeting was attended by Professor Hequan Yao, Vice President of China Pharmaceutical University; Ms. Xiaoxuan Liu, Deputy Director of the Office of International Exchange and Cooperation; Professor Frank Kirchhoff, Member of the Academia Europaea and Director of the Center for Neuroscience and Precision Drug Discovery (CNSPDD); and Professor Xianshu Bai from CNSPDD. Participants from the Korean side included Professor C. Justin Lee, President of the Korean Brain and Neuroscience Society and Director of CMG, IBS, and Dr. Jae-Hun Lee, Senior Research Fellow at IBS.</p>
+<p>During the meeting, both sides introduced their respective progress in research platform development, faculty and research team building, strategic research directions, and international cooperation. The participants exchanged views on future priorities for collaboration and agreed that, against the backdrop of rapid advances in neuroscience and brain science, practical cooperation based on complementary strengths will help promote high-level scientific innovation and international talent training.</p>
+<p>According to the MoU, the two institutions will, on the basis of equality and mutual benefit, actively explore cooperation in student exchange, exchange of research and teaching staff, collaborative research in fields of mutual interest, joint academic and scientific activities, and the sharing of teaching and academic materials. Specific projects and activities will be further developed and implemented through subsequent discussions between the two institutions.</p>
+<p>The signing of the MoU lays a solid foundation for establishing a long-term and stable partnership between China Pharmaceutical University and CMG, IBS. It will also further support CNSPDD in expanding international academic exchange, strengthening collaborative research, and building a high-level global cooperation network in neuroscience and precision drug discovery.</p>
+        </div>
+        <aside class="news-article-side" aria-label="At a glance">
+            <p class="news-article-side-kicker">At a glance</p>
+            <div class="news-article-side-line">
+                <span>Published</span>
+                <strong>June 24, 2026</strong>
             </div>
-            <p class="news-section-count">6 stories</p>
-        </div>
+            <div class="news-article-side-line">
+                <span>Format</span>
+                <strong>International collaboration</strong>
+            </div>
+            <div class="news-article-side-line">
+                <span>Gallery</span>
+                <strong>2 images</strong>
+            </div>
+        </aside>
+    </div>
 
-        <div class="news-card-grid">
-            {% assign news_items = site.data.news.en %}
-            {% for item in news_items %}
-            <a class="news-card{% if forloop.first %} news-card--feature{% endif %}" href="{{ item.url | relative_url }}" aria-label="View {{ item.title }}">
-                <div class="news-card-media">
-                    <img src="{{ item.image | relative_url }}" alt="{{ item.image_alt }}" width="{{ item.width }}" height="{{ item.height }}" {% if forloop.first %}loading="eager" fetchpriority="high"{% else %}loading="lazy"{% endif %} decoding="async">
-                    <span class="news-card-index">0{{ forloop.index }}</span>
-                </div>
-                <div class="news-card-body">
-                    <div class="news-card-meta">
-                        <time class="news-card-date" datetime="{{ item.iso_date }}">{{ item.date }}</time>
-                        <span class="news-chip news-chip--{{ item.category_key }}">{{ item.category }}</span>
-                    </div>
-                    <h3 class="news-card-title">{{ item.title }}</h3>
-                    <p class="news-card-excerpt">{{ item.excerpt }}</p>
-                    <span class="news-card-cta">Read full story <span aria-hidden="true">→</span></span>
-                </div>
-            </a>
-            {% endfor %}
-        </div>
-
-        <div class="news-archive-footer">
-            <span class="news-archive-footer-mark" aria-hidden="true"></span>
-            <span>Each dispatch keeps the full bilingual source story, image gallery, and captions.</span>
-        </div>
-    </section>
-    <a class="news-back-link" href="{{ '/' | relative_url }}">← Back to home</a>
+        <section class="news-article-gallery" aria-labelledby="mou-signing-gallery-title">
+            <h2 class="news-article-gallery-title" id="mou-signing-gallery-title">Field notes</h2>
+            <div class="news-gallery-grid">
+                <figure class="news-figure">
+                <img src="{{ '/assets/images/news/mou-discussion.jpg' | relative_url }}" alt="Representatives from both sides hold discussions on neuroscience research and international collaboration." width="1600" height="1200" loading="lazy" decoding="async">
+                <figcaption>Representatives from both sides hold discussions on neuroscience research and international collaboration.</figcaption>
+            </figure>
+            </div>
+        </section>
 </div>

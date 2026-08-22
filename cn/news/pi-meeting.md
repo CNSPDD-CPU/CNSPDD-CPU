@@ -1,7 +1,7 @@
 ---
 layout: default
-title: News
-permalink: /news/
+title: "神经科学与精准药物研发中心召开PI Meeting"
+permalink: /cn/news/pi-meeting/
 ---
 
 <style>
@@ -630,54 +630,49 @@ permalink: /news/
 </style>
 
 
-<div class="news-archive-page">
-    <a class="news-skip-link" href="#news-archive-title">Skip to news archive</a>
-    <section class="news-archive-hero" aria-labelledby="news-archive-title">
-        <div>
-            <p class="news-archive-kicker">Center dispatches · 2026</p>
-            <h1 class="news-archive-title" id="news-archive-title" tabindex="-1">News and updates</h1>
-            <p class="news-archive-intro">A living record of the Center’s research exchange, platform building, international collaboration, and team life.</p>
+<div class="news-article-page">
+    <div class="news-article-back">
+        <a class="news-back-link" href="{{ '/cn/news/' | relative_url }}">← 返回新闻汇总</a>
+    </div>
+    <header class="news-article-header">
+        <p class="news-article-kicker">中心动态 · CNSPDD</p>
+        <h1 class="news-article-title">神经科学与精准药物研发中心召开PI Meeting</h1>
+        <p class="news-article-lead">中心 PI 围绕建设进展、重点研究方向、平台共享和下一阶段协同工作进行交流。</p>
+        <div class="news-article-meta">
+            <time datetime="2026-06-25">2026年6月25日</time>
+            <span class="news-chip news-chip--operations">中心建设</span>
         </div>
-        <div class="news-archive-ledger" aria-label="Number of stories">
-            <strong>06</strong>
-            <span>stories from the Center</span>
-        </div>
-    </section>
+    </header>
 
-    <section class="news-archive-section" aria-labelledby="news-section-title">
-        <div class="news-section-head">
-            <div>
-                <p class="news-section-label">News archive</p>
-                <h2 class="news-section-title" id="news-section-title" tabindex="-1">From research rooms to global exchange</h2>
+    <figure class="news-article-hero">
+        <img src="{{ '/assets/images/news/pi-meeting.jpg' | relative_url }}" alt="中文图注：
+图1 神经科学与精准药物研发中心PI合影" width="1600" height="1200" loading="eager" decoding="async">
+        <figcaption class="news-figure-caption">中文图注：
+图1 神经科学与精准药物研发中心PI合影</figcaption>
+    </figure>
+
+    <div class="news-article-content">
+        <div class="news-article-copy">
+            
+            <p>2026年6月25日，神经科学与精准药物研发中心召开PI Meeting。中心主任、欧洲科学院院士Frank Kirchhoff教授出席会议，中心多位PI参加会议并围绕中心建设与发展进行交流讨论。</p>
+<p>会议围绕中心建设进展、重点研究方向凝练、科研平台共享、团队协同机制以及后续工作安排等内容展开交流。与会PI结合各自研究基础和学科方向，就进一步加强中心平台建设、促进团队间交叉合作、提升科研组织能力等方面提出了意见和建议。</p>
+<p>本次会议进一步增强了中心PI之间的沟通与协同，明确了中心下一阶段建设重点和工作思路。神经科学与精准药物研发中心将继续围绕神经科学前沿问题和精准药物研发需求，强化有组织科研和平台支撑能力，推动中心高质量建设与发展。</p>
+        </div>
+        <aside class="news-article-side" aria-label="信息速览">
+            <p class="news-article-side-kicker">信息速览</p>
+            <div class="news-article-side-line">
+                <span>发布时间</span>
+                <strong>2026年6月25日</strong>
             </div>
-            <p class="news-section-count">6 stories</p>
-        </div>
+            <div class="news-article-side-line">
+                <span>报道类型</span>
+                <strong>中心建设</strong>
+            </div>
+            <div class="news-article-side-line">
+                <span>图片</span>
+                <strong>1 张图片</strong>
+            </div>
+        </aside>
+    </div>
 
-        <div class="news-card-grid">
-            {% assign news_items = site.data.news.en %}
-            {% for item in news_items %}
-            <a class="news-card{% if forloop.first %} news-card--feature{% endif %}" href="{{ item.url | relative_url }}" aria-label="View {{ item.title }}">
-                <div class="news-card-media">
-                    <img src="{{ item.image | relative_url }}" alt="{{ item.image_alt }}" width="{{ item.width }}" height="{{ item.height }}" {% if forloop.first %}loading="eager" fetchpriority="high"{% else %}loading="lazy"{% endif %} decoding="async">
-                    <span class="news-card-index">0{{ forloop.index }}</span>
-                </div>
-                <div class="news-card-body">
-                    <div class="news-card-meta">
-                        <time class="news-card-date" datetime="{{ item.iso_date }}">{{ item.date }}</time>
-                        <span class="news-chip news-chip--{{ item.category_key }}">{{ item.category }}</span>
-                    </div>
-                    <h3 class="news-card-title">{{ item.title }}</h3>
-                    <p class="news-card-excerpt">{{ item.excerpt }}</p>
-                    <span class="news-card-cta">Read full story <span aria-hidden="true">→</span></span>
-                </div>
-            </a>
-            {% endfor %}
-        </div>
-
-        <div class="news-archive-footer">
-            <span class="news-archive-footer-mark" aria-hidden="true"></span>
-            <span>Each dispatch keeps the full bilingual source story, image gallery, and captions.</span>
-        </div>
-    </section>
-    <a class="news-back-link" href="{{ '/' | relative_url }}">← Back to home</a>
 </div>

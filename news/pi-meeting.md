@@ -1,7 +1,7 @@
 ---
 layout: default
-title: News
-permalink: /news/
+title: "CNSPDD Holds PI Meeting"
+permalink: /news/pi-meeting/
 ---
 
 <style>
@@ -630,54 +630,47 @@ permalink: /news/
 </style>
 
 
-<div class="news-archive-page">
-    <a class="news-skip-link" href="#news-archive-title">Skip to news archive</a>
-    <section class="news-archive-hero" aria-labelledby="news-archive-title">
-        <div>
-            <p class="news-archive-kicker">Center dispatches · 2026</p>
-            <h1 class="news-archive-title" id="news-archive-title" tabindex="-1">News and updates</h1>
-            <p class="news-archive-intro">A living record of the Center’s research exchange, platform building, international collaboration, and team life.</p>
+<div class="news-article-page">
+    <div class="news-article-back">
+        <a class="news-back-link" href="{{ '/news/' | relative_url }}">← Back to news archive</a>
+    </div>
+    <header class="news-article-header">
+        <p class="news-article-kicker">Center dispatch · CNSPDD</p>
+        <h1 class="news-article-title">CNSPDD Holds PI Meeting</h1>
+        <p class="news-article-lead">CNSPDD PIs reviewed the Center’s development progress, research priorities, platform sharing, and next-stage collaboration.</p>
+        <div class="news-article-meta">
+            <time datetime="2026-06-25">JUN 25, 2026</time>
+            <span class="news-chip news-chip--operations">Center operations</span>
         </div>
-        <div class="news-archive-ledger" aria-label="Number of stories">
-            <strong>06</strong>
-            <span>stories from the Center</span>
-        </div>
-    </section>
+    </header>
 
-    <section class="news-archive-section" aria-labelledby="news-section-title">
-        <div class="news-section-head">
-            <div>
-                <p class="news-section-label">News archive</p>
-                <h2 class="news-section-title" id="news-section-title" tabindex="-1">From research rooms to global exchange</h2>
+    <figure class="news-article-hero">
+        <img src="{{ '/assets/images/news/pi-meeting.jpg' | relative_url }}" alt="Group photo of PIs from the Center for Neuroscience and Precision Drug Discovery" width="1600" height="1200" loading="eager" decoding="async">
+        <figcaption class="news-figure-caption">Group photo of PIs from the Center for Neuroscience and Precision Drug Discovery</figcaption>
+    </figure>
+
+    <div class="news-article-content">
+        <div class="news-article-copy">
+            
+            <p>On June 25, 2026, the Center for Neuroscience and Precision Drug Discovery (CNSPDD) held a PI Meeting. Professor Frank Kirchhoff, Member of the Academia Europaea and Director of CNSPDD, attended the meeting, together with several PIs of the Center.</p>
+<p>The meeting focused on the Center’s development progress, refinement of key research directions, sharing of research platforms, team collaboration mechanisms, and follow-up work arrangements. Based on their respective research backgrounds and disciplinary expertise, the participating PIs exchanged views and provided suggestions on strengthening platform development, promoting interdisciplinary collaboration, and enhancing the Center’s capacity for organized research.</p>
+<p>The meeting further strengthened communication and coordination among CNSPDD PIs and helped clarify the Center’s priorities and working plans for the next stage. Moving forward, CNSPDD will continue to focus on frontier questions in neuroscience and the needs of precision drug discovery, strengthen organized research and platform support, and promote the high-quality development of the Center.</p>
+        </div>
+        <aside class="news-article-side" aria-label="At a glance">
+            <p class="news-article-side-kicker">At a glance</p>
+            <div class="news-article-side-line">
+                <span>Published</span>
+                <strong>June 25, 2026</strong>
             </div>
-            <p class="news-section-count">6 stories</p>
-        </div>
+            <div class="news-article-side-line">
+                <span>Format</span>
+                <strong>Center operations</strong>
+            </div>
+            <div class="news-article-side-line">
+                <span>Gallery</span>
+                <strong>1 image</strong>
+            </div>
+        </aside>
+    </div>
 
-        <div class="news-card-grid">
-            {% assign news_items = site.data.news.en %}
-            {% for item in news_items %}
-            <a class="news-card{% if forloop.first %} news-card--feature{% endif %}" href="{{ item.url | relative_url }}" aria-label="View {{ item.title }}">
-                <div class="news-card-media">
-                    <img src="{{ item.image | relative_url }}" alt="{{ item.image_alt }}" width="{{ item.width }}" height="{{ item.height }}" {% if forloop.first %}loading="eager" fetchpriority="high"{% else %}loading="lazy"{% endif %} decoding="async">
-                    <span class="news-card-index">0{{ forloop.index }}</span>
-                </div>
-                <div class="news-card-body">
-                    <div class="news-card-meta">
-                        <time class="news-card-date" datetime="{{ item.iso_date }}">{{ item.date }}</time>
-                        <span class="news-chip news-chip--{{ item.category_key }}">{{ item.category }}</span>
-                    </div>
-                    <h3 class="news-card-title">{{ item.title }}</h3>
-                    <p class="news-card-excerpt">{{ item.excerpt }}</p>
-                    <span class="news-card-cta">Read full story <span aria-hidden="true">→</span></span>
-                </div>
-            </a>
-            {% endfor %}
-        </div>
-
-        <div class="news-archive-footer">
-            <span class="news-archive-footer-mark" aria-hidden="true"></span>
-            <span>Each dispatch keeps the full bilingual source story, image gallery, and captions.</span>
-        </div>
-    </section>
-    <a class="news-back-link" href="{{ '/' | relative_url }}">← Back to home</a>
 </div>
