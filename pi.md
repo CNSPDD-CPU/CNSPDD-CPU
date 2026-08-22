@@ -7,15 +7,50 @@ permalink: /pi/
 <style>
 
 .pi-overview-page {
-    --pi-ink: #183047;
-    --pi-teal: #0f766e;
-    --pi-coral: #c76d4e;
-    --pi-mist: #f1f5f4;
-    --pi-line: #d8e5e5;
-    --pi-muted: #5e6d78;
+    --pi-ink: #1E2761;
+    --pi-primary: #2C5F2D;
+    --pi-accent: #735DA5;
+    --pi-mist: #f0f4f8;
+    --pi-line: #dce5ee;
+    --pi-muted: #526071;
     max-width: 1180px;
     margin: 0 auto;
     padding: 0 2rem 5rem;
+    box-sizing: border-box;
+    overflow-x: clip;
+}
+
+
+.pi-skip-link {
+    position: fixed;
+    top: .75rem;
+    left: 1rem;
+    z-index: 2000;
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: .6rem .9rem;
+    border-radius: 999px;
+    color: #fff;
+    background: var(--pi-ink);
+    box-shadow: 0 8px 20px rgba(30,39,97,.2);
+    text-decoration: none;
+    transform: translateY(-160%);
+    transition: transform .2s ease;
+}
+
+.pi-skip-link::after {
+    display: none;
+}
+
+.pi-skip-link:focus-visible {
+    outline: 3px solid var(--pi-accent);
+    outline-offset: 3px;
+    transform: translateY(0);
+}
+
+.pi-overview-page [id] {
+    scroll-margin-top: 7rem;
 }
 
 .pi-overview-hero {
@@ -31,7 +66,7 @@ permalink: /pi/
 .pi-overview-section-label,
 .pi-directory-label {
     margin: 0 0 .55rem;
-    color: var(--pi-teal);
+    color: var(--pi-primary);
     font-size: .74rem;
     font-weight: 900;
     letter-spacing: .13em;
@@ -45,6 +80,7 @@ permalink: /pi/
     font-size: clamp(2.4rem, 5vw, 4.7rem);
     line-height: 1.02;
     letter-spacing: -.05em;
+    text-wrap: balance;
     text-align: left;
     background: none;
     -webkit-text-fill-color: currentColor;
@@ -71,7 +107,7 @@ permalink: /pi/
     width: .55rem;
     height: 3.1rem;
     border-radius: 999px;
-    background: linear-gradient(180deg, var(--pi-coral), var(--pi-teal));
+    background: linear-gradient(180deg, var(--pi-accent), var(--pi-primary));
 }
 
 .pi-overview-ribbon strong {
@@ -106,12 +142,13 @@ permalink: /pi/
     color: var(--pi-ink);
     font-size: 1.7rem;
     line-height: 1.2;
+    text-wrap: balance;
     text-align: left;
 }
 
 .pi-overview-count {
     margin: 0;
-    color: var(--pi-teal);
+    color: var(--pi-primary);
     font-size: .82rem;
     font-weight: 900;
     letter-spacing: .08em;
@@ -133,6 +170,8 @@ permalink: /pi/
     background: #fff;
     box-shadow: 0 16px 42px rgba(24, 48, 71, .1);
     text-decoration: none;
+    cursor: pointer;
+    touch-action: manipulation;
     transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
 }
 
@@ -141,14 +180,14 @@ permalink: /pi/
 }
 
 .pi-directory-card:hover {
-    border-color: rgba(15,118,110,.42);
+    border-color: rgba(44,95,45,.42);
     box-shadow: 0 22px 52px rgba(24, 48, 71, .15);
     color: inherit;
     transform: translateY(-4px);
 }
 
 .pi-directory-card:focus-visible {
-    outline: 3px solid rgba(199,109,78,.55);
+    outline: 3px solid rgba(115,93,165,.55);
     outline-offset: 4px;
 }
 
@@ -156,7 +195,7 @@ permalink: /pi/
     position: relative;
     min-height: 330px;
     overflow: hidden;
-    background: linear-gradient(155deg, #183047 0%, #0f5d60 100%);
+    background: linear-gradient(155deg, #1E2761 0%, #2C5F2D 100%);
 }
 
 .pi-directory-media::after {
@@ -189,7 +228,7 @@ permalink: /pi/
     border: 1px solid rgba(255,255,255,.3);
     border-radius: 999px;
     color: #fff;
-    background: rgba(24,48,71,.55);
+    background: rgba(30,39,97,.55);
     font-size: .72rem;
     font-weight: 900;
     letter-spacing: .1em;
@@ -206,7 +245,7 @@ permalink: /pi/
 }
 
 .pi-directory-label {
-    color: var(--pi-coral);
+    color: var(--pi-accent);
 }
 
 .pi-directory-name {
@@ -215,6 +254,7 @@ permalink: /pi/
     font-size: clamp(2rem, 4vw, 3.1rem);
     line-height: 1;
     letter-spacing: -.04em;
+    text-wrap: balance;
     text-align: left;
 }
 
@@ -227,7 +267,7 @@ permalink: /pi/
 
 .pi-directory-role {
     margin: 0;
-    color: var(--pi-teal);
+    color: var(--pi-primary);
     font-weight: 900;
     line-height: 1.5;
 }
@@ -250,9 +290,9 @@ permalink: /pi/
     align-items: center;
     min-height: 2rem;
     padding: .35rem .65rem;
-    border: 1px solid rgba(15,118,110,.18);
+    border: 1px solid rgba(44,95,45,.18);
     border-radius: 999px;
-    color: var(--pi-teal);
+    color: var(--pi-primary);
     background: var(--pi-mist);
     font-size: .78rem;
     font-weight: 800;
@@ -269,13 +309,14 @@ permalink: /pi/
 }
 
 .pi-directory-cta span {
-    color: var(--pi-coral);
+    color: var(--pi-accent);
     font-size: 1.25rem;
     line-height: 1;
     transition: transform .25s ease;
 }
 
-.pi-directory-card:hover .pi-directory-cta span {
+.pi-directory-card:hover .pi-directory-cta span,
+.pi-directory-card:focus-visible .pi-directory-cta span {
     transform: translateX(4px);
 }
 
@@ -332,7 +373,8 @@ permalink: /pi/
 
 @media (prefers-reduced-motion: reduce) {
     .pi-directory-card,
-    .pi-directory-cta span {
+    .pi-directory-cta span,
+    .pi-skip-link {
         transition: none;
     }
 }
@@ -340,10 +382,11 @@ permalink: /pi/
 </style>
 
 <div class="pi-overview-page">
+    <a class="pi-skip-link" href="#pi-directory-title">Skip to PI directory</a>
     <section class="pi-overview-hero" aria-labelledby="pi-overview-title">
         <div>
             <p class="pi-overview-kicker">PI Directory · Experimental Platform</p>
-            <h1 id="pi-overview-title">Investigators behind the platform.</h1>
+            <h1 id="pi-overview-title" tabindex="-1">Investigators behind the platform.</h1>
         </div>
         <div>
             <p class="pi-overview-intro">Explore the principal investigators who connect disease mechanisms, vascular biology, and translational drug development across the center.</p>
@@ -361,7 +404,7 @@ permalink: /pi/
         <div class="pi-overview-section-head">
             <div>
                 <p class="pi-overview-section-label">Directory</p>
-                <h2 id="pi-directory-title">Principal investigators</h2>
+                <h2 id="pi-directory-title" tabindex="-1">Principal investigators</h2>
             </div>
             <p class="pi-overview-count">1 profile</p>
         </div>
@@ -369,8 +412,8 @@ permalink: /pi/
         <div class="pi-directory-grid">
             <a class="pi-directory-card" href="{{ '/pi/pin-li/' | relative_url }}" aria-label="View Pin Li profile">
                 <div class="pi-directory-media">
-                    <img src="{{ '/assets/images/pi/pin-li.jpg' | relative_url }}" alt="Pin Li, Professor at China Pharmaceutical University" loading="lazy" decoding="async">
-                    <span class="pi-directory-stamp">Featured PI</span>
+                    <img src="{{ '/assets/images/pi/pin-li.jpg' | relative_url }}" alt="Pin Li, Professor at China Pharmaceutical University" width="640" height="800" loading="eager" fetchpriority="high" decoding="async">
+                    <span class="pi-directory-stamp">PI Profile</span>
                 </div>
                 <div class="pi-directory-body">
                     <p class="pi-directory-label">Principal Investigator</p>
