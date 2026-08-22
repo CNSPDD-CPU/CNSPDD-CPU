@@ -4,15 +4,13 @@
     margin: 0 auto;
     padding: 0 0 5rem;
     color: var(--site-ink);
+    overflow-x: clip;
 }
 
 .template-hero {
     position: relative;
-    display: grid;
-    grid-template-columns: minmax(230px, .76fr) minmax(0, 1.24fr);
-    gap: 2.5rem;
-    align-items: end;
-    padding: 4.2rem 0 2.8rem;
+    display: block;
+    padding: clamp(3.6rem, 8vw, 5.2rem) 0 3.15rem;
     border-bottom: 1px solid var(--site-line);
 }
 
@@ -36,11 +34,13 @@
 }
 
 .template-hero h1 {
-    max-width: 720px;
-    margin: 0;
+    max-width: 900px;
+    margin: .15rem 0 0;
     color: var(--site-navy);
-    font-size: clamp(2.7rem, 5.5vw, 5rem);
-    line-height: .98;
+    font-size: clamp(3rem, 7vw, 5.4rem);
+    line-height: .96;
+    letter-spacing: -.05em;
+    text-wrap: balance;
     text-align: left;
     background: none;
     -webkit-text-fill-color: currentColor;
@@ -55,13 +55,13 @@
 }
 
 .template-hero > p:last-child {
-    max-width: 590px;
-    margin: 0;
+    max-width: 640px;
+    margin: 1.25rem 0 0;
     font-size: 1.05rem;
 }
 
 .template-section {
-    margin: 3.3rem 0 0;
+    margin: 3.7rem 0 0;
 }
 
 .template-section-head {
@@ -72,11 +72,16 @@
     margin-bottom: 1.4rem;
 }
 
+.template-section-head > div {
+    min-width: 0;
+}
+
 .template-section-head h2 {
     margin: 0;
     color: var(--site-navy);
     font-size: clamp(1.85rem, 3vw, 2.55rem);
     line-height: 1.05;
+    text-wrap: balance;
     text-align: left;
 }
 
@@ -104,6 +109,7 @@
     border-radius: 16px;
     background: #fff;
     box-shadow: 0 8px 24px rgba(19, 39, 58, .05);
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
 }
 
 .template-card::before,
@@ -124,11 +130,13 @@
     background: var(--site-violet);
 }
 
-.template-card:hover,
-.template-note:hover {
-    border-color: rgba(46, 107, 74, .32);
-    box-shadow: 0 18px 42px rgba(19, 39, 58, .1);
-    transform: translateY(-3px);
+@media (hover: hover) and (pointer: fine) {
+    .template-card:hover,
+    .template-note:hover {
+        border-color: rgba(46, 107, 74, .32);
+        box-shadow: 0 18px 42px rgba(19, 39, 58, .1);
+        transform: translateY(-3px);
+    }
 }
 
 .template-card h2,
@@ -138,6 +146,7 @@
     color: var(--site-navy);
     font-size: 1.5rem;
     line-height: 1.1;
+    text-wrap: balance;
     text-align: left;
 }
 
@@ -178,14 +187,12 @@
         width: min(100% - 1.5rem, 640px);
     }
 
-    .template-hero,
     .template-section-head,
     .template-grid {
         grid-template-columns: 1fr;
     }
 
     .template-hero {
-        gap: 1.25rem;
         padding-top: 3.3rem;
     }
 }
@@ -193,6 +200,10 @@
 @media (max-width: 520px) {
     .template-page {
         width: min(100% - 1.25rem, 480px);
+    }
+
+    .template-hero h1 {
+        font-size: clamp(2.7rem, 13vw, 4rem);
     }
 
     .template-card,
