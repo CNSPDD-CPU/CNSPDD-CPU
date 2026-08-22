@@ -321,6 +321,10 @@ permalink: /pi/
     transform: translateX(4px);
 }
 
+.pi-directory-media--ziyang img {
+    object-position: 50% 42%;
+}
+
 @media (max-width: 980px) {
     .pi-directory-grid {
         grid-template-columns: 1fr;
@@ -413,7 +417,7 @@ permalink: /pi/
                 <p class="pi-overview-section-label">Directory</p>
                 <h2 id="pi-directory-title" tabindex="-1">Principal investigators</h2>
             </div>
-            <p class="pi-overview-count">2 profiles</p>
+            <p class="pi-overview-count">3 profiles</p>
         </div>
 
         <div class="pi-directory-grid">
@@ -452,6 +456,26 @@ permalink: /pi/
                         <span>Neuroglial biology</span>
                         <span>Neural circuits</span>
                         <span>Brain injury &amp; repair</span>
+                    </div>
+                    <span class="pi-directory-cta">View full profile <span aria-hidden="true">→</span></span>
+                </div>
+            </a>
+
+            <a class="pi-directory-card" href="{{ '/pi/ziyang-zhang/' | relative_url }}" aria-label="View Ziyang Zhang profile">
+                <div class="pi-directory-media pi-directory-media--ziyang">
+                    <img src="{{ '/assets/images/pi/ziyang-zhang.jpg' | relative_url }}" alt="Ziyang Zhang, Professor at China Pharmaceutical University" width="1220" height="1460" loading="lazy" decoding="async">
+                    <span class="pi-directory-stamp">PI Profile</span>
+                </div>
+                <div class="pi-directory-body">
+                    <p class="pi-directory-label">Principal Investigator</p>
+                    <h3 class="pi-directory-name">Ziyang Zhang</h3>
+                    <p class="pi-directory-subname">张子洋</p>
+                    <p class="pi-directory-role">Professor · Doctoral Supervisor<br>School of Pharmacy · China Pharmaceutical University</p>
+                    <p class="pi-directory-summary">Neurodegenerative disease mechanisms, protein quality control, and targeted drug discovery for aberrant protein aggregation and clearance.</p>
+                    <div class="pi-directory-tags" aria-label="Research focus">
+                        <span>Protein quality control</span>
+                        <span>Neurodegeneration</span>
+                        <span>Drug discovery</span>
                     </div>
                     <span class="pi-directory-cta">View full profile <span aria-hidden="true">→</span></span>
                 </div>
