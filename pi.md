@@ -330,6 +330,9 @@ permalink: /pi/
 .pi-directory-media--lei img {
     object-position: 50% 42%;
 }
+.pi-directory-media--feng img {
+    object-position: 50% 45%;
+}
 
 @media (max-width: 980px) {
     .pi-directory-grid {
@@ -423,7 +426,7 @@ permalink: /pi/
                 <p class="pi-overview-section-label">Directory</p>
                 <h2 id="pi-directory-title" tabindex="-1">Principal investigators</h2>
             </div>
-            <p class="pi-overview-count">5 profiles</p>
+            <p class="pi-overview-count">6 profiles</p>
         </div>
 
         <div class="pi-directory-grid">
@@ -520,6 +523,26 @@ permalink: /pi/
                         <span>Neuromodulators</span>
                         <span>Neuropsychiatric disease</span>
                         <span>Neural circuits</span>
+                    </div>
+                    <span class="pi-directory-cta">View full profile <span aria-hidden="true">→</span></span>
+                </div>
+            </a>
+
+            <a class="pi-directory-card" href="{{ '/pi/yuanqing-feng/' | relative_url }}" aria-label="View Yuanqing Feng profile">
+                <div class="pi-directory-media pi-directory-media--feng">
+                    <img src="{{ '/assets/images/pi/yuanqing-feng.png' | relative_url }}" alt="Yuanqing Feng, Professor at China Pharmaceutical University" width="940" height="1088" loading="lazy" decoding="async">
+                    <span class="pi-directory-stamp">PI Profile</span>
+                </div>
+                <div class="pi-directory-body">
+                    <p class="pi-directory-label">Principal Investigator</p>
+                    <h3 class="pi-directory-name">Yuanqing Feng</h3>
+                    <p class="pi-directory-subname">冯园庆</p>
+                    <p class="pi-directory-role">Professor · Doctoral Supervisor<br>China Pharmaceutical University</p>
+                    <p class="pi-directory-summary">Human genetic variation, functional genomics, and non-coding pharmacogenomics for complex disease and precision medicine.</p>
+                    <div class="pi-directory-tags" aria-label="Research focus">
+                        <span>Human genetics</span>
+                        <span>Functional genomics</span>
+                        <span>Precision medicine</span>
                     </div>
                     <span class="pi-directory-cta">View full profile <span aria-hidden="true">→</span></span>
                 </div>
