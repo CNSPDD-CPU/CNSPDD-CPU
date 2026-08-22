@@ -37,7 +37,7 @@ permalink: /pi/
         </div>
 
         <div class="pi-directory-grid">
-<a class="pi-directory-card" href="{{ '/pi/frank-kirchhoff/' | relative_url }}" aria-label="View Frank Kirchhoff profile">
+<a class="pi-directory-card pi-directory-card--director" href="{{ '/pi/frank-kirchhoff/' | relative_url }}" aria-label="View Frank Kirchhoff profile">
                 <div class="pi-directory-media pi-directory-media--kirchhoff">
                     <img src="{{ '/assets/images/pi/frank-kirchhoff.jpg' | relative_url }}" alt="Frank Kirchhoff, Chief Scientist at China Pharmaceutical University" width="901" height="1200" loading="lazy" decoding="async">
                     <span class="pi-directory-stamp">PI Profile</span>

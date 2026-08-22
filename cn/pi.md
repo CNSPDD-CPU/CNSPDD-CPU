@@ -37,7 +37,7 @@ permalink: /cn/pi/
         </div>
 
         <div class="pi-directory-grid">
-<a class="pi-directory-card" href="{{ '/cn/pi/frank-kirchhoff/' | relative_url }}" aria-label="查看弗兰克·基尔霍夫个人主页">
+<a class="pi-directory-card pi-directory-card--director" href="{{ '/cn/pi/frank-kirchhoff/' | relative_url }}" aria-label="查看弗兰克·基尔霍夫个人主页">
                 <div class="pi-directory-media pi-directory-media--kirchhoff">
                     <img src="{{ '/assets/images/pi/frank-kirchhoff.jpg' | relative_url }}" alt="弗兰克·基尔霍夫教授照片" width="901" height="1200" loading="lazy" decoding="async">
                     <span class="pi-directory-stamp">PI 个人主页</span>
