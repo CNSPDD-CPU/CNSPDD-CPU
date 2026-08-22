@@ -3,56 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#13273a">
     <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Crimson+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     {% seo %}
 </head>
 <body>
+    <a class="skip-link" href="#main-content">
+        {% if page.url contains '/cn/' %}跳转到主要内容{% else %}Skip to main content{% endif %}
+    </a>
     <header class="site-header">
         <div class="header-container">
-            <a href="{{ site.baseurl }}{% if page.url contains '/cn/' %}/cn/{% else %}/{% endif %}" class="site-logo" aria-label="CNSPDD home">
-                <img src="{{ '/assets/images/cnspdd-logo.png' | relative_url }}" alt="CNSPDD Center for Neuroscience and Precision Drug Development">
+            <a href="{{ site.baseurl }}{% if page.url contains '/cn/' %}/cn/{% else %}/{% endif %}" class="site-logo" aria-label="{% if page.url contains '/cn/' %}CNSPDD 首页{% else %}CNSPDD home{% endif %}">
+                <img src="{{ '/assets/images/cnspdd-logo.png' | relative_url }}" alt="CNSPDD Center for Neuroscience and Precision Drug Development" width="190" height="58" decoding="async" translate="no">
             </a>
-            <nav class="main-nav">
+            <nav class="main-nav" aria-label="{% if page.url contains '/cn/' %}主导航{% else %}Primary navigation{% endif %}">
                 {% if page.url contains '/cn/' and site.navigation_cn %}
                     {% assign nav_items = site.navigation_cn %}
                 {% else %}
                     {% assign nav_items = site.navigation %}
                 {% endif %}
                 {% for item in nav_items %}
-                <a href="{{ site.baseurl }}{{ item.url }}" {% if page.url == item.url %}class="active"{% endif %}>{{ item.title }}</a>
+                <a href="{{ site.baseurl }}{{ item.url }}" {% if page.url == item.url %}class="active" aria-current="page"{% endif %}>{{ item.title }}</a>
                 {% endfor %}
             </nav>
             <div class="lang-toggle">
                 {% if page.url contains '/cn/' %}
                     {% assign english_url = page.url | replace_first: '/cn', '' %}
-                    <a href="{{ site.baseurl }}{{ english_url }}" class="lang-btn">English</a>
+                    <a href="{{ site.baseurl }}{{ english_url }}" class="lang-btn" aria-label="Switch to English" translate="no">English</a>
                 {% else %}
                     {% if page.url == '/' %}
                         {% assign chinese_url = '/cn/' %}
                     {% else %}
                         {% assign chinese_url = '/cn' | append: page.url %}
                     {% endif %}
-                    <a href="{{ site.baseurl }}{{ chinese_url }}" class="lang-btn">Chinese</a>
+                    <a href="{{ site.baseurl }}{{ chinese_url }}" class="lang-btn" aria-label="切换到中文" translate="no">中文</a>
                 {% endif %}
             </div>
         </div>
     </header>
 
-    <main class="content">
+    <main class="content" id="main-content" tabindex="-1">
         {{ content }}
     </main>
 
     <footer class="site-footer">
         <div class="footer-container">
             <div class="social-icons">
-                <a href="mailto:{{ site.email }}" class="icon" title="Email">
-                    <i class="fas fa-envelope"></i>
+                <a href="mailto:{{ site.email }}" class="icon" aria-label="{% if page.url contains '/cn/' %}发送邮件{% else %}Email CNSPDD{% endif %}" title="{% if page.url contains '/cn/' %}发送邮件{% else %}Email CNSPDD{% endif %}">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
                 </a>
                 {% if site.social_links.github %}
-                <a href="https://github.com/{{ site.social_links.github }}" class="icon" title="GitHub">
-                    <i class="fab fa-github"></i>
+                <a href="https://github.com/{{ site.social_links.github }}" class="icon" aria-label="GitHub CNSPDD" title="GitHub CNSPDD" rel="noopener" target="_blank">
+                    <i class="fab fa-github" aria-hidden="true"></i>
                 </a>
                 {% endif %}
             </div>
@@ -68,14 +76,12 @@
     </footer>
 
     <script>
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('.site-header');
-            if (window.scrollY > 10) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
+        const siteHeader = document.querySelector('.site-header');
+        if (siteHeader) {
+            window.addEventListener('scroll', () => {
+                siteHeader.classList.toggle('scrolled', window.scrollY > 10);
+            }, { passive: true });
+        }
     </script>
 </body>
 </html>

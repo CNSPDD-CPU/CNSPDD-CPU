@@ -1,171 +1,83 @@
 ---
 layout: default
 title: 首页
+permalink: /cn/
 ---
 
-<style>
-    .home-page {
-        --ink: #172033;
-        --muted: #526071;
-        --line: #dce5ee;
-        --green: #2C5F2D;
-        --navy: #1E2761;
-        --purple: #735DA5;
-        color: var(--ink);
-    }
+{% include home_styles.html %}
 
-    .hero-section {
-        min-height: clamp(520px, 72vh, 720px);
-        display: grid;
-        align-items: center;
-        color: #fff;
-        background:
-            linear-gradient(90deg, rgba(18, 30, 52, 0.9) 0%, rgba(18, 30, 52, 0.74) 48%, rgba(18, 30, 52, 0.34) 100%),
-            url('{{ "/assets/images/cnspdd-neuroscience-hero.jpg" | relative_url }}') center 44% / cover no-repeat;
-    }
-
-    .home-shell,
-    .hero-content {
-        max-width: 1140px;
-        margin: 0 auto;
-        padding: 0 2rem;
-        box-sizing: border-box;
-    }
-
-    .hero-content {
-        width: 100%;
-        padding-top: 4rem;
-        padding-bottom: 4rem;
-    }
-
-    .hero-kicker,
-    .section-eyebrow {
-        margin: 0 0 0.6rem;
-        color: var(--purple);
-        font-size: 0.82rem;
-        font-weight: 900;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-    }
-
-    .hero-kicker {
-        display: inline-flex;
-        padding: 0.45rem 0.75rem;
-        border: 1px solid rgba(255, 255, 255, 0.32);
-        border-radius: 999px;
-        color: rgba(255, 255, 255, 0.9);
-        background: rgba(255, 255, 255, 0.08);
-        backdrop-filter: blur(12px);
-    }
-
-    .hero-title {
-        max-width: 840px;
-        margin: 1.25rem 0 1rem;
-        color: #fff;
-        font-size: clamp(2.55rem, 5.2vw, 4.8rem);
-        line-height: 1.08;
-        letter-spacing: 0;
-        text-align: left;
-        background: none;
-        -webkit-text-fill-color: currentColor;
-    }
-
-    .hero-subtitle {
-        max-width: 760px;
-        margin: 0 0 1.8rem;
-        color: rgba(255, 255, 255, 0.9);
-        font-size: 1.18rem;
-        line-height: 1.85;
-        font-weight: 600;
-    }
-
-    .hero-actions,
-    .hero-tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.85rem;
-    }
-
-    .home-btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.55rem;
-        min-height: 46px;
-        padding: 0.8rem 1.1rem;
-        border-radius: 999px;
-        font-weight: 800;
-        text-decoration: none;
-    }
-
-    .home-btn::after { display: none; }
-    .home-btn.primary { color: #fff; background: var(--green); }
-    .home-btn.secondary { color: #fff; border: 1px solid rgba(255,255,255,0.42); background: rgba(255,255,255,0.08); }
-
-    .hero-tags { max-width: 840px; margin-top: 2rem; }
-    .hero-tag {
-        padding: 0.75rem 0.85rem;
-        border: 1px solid rgba(255,255,255,0.22);
-        border-radius: 8px;
-        color: rgba(255,255,255,0.92);
-        background: rgba(255,255,255,0.08);
-        backdrop-filter: blur(12px);
-        font-weight: 700;
-        line-height: 1.45;
-    }
-
-    .home-section { margin: 4rem auto; }
-    .section-head { max-width: 880px; margin: 0 auto 2rem; text-align: center; }
-    .section-title { margin: 0; color: var(--navy); font-size: clamp(1.75rem, 3vw, 2.45rem); line-height: 1.2; text-align: center; background: none; -webkit-text-fill-color: currentColor; }
-    .section-copy { max-width: 780px; margin: 0.9rem auto 0; color: var(--muted); line-height: 1.8; }
-    .card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; max-width: 1040px; margin: 0 auto; }
-    .home-card { padding: 1.45rem; border: 1px solid var(--line); border-radius: 8px; background: #fff; box-shadow: 0 10px 28px rgba(23,32,51,0.07); text-align: center; }
-    .home-card::before { content: ""; display: block; width: 42px; height: 4px; margin: 0 auto 1rem; border-radius: 999px; background: var(--green); }
-    .home-card:nth-child(2)::before { background: var(--navy); }
-    .home-card:nth-child(3)::before { background: var(--purple); }
-    .home-card h3 { margin: 0 0 0.7rem; color: var(--navy); font-size: 1.08rem; text-align: center; }
-    .home-card p { margin: 0; color: var(--muted); line-height: 1.75; }
-
-    @media (max-width: 768px) {
-        .home-shell, .hero-content { padding-left: 1rem; padding-right: 1rem; }
-        .section-head, .card-grid { grid-template-columns: 1fr; }
-        .hero-title { font-size: 2.3rem; }
-    }
-</style>
-
+{% assign home = site.data.home.cn %}
 <div class="home-page">
-    {% assign home = site.data.home.cn %}
-    <section class="hero-section" aria-labelledby="home-title">
-        <div class="hero-content">
-            <div class="hero-kicker">China Pharmaceutical University</div>
-            <h1 class="hero-title" id="home-title">{{ home.hero.title }}</h1>
-            <p class="hero-subtitle">{{ home.hero.subtitle }}</p>
-            <div class="hero-actions">
-                <a class="home-btn primary" href="{{ '/cn/research/' | relative_url }}"><i class="fas fa-microscope"></i> {{ home.hero.primary_button }}</a>
-                <a class="home-btn secondary" href="{{ '/cn/jobs/' | relative_url }}"><i class="fas fa-user-plus"></i> {{ home.hero.secondary_button }}</a>
+    <section class="home-hero" aria-labelledby="home-title">
+        <div class="home-shell home-hero-grid">
+            <div class="home-hero-copy">
+                <p class="home-kicker">中国药科大学 · CNSPDD</p>
+                <h1 class="home-title" id="home-title">{{ home.hero.title }}</h1>
+                <p class="home-subtitle">{{ home.hero.subtitle }}</p>
+                <div class="home-actions">
+                    <a class="home-btn home-btn-primary" href="{{ '/cn/research/' | relative_url }}"><i class="fas fa-microscope" aria-hidden="true"></i> {{ home.hero.primary_button }}</a>
+                    <a class="home-btn home-btn-secondary" href="{{ '/cn/jobs/' | relative_url }}"><i class="fas fa-user-plus" aria-hidden="true"></i> {{ home.hero.secondary_button }}</a>
+                </div>
+                <ul class="home-tag-list" aria-label="研究方向">
+                    {% for tag in home.hero.tags %}
+                    <li>{{ tag }}</li>
+                    {% endfor %}
+                </ul>
             </div>
-            <div class="hero-tags" aria-label="研究主题">
-                {% for tag in home.hero.tags %}
-                <span class="hero-tag">{{ tag }}</span>
-                {% endfor %}
-            </div>
+            <aside class="home-field-note" aria-label="中心动态">
+                <p class="home-field-label">现场通讯 · 最新报道</p>
+                <span class="home-field-number">{{ site.data.news.cn.size | prepend: '0' }}</span>
+                <p>记录中心的科研现场、平台建设、合作交流与团队成长。</p>
+                <a class="home-field-route" href="{{ '/cn/news/' | relative_url }}">打开新闻归档 →</a>
+            </aside>
         </div>
     </section>
 
-    <section class="home-section home-shell">
-        <div class="section-head">
+    <section class="home-section home-shell" aria-labelledby="mission-title">
+        <div class="home-section-head">
             <div>
-                <p class="section-eyebrow">{{ home.mission.eyebrow }}</p>
-                <h2 class="section-title">{{ home.mission.title }}</h2>
+                <p class="home-section-marker">01 / 中心使命</p>
+                <h2 class="home-section-title" id="mission-title">{{ home.mission.title }}</h2>
             </div>
-            <p class="section-copy">{{ home.mission.copy }}</p>
+            <p class="home-section-copy">{{ home.mission.copy }}</p>
         </div>
-        <div class="card-grid">
+        <div class="home-mission-grid">
             {% for card in home.mission.cards %}
-            <article class="home-card">
+            <article class="home-mission-card">
+                <span class="home-card-index">0{{ forloop.index }}</span>
                 <h3>{{ card.title }}</h3>
                 <p>{{ card.copy }}</p>
             </article>
             {% endfor %}
+        </div>
+    </section>
+
+    <section class="home-news-band" aria-labelledby="latest-news-title">
+        <div class="home-shell home-section">
+            <div class="home-section-head home-news-head">
+                <div>
+                    <p class="home-section-marker">02 / 最新报道</p>
+                    <h2 class="home-section-title" id="latest-news-title">科研现场正在发生</h2>
+                </div>
+                <a class="home-news-link" href="{{ '/cn/news/' | relative_url }}">查看全部新闻 →</a>
+            </div>
+            <div class="home-news-grid">
+                {% for item in site.data.news.cn limit: 3 %}
+                <a class="home-news-card" href="{{ item.url | relative_url }}" aria-label="阅读{{ item.title }}">
+                    <div class="home-news-media">
+                        <img src="{{ item.image | relative_url }}" alt="{{ item.image_alt }}" width="{{ item.width }}" height="{{ item.height }}" {% if forloop.first %}loading="eager" fetchpriority="high"{% else %}loading="lazy"{% endif %} decoding="async">
+                    </div>
+                    <div class="home-news-body">
+                        <div class="home-news-meta">
+                            <time datetime="{{ item.iso_date }}">{{ item.date }}</time>
+                            <span>{{ item.category }}</span>
+                        </div>
+                        <h3 class="home-news-title">{{ item.title }}</h3>
+                        <p class="home-news-excerpt">{{ item.excerpt }}</p>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
         </div>
     </section>
 </div>
