@@ -327,6 +327,9 @@ permalink: /cn/pi/
 .pi-directory-media--yifei img {
     object-position: 50% 42%;
 }
+.pi-directory-media--lei img {
+    object-position: 50% 42%;
+}
 
 @media (max-width: 980px) {
     .pi-directory-grid {
@@ -420,7 +423,7 @@ permalink: /cn/pi/
                 <p class="pi-overview-section-label">PI Directory</p>
                 <h2 id="pi-directory-title" tabindex="-1">实验平台 PI</h2>
             </div>
-            <p class="pi-overview-count">4 位 PI</p>
+            <p class="pi-overview-count">5 位 PI</p>
         </div>
 
         <div class="pi-directory-grid">
@@ -502,6 +505,26 @@ permalink: /cn/pi/
                     <span class="pi-directory-cta">查看完整资料 <span aria-hidden="true">→</span></span>
                 </div>
             </a>
+            <a class="pi-directory-card" href="{{ '/cn/pi/lei-ma/' | relative_url }}" aria-label="查看马磊个人主页">
+                <div class="pi-directory-media pi-directory-media--lei">
+                    <img src="{{ '/assets/images/pi/lei-ma.png' | relative_url }}" alt="马磊教授照片" width="1280" height="1768" loading="lazy" decoding="async">
+                    <span class="pi-directory-stamp">PI 个人主页</span>
+                </div>
+                <div class="pi-directory-body">
+                    <p class="pi-directory-label">实验平台 PI</p>
+                    <h3 class="pi-directory-name">马磊</h3>
+                    <p class="pi-directory-subname">Lei Ma</p>
+                    <p class="pi-directory-role">教授<br>中国药科大学</p>
+                    <p class="pi-directory-summary">聚焦多巴胺、腺苷和乙酰胆碱等神经调质在抑郁症、焦虑症与帕金森病中的作用机制。</p>
+                    <div class="pi-directory-tags" aria-label="研究方向">
+                        <span>神经调质</span>
+                        <span>神经精神疾病</span>
+                        <span>神经环路</span>
+                    </div>
+                    <span class="pi-directory-cta">查看完整资料 <span aria-hidden="true">→</span></span>
+                </div>
+            </a>
+
         </div>
     </section>
 </div>

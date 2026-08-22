@@ -327,6 +327,9 @@ permalink: /pi/
 .pi-directory-media--yifei img {
     object-position: 50% 42%;
 }
+.pi-directory-media--lei img {
+    object-position: 50% 42%;
+}
 
 @media (max-width: 980px) {
     .pi-directory-grid {
@@ -420,7 +423,7 @@ permalink: /pi/
                 <p class="pi-overview-section-label">Directory</p>
                 <h2 id="pi-directory-title" tabindex="-1">Principal investigators</h2>
             </div>
-            <p class="pi-overview-count">4 profiles</p>
+            <p class="pi-overview-count">5 profiles</p>
         </div>
 
         <div class="pi-directory-grid">
@@ -502,6 +505,26 @@ permalink: /pi/
                     <span class="pi-directory-cta">View full profile <span aria-hidden="true">→</span></span>
                 </div>
             </a>
+            <a class="pi-directory-card" href="{{ '/pi/lei-ma/' | relative_url }}" aria-label="View Lei Ma profile">
+                <div class="pi-directory-media pi-directory-media--lei">
+                    <img src="{{ '/assets/images/pi/lei-ma.png' | relative_url }}" alt="Lei Ma, Professor at China Pharmaceutical University" width="1280" height="1768" loading="lazy" decoding="async">
+                    <span class="pi-directory-stamp">PI Profile</span>
+                </div>
+                <div class="pi-directory-body">
+                    <p class="pi-directory-label">Principal Investigator</p>
+                    <h3 class="pi-directory-name">Lei Ma</h3>
+                    <p class="pi-directory-subname">马磊</p>
+                    <p class="pi-directory-role">Professor<br>China Pharmaceutical University</p>
+                    <p class="pi-directory-summary">Neuromodulator mechanisms in depression, anxiety, and Parkinson’s disease, with a focus on dopamine, adenosine, and acetylcholine.</p>
+                    <div class="pi-directory-tags" aria-label="Research focus">
+                        <span>Neuromodulators</span>
+                        <span>Neuropsychiatric disease</span>
+                        <span>Neural circuits</span>
+                    </div>
+                    <span class="pi-directory-cta">View full profile <span aria-hidden="true">→</span></span>
+                </div>
+            </a>
+
         </div>
     </section>
 </div>
