@@ -13,7 +13,7 @@ permalink: /pi/
     <section class="pi-overview-hero" aria-labelledby="pi-overview-title">
         <div>
             <p class="pi-overview-kicker">PI Directory · Experimental Platform</p>
-            <h1 id="pi-overview-title" tabindex="-1">Investigators behind the platform.</h1>
+            <h1 id="pi-overview-title" tabindex="-1">Investigators behind the platform</h1>
         </div>
         <div>
             <p class="pi-overview-intro">Explore the principal investigators who connect disease mechanisms, vascular biology, and translational drug development across the center.</p>
