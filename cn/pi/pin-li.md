@@ -13,7 +13,7 @@ permalink: /cn/pi/pin-li/
     --pi-paper: #fbfcfd;
     --pi-line: #dce5ee;
     --pi-muted: #526071;
-    max-width: 1180px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 2rem 5rem;
     box-sizing: border-box;
@@ -172,11 +172,11 @@ permalink: /cn/pi/pin-li/
 
 .pi-feature {
     display: grid;
-    grid-template-columns: minmax(280px, .78fr) minmax(0, 1.22fr);
-    margin-top: 2rem;
+    grid-template-columns: minmax(250px, .76fr) minmax(0, 1.24fr);
+    margin-top: 1.8rem;
     overflow: hidden;
     border: 1px solid var(--pi-line);
-    border-radius: 20px;
+    border-radius: 18px;
     background: #fff;
     box-shadow: 0 22px 56px rgba(24,48,71,.12);
 }
@@ -185,7 +185,7 @@ permalink: /cn/pi/pin-li/
     position: relative;
     isolation: isolate;
     overflow: hidden;
-    padding: 2.2rem 2rem 2.15rem;
+    padding: 2rem 1.7rem 1.95rem;
     color: #fff;
     background:
         radial-gradient(circle at 96% 8%, rgba(115,93,165,.56) 0, rgba(115,93,165,0) 34%),
@@ -196,10 +196,10 @@ permalink: /cn/pi/pin-li/
 .pi-person::before {
     position: absolute;
     top: -1rem;
-    right: -5rem;
+    right: -6rem;
     z-index: -1;
-    width: 19rem;
-    height: 28rem;
+    width: 16rem;
+    height: 23rem;
     border: 1px solid rgba(255,255,255,.16);
     border-radius: 48%;
     content: "";
@@ -209,10 +209,10 @@ permalink: /cn/pi/pin-li/
 
 .pi-person::after {
     position: absolute;
-    right: -7rem;
-    bottom: 10rem;
-    width: 22rem;
-    height: 8rem;
+    right: -6.5rem;
+    bottom: 9.5rem;
+    width: 18rem;
+    height: 7rem;
     border-top: 1px solid rgba(255,255,255,.32);
     border-radius: 50%;
     content: "";
@@ -223,21 +223,21 @@ permalink: /cn/pi/pin-li/
 .pi-photo-frame {
     position: relative;
     z-index: 1;
-    width: min(100%, 238px);
+    width: min(100%, 220px);
     aspect-ratio: 4 / 5;
     margin-bottom: 1.7rem;
     overflow: hidden;
     border: 0;
-    border-radius: 16px;
+    border-radius: 14px;
     background: #dfe8e5;
-    box-shadow: 0 18px 34px rgba(0,0,0,.22);
+    box-shadow: 0 16px 30px rgba(0,0,0,.2);
 }
 
 .pi-photo-frame::after {
     position: absolute;
-    inset: 10px;
-    border: 1px solid rgba(255,255,255,.5);
-    border-radius: 10px;
+    inset: 8px;
+    border: 1px solid rgba(255,255,255,.48);
+    border-radius: 9px;
     content: "";
     pointer-events: none;
 }
@@ -308,7 +308,7 @@ permalink: /cn/pi/pin-li/
 
 .pi-detail {
     min-width: 0;
-    padding: 2rem 2.25rem 2.55rem;
+    padding: 1.85rem 2rem 2.35rem;
     background: linear-gradient(145deg, #fff 0%, #f7faf9 100%);
 }
 
@@ -538,13 +538,13 @@ permalink: /cn/pi/pin-li/
 
     .pi-person {
         display: grid;
-        grid-template-columns: 180px minmax(0, 1fr);
-        gap: 1.5rem;
+        grid-template-columns: 164px minmax(0, 1fr);
+        gap: 1.25rem;
         align-items: end;
     }
 
     .pi-photo-frame {
-        width: 180px;
+        width: 164px;
         margin: 0;
     }
 
@@ -571,22 +571,22 @@ permalink: /cn/pi/pin-li/
     }
 
     .pi-feature {
-        margin-top: 1.5rem;
-        border-radius: 18px;
+        margin-top: 1.35rem;
+        border-radius: 16px;
     }
 
     .pi-person {
         display: block;
-        padding: 1.55rem 1.25rem 1.7rem;
+        padding: 1.35rem 1.1rem 1.55rem;
     }
 
     .pi-photo-frame {
-        width: min(68vw, 230px);
+        width: min(62vw, 215px);
         margin-bottom: 1.35rem;
     }
 
     .pi-detail {
-        padding: 1.5rem 1.15rem 1.9rem;
+        padding: 1.4rem 1.05rem 1.8rem;
     }
 
     .pi-detail-head {
