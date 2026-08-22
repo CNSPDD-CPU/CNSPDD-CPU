@@ -190,13 +190,12 @@ a {
 }
 
 .header-container {
-    width: min(1240px, calc(100% - 3rem));
+    width: min(1320px, calc(100% - 3rem));
     min-height: 78px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr) auto;
+    display: flex;
     align-items: center;
-    gap: 1.3rem;
+    gap: 1.15rem;
 }
 
 .site-logo {
@@ -228,25 +227,31 @@ a {
 
 .main-nav {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex: 0 1 auto;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
     align-items: center;
-    gap: .25rem;
+    gap: .08rem;
     min-width: 0;
+    padding: .25rem;
+    border: 1px solid rgba(203, 217, 232, .78);
+    border-radius: 13px;
+    background: rgba(255, 255, 255, .48);
+    box-shadow: 0 5px 18px rgba(7, 27, 51, .045);
 }
 
 .main-nav a {
     display: inline-flex;
-    min-height: 44px;
+    min-height: 40px;
     align-items: center;
     justify-content: center;
-    padding: .5rem .82rem;
+    padding: .42rem .68rem;
     border: 1px solid transparent;
-    border-radius: 10px;
+    border-radius: 9px;
     color: var(--site-ink);
-    font-size: .92rem;
+    font-size: .9rem;
     font-weight: 700;
-    letter-spacing: .01em;
+    letter-spacing: 0;
     white-space: nowrap;
 }
 
@@ -279,16 +284,17 @@ html[lang="zh"] .main-nav a {
 
 .lang-toggle {
     display: flex;
-    justify-self: end;
+    flex: 0 0 auto;
     align-items: center;
+    margin-left: auto;
 }
 
 .lang-btn {
     display: inline-flex;
-    min-height: 44px;
+    min-height: 40px;
     align-items: center;
     justify-content: center;
-    padding: .5rem .85rem;
+    padding: .42rem .72rem;
     border: 1px solid var(--site-line);
     border-radius: 10px;
     color: var(--site-navy);
@@ -489,18 +495,19 @@ html[lang="zh"] .main-nav a {
 
 @media (max-width: 980px) {
     .header-container {
-        width: min(100% - 2rem, 900px);
-        grid-template-columns: auto minmax(0, 1fr) auto;
-        gap: .7rem;
+        width: min(100% - 2rem, 940px);
+        gap: .65rem;
     }
 
     .main-nav {
-        gap: .1rem;
+        flex: 1 1 auto;
+        gap: 0;
+        padding: .2rem;
     }
 
     .main-nav a {
-        padding: .45rem .62rem;
-        font-size: .86rem;
+        padding: .4rem .55rem;
+        font-size: .84rem;
     }
 
     html[lang="zh"] .main-nav a {
@@ -518,8 +525,9 @@ html[lang="zh"] .main-nav a {
         width: min(100% - 1.5rem, 640px);
         min-height: 0;
         padding: .65rem 0 .8rem;
+        display: grid;
         grid-template-columns: minmax(0, 1fr) auto;
-        row-gap: .45rem;
+        gap: .45rem .75rem;
     }
 
     .site-logo {
@@ -535,9 +543,13 @@ html[lang="zh"] .main-nav a {
         flex-wrap: nowrap;
         justify-content: flex-start;
         max-width: 100%;
-        padding-top: .25rem;
+        padding: .3rem 0 0;
         overflow-x: auto;
+        border: 0;
         border-top: 1px solid rgba(203, 217, 232, .86);
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
         scrollbar-width: none;
         overscroll-behavior-inline: contain;
     }
@@ -582,8 +594,8 @@ html[lang="zh"] .main-nav a {
     }
 
     .main-nav {
-        justify-content: center;
-        gap: .15rem;
+        justify-content: flex-start;
+        gap: .05rem;
     }
 
     .main-nav a {
