@@ -225,38 +225,6 @@
     border: 0;
 }
 
-.contact-map-overlay {
-    position: absolute;
-    right: auto;
-    bottom: 1rem;
-    left: 1rem;
-    display: flex;
-    max-width: min(76%, 430px);
-    align-items: flex-start;
-    flex-direction: column;
-    gap: .22rem;
-    padding: .68rem .82rem;
-    border: 1px solid rgba(255, 255, 255, .3);
-    border-radius: 12px;
-    color: #fff;
-    background: rgba(7, 27, 51, .72);
-    box-shadow: 0 8px 24px rgba(7, 27, 51, .18);
-    backdrop-filter: blur(10px);
-}
-
-.contact-map-overlay span {
-    color: #a9dcff;
-    font-size: .67rem;
-    font-weight: 900;
-    letter-spacing: .12em;
-}
-
-.contact-map-overlay strong {
-    font-size: .82rem;
-    line-height: 1.35;
-    letter-spacing: .01em;
-}
-
 .contact-location-details {
     display: flex;
     flex-direction: column;
@@ -318,42 +286,6 @@
     font-variant-numeric: tabular-nums;
 }
 
-.contact-map-switcher {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    z-index: 2;
-    display: inline-flex;
-    gap: .2rem;
-    padding: .25rem;
-    border: 1px solid rgba(255, 255, 255, .72);
-    border-radius: 999px;
-    background: rgba(255, 255, 255, .9);
-    box-shadow: 0 8px 24px rgba(7, 27, 51, .16);
-    backdrop-filter: blur(12px);
-}
-
-.contact-map-switch {
-    min-height: 34px;
-    padding: .38rem .72rem;
-    border: 0;
-    border-radius: 999px;
-    color: var(--site-muted);
-    background: transparent;
-    font: inherit;
-    font-size: .73rem;
-    font-weight: 850;
-    cursor: pointer;
-    transition: color .2s ease, background .2s ease, box-shadow .2s ease;
-}
-
-.contact-map-switch.is-current {
-    color: #fff;
-    background: var(--site-blue);
-    box-shadow: 0 4px 12px rgba(11, 99, 206, .25);
-}
-
-.contact-map-switch:focus-visible,
 .contact-nav-button:focus-visible {
     outline: 3px solid rgba(11, 99, 206, .3);
     outline-offset: 3px;
@@ -457,27 +389,8 @@
         grid-template-columns: 1fr;
     }
 
-    .contact-map-overlay {
-        right: auto;
-        bottom: .75rem;
-        left: .75rem;
-        max-width: calc(100% - 1.5rem);
-        align-items: flex-start;
-        flex-direction: column;
-        gap: .25rem;
-    }
-
-    .contact-map-overlay strong {
-        font-size: .78rem;
-    }
-
     .contact-map-actions {
         grid-template-columns: 1fr;
-    }
-
-    .contact-map-switcher {
-        top: .75rem;
-        right: .75rem;
     }
 }
 
@@ -488,25 +401,3 @@
     }
 }
 </style>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".contact-location-module").forEach(function (module) {
-        const frame = module.querySelector(".contact-map-frame");
-        const providers = module.querySelectorAll(".contact-map-switch");
-        if (!frame || !providers.length) return;
-
-        providers.forEach(function (provider) {
-            provider.addEventListener("click", function () {
-                const source = provider.getAttribute("data-map-src");
-                if (!source) return;
-                frame.src = source;
-                const frameTitle = provider.getAttribute("data-map-title");
-                if (frameTitle) frame.title = frameTitle;
-                providers.forEach(function (item) {
-                    item.classList.toggle("is-current", item === provider);
-                });
-            });
-        });
-    });
-});
-</script>

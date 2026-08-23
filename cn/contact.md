@@ -52,22 +52,14 @@ permalink: /cn/contact/
         </div>
         <div class="contact-location-module">
             <div class="contact-location-map">
-                <iframe class="contact-map-frame" src="https://uri.amap.com/marker?markers=118.9202642,31.9110232,%E4%B8%AD%E5%9B%BD%E8%8D%AF%E7%A7%91%E5%A4%A7%E5%AD%A6%E6%B1%9F%E5%AE%81%E6%A0%A1%E5%8C%BA&amp;src=CNSIDD&amp;callnative=0" title="中国药科大学江宁校区高德地图预览" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <div class="contact-map-switcher" role="group" aria-label="切换地图预览">
-                    <button class="contact-map-switch is-current" type="button" data-map-src="https://uri.amap.com/marker?markers=118.9202642,31.9110232,%E4%B8%AD%E5%9B%BD%E8%8D%AF%E7%A7%91%E5%A4%A7%E5%AD%A6%E6%B1%9F%E5%AE%81%E6%A0%A1%E5%8C%BA&amp;src=CNSIDD&amp;callnative=0" data-map-title="中国药科大学江宁校区高德地图预览">高德</button>
-                    <button class="contact-map-switch" type="button" data-map-src="https://www.google.com/maps?q=China+Pharmaceutical+University+Jiangning+Campus%2C+639+Longmian+Avenue%2C+Nanjing&amp;z=16&amp;output=embed" data-map-title="中国药科大学江宁校区 Google 地图预览">Google</button>
-                </div>
-                <div class="contact-map-overlay">
-                    <span>实时地图预览</span>
-                    <strong>中国药科大学 · 江宁校区</strong>
-                </div>
+                <iframe class="contact-map-frame" src="https://www.openstreetmap.org/export/embed.html?bbox=118.9040%2C31.8960%2C118.9230%2C31.9130&amp;layer=mapnik&amp;marker=31.90448%2C118.91339" title="中国药科大学江宁校区互动地图" loading="lazy" referrerpolicy="no-referrer"></iframe>
             </div>
             <div class="contact-location-details">
                 <p class="contact-location-kicker">实验平台</p>
                 <h3>中国药科大学江宁校区</h3>
                 <p class="contact-address">中国江苏省南京市江宁区<br>龙眠大道639号</p>
                 <div class="contact-map-actions" aria-label="打开地图导航">
-                    <a class="contact-nav-button is-primary" href="https://uri.amap.com/navigation?from=&amp;to=118.9202642,31.9110232,%E4%B8%AD%E5%9B%BD%E8%8D%AF%E7%A7%91%E5%A4%A7%E5%AD%A6%E6%B1%9F%E5%AE%81%E6%A0%A1%E5%8C%BA&amp;mode=car&amp;policy=0&amp;src=CNSIDD&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">高德地图导航 <span>打开路线 ↗</span></a>
+                    <a class="contact-nav-button is-primary" href="https://uri.amap.com/navigation?from=&amp;to=118.918208,31.902898,%E4%B8%AD%E5%9B%BD%E8%8D%AF%E7%A7%91%E5%A4%A7%E5%AD%A6%E6%B1%9F%E5%AE%81%E6%A0%A1%E5%8C%BA&amp;mode=car&amp;policy=0&amp;src=CNSIDD&amp;coordinate=gaode&amp;callnative=1" target="_blank" rel="noopener">高德地图导航 <span>打开路线 ↗</span></a>
                     <a class="contact-nav-button" href="https://www.google.com/maps/dir/?api=1&amp;destination=China+Pharmaceutical+University+Jiangning+Campus%2C+639+Longmian+Avenue%2C+Nanjing&amp;dir_action=navigate" target="_blank" rel="noopener">Google 地图导航 <span>打开路线 ↗</span></a>
                 </div>
                 <p class="contact-location-note">选择地图服务后，将从当前位置打开前往中国药科大学江宁校区的路线。</p>
