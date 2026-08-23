@@ -212,6 +212,10 @@ a {
     display: none;
 }
 
+.mobile-nav-toggle {
+    display: none;
+}
+
 .site-logo img {
     display: block;
     width: auto;
