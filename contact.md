@@ -51,14 +51,11 @@ permalink: /contact/
             <p>Located on the Jiangning Campus of China Pharmaceutical University, the Center is open to research collaboration, platform access, and academic exchange.</p>
         </div>
         <div class="contact-location-module">
-            <div class="contact-location-map" role="img" aria-label="Map preview of CNSIDD at China Pharmaceutical University Jiangning Campus">
-                <div class="contact-map-grid" aria-hidden="true"></div>
-                <div class="contact-map-road contact-map-road--a" aria-hidden="true"></div>
-                <div class="contact-map-road contact-map-road--b" aria-hidden="true"></div>
-                <div class="contact-map-pin" aria-hidden="true"><span></span></div>
-                <div class="contact-map-label">
-                    <strong>CNSIDD</strong>
-                    <span>China Pharmaceutical University · Jiangning Campus</span>
+            <div class="contact-location-map">
+                <iframe class="contact-map-frame" src="https://www.google.com/maps?q=31.9110385,118.9201205&amp;z=17&amp;output=embed" title="Interactive Google Maps preview of CNSIDD" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="contact-map-overlay">
+                    <span>LIVE MAP PREVIEW</span>
+                    <strong>CNSIDD · Jiangning Campus</strong>
                 </div>
             </div>
             <div class="contact-location-details">
@@ -69,8 +66,11 @@ permalink: /contact/
                     <div><dt>Longitude</dt><dd>118.9201205°</dd></div>
                     <div><dt>Latitude</dt><dd>31.9110385°</dd></div>
                 </dl>
-                <a class="contact-map-button" href="https://j.map.baidu.com/4c/s03M" target="_blank" rel="noopener">Open Baidu Maps <span aria-hidden="true">↗</span></a>
-                <p class="contact-location-note">Use the map link for live route planning and campus-level navigation.</p>
+                <div class="contact-map-providers" aria-label="Map providers">
+                    <a class="contact-map-provider is-current" href="https://www.google.com/maps/search/?api=1&amp;query=31.9110385%2C118.9201205" target="_blank" rel="noopener">Google Maps <span>Open ↗</span></a>
+                    <a class="contact-map-provider" href="https://uri.amap.com/marker?position=118.9201205,31.9110385&amp;name=China%20Pharmaceutical%20University%20Jiangning%20Campus" target="_blank" rel="noopener">Amap / 高德地图 <span>Open ↗</span></a>
+                </div>
+                <p class="contact-location-note">Choose a map provider for live map browsing and route planning.</p>
             </div>
         </div>
     </section>
