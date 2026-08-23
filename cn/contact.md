@@ -52,9 +52,9 @@ permalink: /cn/contact/
         </div>
         <div class="contact-location-module">
             <div class="contact-location-map">
-                <iframe class="contact-map-frame" src="https://ditu.amap.com/search?query=%E4%B8%AD%E5%9B%BD%E8%8D%AF%E7%A7%91%E5%A4%A7%E5%AD%A6%E6%B1%9F%E5%AE%81%E6%A0%A1%E5%8C%BA" title="中国药科大学江宁校区高德地图预览" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe class="contact-map-frame" src="https://uri.amap.com/marker?markers=118.9202642,31.9110232,%E4%B8%AD%E5%9B%BD%E8%8D%AF%E7%A7%91%E5%A4%A7%E5%AD%A6%E6%B1%9F%E5%AE%81%E6%A0%A1%E5%8C%BA&amp;src=CNSIDD&amp;callnative=0" title="中国药科大学江宁校区高德地图预览" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 <div class="contact-map-switcher" role="group" aria-label="切换地图预览">
-                    <button class="contact-map-switch is-current" type="button" data-map-src="https://ditu.amap.com/search?query=%E4%B8%AD%E5%9B%BD%E8%8D%AF%E7%A7%91%E5%A4%A7%E5%AD%A6%E6%B1%9F%E5%AE%81%E6%A0%A1%E5%8C%BA" data-map-title="中国药科大学江宁校区高德地图预览">高德</button>
+                    <button class="contact-map-switch is-current" type="button" data-map-src="https://uri.amap.com/marker?markers=118.9202642,31.9110232,%E4%B8%AD%E5%9B%BD%E8%8D%AF%E7%A7%91%E5%A4%A7%E5%AD%A6%E6%B1%9F%E5%AE%81%E6%A0%A1%E5%8C%BA&amp;src=CNSIDD&amp;callnative=0" data-map-title="中国药科大学江宁校区高德地图预览">高德</button>
                     <button class="contact-map-switch" type="button" data-map-src="https://www.google.com/maps?q=China+Pharmaceutical+University+Jiangning+Campus%2C+639+Longmian+Avenue%2C+Nanjing&amp;z=16&amp;output=embed" data-map-title="中国药科大学江宁校区 Google 地图预览">Google</button>
                 </div>
                 <div class="contact-map-overlay">

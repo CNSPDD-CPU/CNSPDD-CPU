@@ -227,14 +227,15 @@
 
 .contact-map-overlay {
     position: absolute;
-    right: 1rem;
+    right: auto;
     bottom: 1rem;
     left: 1rem;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    padding: .75rem .9rem;
+    max-width: min(76%, 430px);
+    align-items: flex-start;
+    flex-direction: column;
+    gap: .22rem;
+    padding: .68rem .82rem;
     border: 1px solid rgba(255, 255, 255, .3);
     border-radius: 12px;
     color: #fff;
@@ -251,8 +252,9 @@
 }
 
 .contact-map-overlay strong {
-    font-size: .85rem;
-    letter-spacing: .02em;
+    font-size: .82rem;
+    line-height: 1.35;
+    letter-spacing: .01em;
 }
 
 .contact-location-details {
@@ -456,9 +458,10 @@
     }
 
     .contact-map-overlay {
-        right: .75rem;
+        right: auto;
         bottom: .75rem;
         left: .75rem;
+        max-width: calc(100% - 1.5rem);
         align-items: flex-start;
         flex-direction: column;
         gap: .25rem;
