@@ -52,7 +52,7 @@ permalink: /contact/
         </div>
         <div class="contact-location-module">
             <div class="contact-location-map">
-                <iframe class="contact-map-frame" src="https://www.google.com/maps?q=China+Pharmaceutical+University+Jiangning+Campus%2C+639+Longmian+Avenue%2C+Jiangning+District%2C+Nanjing&amp;z=16&amp;output=embed" title="Interactive Google map of China Pharmaceutical University Jiangning Campus" loading="lazy" referrerpolicy="no-referrer"></iframe>
+                <iframe class="contact-map-frame" src="https://www.google.com/maps?q=31.90448%2C118.91339&amp;z=17&amp;output=embed" title="Interactive Google map of China Pharmaceutical University Jiangning Campus" loading="lazy" referrerpolicy="no-referrer"></iframe>
             </div>
             <div class="contact-location-details">
                 <p class="contact-location-kicker">Experimental Platform</p>
