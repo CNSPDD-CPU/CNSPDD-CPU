@@ -52,7 +52,7 @@ permalink: /cn/contact/
         </div>
         <div class="contact-location-module">
             <div class="contact-location-map">
-                <iframe class="contact-map-frame" src="https://www.openstreetmap.org/export/embed.html?bbox=118.9040%2C31.8960%2C118.9230%2C31.9130&amp;layer=mapnik&amp;marker=31.90448%2C118.91339" title="中国药科大学江宁校区互动地图" loading="lazy" referrerpolicy="no-referrer"></iframe>
+                <iframe class="contact-map-frame" src="https://www.google.com/maps?q=China+Pharmaceutical+University+Jiangning+Campus%2C+639+Longmian+Avenue%2C+Jiangning+District%2C+Nanjing&amp;z=16&amp;output=embed" title="中国药科大学江宁校区 Google 互动地图" loading="lazy" referrerpolicy="no-referrer"></iframe>
             </div>
             <div class="contact-location-details">
                 <p class="contact-location-kicker">实验平台</p>
