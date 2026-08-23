@@ -41,4 +41,37 @@ permalink: /contact/
             </article>
         </div>
     </section>
+
+    <section class="template-section contact-location-section" aria-labelledby="location-title">
+        <div class="template-section-head">
+            <div>
+                <p class="template-eyebrow">Find the Center</p>
+                <h2 id="location-title">Visit CNSIDD</h2>
+            </div>
+            <p>Located on the Jiangning Campus of China Pharmaceutical University, the Center is open to research collaboration, platform access, and academic exchange.</p>
+        </div>
+        <div class="contact-location-module">
+            <div class="contact-location-map" role="img" aria-label="Map preview of CNSIDD at China Pharmaceutical University Jiangning Campus">
+                <div class="contact-map-grid" aria-hidden="true"></div>
+                <div class="contact-map-road contact-map-road--a" aria-hidden="true"></div>
+                <div class="contact-map-road contact-map-road--b" aria-hidden="true"></div>
+                <div class="contact-map-pin" aria-hidden="true"><span></span></div>
+                <div class="contact-map-label">
+                    <strong>CNSIDD</strong>
+                    <span>China Pharmaceutical University · Jiangning Campus</span>
+                </div>
+            </div>
+            <div class="contact-location-details">
+                <p class="contact-location-kicker">Experimental Platform</p>
+                <h3>China Pharmaceutical University</h3>
+                <p class="contact-address">639 Longmian Avenue, Jiangning District<br>Nanjing, Jiangsu 211198, China</p>
+                <dl class="contact-coordinates">
+                    <div><dt>Longitude</dt><dd>118.9201205°</dd></div>
+                    <div><dt>Latitude</dt><dd>31.9110385°</dd></div>
+                </dl>
+                <a class="contact-map-button" href="https://j.map.baidu.com/4c/s03M" target="_blank" rel="noopener">Open Baidu Maps <span aria-hidden="true">↗</span></a>
+                <p class="contact-location-note">Use the map link for live route planning and campus-level navigation.</p>
+            </div>
+        </div>
+    </section>
 </div>
