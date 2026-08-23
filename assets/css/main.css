@@ -201,7 +201,7 @@ a {
 .site-logo {
     display: inline-flex;
     width: max-content;
-    height: 58px;
+    height: 49px;
     align-items: flex-start;
     justify-self: start;
     overflow: hidden;
@@ -530,7 +530,7 @@ html[lang="zh"] .main-nav a {
     }
 
     .site-logo {
-        height: 52px;
+        height: 44px;
     }
 
     .site-logo img {
@@ -608,7 +608,7 @@ html[lang="zh"] .main-nav a {
     }
 
     .site-logo {
-        height: 47px;
+        height: 40px;
     }
 
     .site-logo img {
