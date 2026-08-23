@@ -62,9 +62,9 @@ permalink: /cn/contact/
                 <p class="contact-location-kicker">实验平台</p>
                 <h3>中国药科大学江宁校区</h3>
                 <p class="contact-address">中国江苏省南京市江宁区<br>龙眠大道639号</p>
-                <div class="contact-map-providers" aria-label="地图服务选择">
-                    <a class="contact-map-provider is-current" href="https://www.google.com/maps/search/?api=1&amp;query=China+Pharmaceutical+University+Jiangning+Campus" target="_blank" rel="noopener">Google Maps <span>打开 ↗</span></a>
-                    <a class="contact-map-provider" href="https://uri.amap.com/search?keyword=%E4%B8%AD%E5%9B%BD%E8%8D%AF%E7%A7%91%E5%A4%A7%E5%AD%A6%E6%B1%9F%E5%AE%81%E6%A0%A1%E5%8C%BA" target="_blank" rel="noopener">高德地图 <span>打开 ↗</span></a>
+                <div class="contact-map-providers" role="group" aria-label="地图预览切换">
+                    <button class="contact-map-provider is-current" type="button" data-map-src="https://www.google.com/maps?q=China+Pharmaceutical+University+Jiangning+Campus&amp;z=16&amp;output=embed">Google Maps <span>预览</span></button>
+                    <button class="contact-map-provider" type="button" data-map-src="https://ditu.amap.com/search?query=%E4%B8%AD%E5%9B%BD%E8%8D%AF%E7%A7%91%E5%A4%A7%E5%AD%A6%E6%B1%9F%E5%AE%81%E6%A0%A1%E5%8C%BA">高德地图 <span>预览</span></button>
                 </div>
                 <p class="contact-location-note">可选择地图服务进行实时浏览、路线规划和导航。</p>
             </div>

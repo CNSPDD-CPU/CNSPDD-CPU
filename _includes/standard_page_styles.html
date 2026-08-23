@@ -336,6 +336,10 @@
     background: #fff;
     font-size: .82rem;
     font-weight: 850;
+    appearance: none;
+    cursor: pointer;
+    font: inherit;
+    text-align: left;
     transition: transform .2s ease, border-color .2s ease, background .2s ease;
 }
 
@@ -434,3 +438,23 @@
     }
 }
 </style>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".contact-map-module").forEach(function (module) {
+        const frame = module.querySelector(".contact-map-frame");
+        const providers = module.querySelectorAll(".contact-map-provider");
+        if (!frame || !providers.length) return;
+
+        providers.forEach(function (provider) {
+            provider.addEventListener("click", function () {
+                const source = provider.getAttribute("data-map-src");
+                if (!source) return;
+                frame.src = source;
+                providers.forEach(function (item) {
+                    item.classList.toggle("is-current", item === provider);
+                });
+            });
+        });
+    });
+});
+</script>

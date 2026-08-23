@@ -62,9 +62,9 @@ permalink: /contact/
                 <p class="contact-location-kicker">Experimental Platform</p>
                 <h3>China Pharmaceutical University</h3>
                 <p class="contact-address">639 Longmian Avenue, Jiangning District<br>Nanjing, Jiangsu 211198, China</p>
-                <div class="contact-map-providers" aria-label="Map providers">
-                    <a class="contact-map-provider is-current" href="https://www.google.com/maps/search/?api=1&amp;query=China+Pharmaceutical+University+Jiangning+Campus" target="_blank" rel="noopener">Google Maps <span>Open ↗</span></a>
-                    <a class="contact-map-provider" href="https://uri.amap.com/search?keyword=China%20Pharmaceutical%20University%20Jiangning%20Campus" target="_blank" rel="noopener">Amap / 高德地图 <span>Open ↗</span></a>
+                <div class="contact-map-providers" role="group" aria-label="Map provider preview">
+                    <button class="contact-map-provider is-current" type="button" data-map-src="https://www.google.com/maps?q=China+Pharmaceutical+University+Jiangning+Campus&amp;z=16&amp;output=embed">Google Maps <span>Preview</span></button>
+                    <button class="contact-map-provider" type="button" data-map-src="https://ditu.amap.com/search?query=China%20Pharmaceutical%20University%20Jiangning%20Campus">Amap / 高德地图 <span>Preview</span></button>
                 </div>
                 <p class="contact-location-note">Choose a map provider for live map browsing and route planning.</p>
             </div>
