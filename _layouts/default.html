@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v=20260823-logo-crop2">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v=20260823-nav-mobile1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     {% seo %}
 </head>
@@ -22,7 +22,11 @@
             <a href="{{ site.baseurl }}{% if page.url contains '/cn/' %}/cn/{% else %}/{% endif %}" class="site-logo" aria-label="{% if page.url contains '/cn/' %}CNSIDD 首页{% else %}CNSIDD home{% endif %}">
                 <img src="{{ '/assets/images/cnsidd-logo.png' | relative_url }}" alt="CNSIDD Center for Neuroscience and Innovative Drug Development" width="1002" height="827" decoding="async" translate="no">
             </a>
-            <nav class="main-nav" aria-label="{% if page.url contains '/cn/' %}主导航{% else %}Primary navigation{% endif %}">
+            <button class="mobile-nav-toggle" type="button" data-mobile-nav-toggle aria-expanded="false" aria-controls="primary-navigation">
+                <span class="mobile-nav-toggle-icon" aria-hidden="true"></span>
+                <span>{% if page.url contains '/cn/' %}菜单{% else %}Menu{% endif %}</span>
+            </button>
+            <nav id="primary-navigation" class="main-nav" aria-label="{% if page.url contains '/cn/' %}主导航{% else %}Primary navigation{% endif %}">
                 {% if page.url contains '/cn/' and site.navigation_cn %}
                     {% assign nav_items = site.navigation_cn %}
                 {% else %}
