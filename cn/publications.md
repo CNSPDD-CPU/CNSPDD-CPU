@@ -1,6 +1,6 @@
 ---
 layout: default
-title: ??
+title: 科研成果
 permalink: /cn/publications/
 ---
 
