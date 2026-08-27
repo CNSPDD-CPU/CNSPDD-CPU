@@ -503,10 +503,12 @@
 .news-gallery-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
     gap: 1rem;
 }
 
 .news-figure {
+    align-self: start;
     display: flex;
     min-width: 0;
     flex-direction: column;
@@ -522,9 +524,8 @@
     display: block;
     width: 100%;
     height: auto;
-    min-height: 220px;
-    aspect-ratio: 3 / 2;
-    object-fit: cover;
+    min-height: 0;
+    object-fit: contain;
 }
 
 .news-figure figcaption,
