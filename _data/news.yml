@@ -38,19 +38,6 @@ en:
     image_alt: "The International Academic Salon of the Yuanshu Brain Science Research Center"
     width: 1600
     height: 1200
-  - slug: "mou-signing"
-    date: "JUN 24, 2026"
-    iso_date: "2026-06-11"
-    category: "International collaboration"
-    category_key: "collaboration"
-    title: "China Pharmaceutical University and the Center for Memory and Glioscience, Institute for Basic Science, Sign Memorandum of Understanding"
-    card_title: "CPU and IBS Center for Memory and Glioscience Sign MoU"
-    excerpt: "China Pharmaceutical University and the Center for Memory and Glioscience at IBS signed an MoU on neuroscience, talent development, and international collaboration."
-    url: "/news/mou-signing/"
-    image: "/assets/images/news/mou-signing.jpg"
-    image_alt: "China Pharmaceutical University and the Center for Memory and Glioscience, Institute for Basic Science, sign the Memorandum of Understanding."
-    width: 1600
-    height: 1200
   - slug: "targetome-conference"
     date: "JUN 22–23, 2026"
     iso_date: "2026-06-11"
@@ -116,19 +103,6 @@ cn:
     url: "/cn/news/yuanshu-salon/"
     image: "/assets/images/news/yuanshu-salon.jpg"
     image_alt: "元枢脑科学研究中心国际学术沙龙现场"
-    width: 1600
-    height: 1200
-  - slug: "mou-signing"
-    date: "2026年6月24日"
-    iso_date: "2026-06-11"
-    category: "国际合作"
-    category_key: "collaboration"
-    title: "中国药科大学与韩国基础科学研究院记忆与胶质科学中心签署合作备忘录"
-    card_title: "中国药科大学与韩国基础科学研究院签署合作备忘录"
-    excerpt: "中国药科大学与韩国基础科学研究院记忆与胶质科学中心签署合作备忘录，推进神经科学、人才培养与国际合作。"
-    url: "/cn/news/mou-signing/"
-    image: "/assets/images/news/mou-signing.jpg"
-    image_alt: "中国药科大学与韩国基础科学研究院记忆与胶质科学中心合作备忘录签署现场"
     width: 1600
     height: 1200
   - slug: "targetome-conference"
