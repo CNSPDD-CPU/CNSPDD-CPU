@@ -2,8 +2,8 @@ title: Center for Neuroscience and Innovative Drug Development
 email: hangao@cpu.edu.cn
 description: >-
   The Center for Neuroscience and Innovative Drug Development at China Pharmaceutical University advances mechanism-based, sex-informed precision therapies for neurological and psychiatric disorders.
-baseurl: "/CNSPDD-CPU"
-url: "https://cnspdd-cpu.github.io"
+baseurl: ""
+url: "https://cnsidd.com"
 
 # Build settings
 markdown: kramdown
