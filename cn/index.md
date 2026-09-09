@@ -1,6 +1,7 @@
 ---
 layout: default
-title: 首页
+title: 神经科学与原创药物研发中心（CNSIDD）｜中国药科大学
+description: 中国药科大学神经科学与原创药物研发中心（CNSIDD）聚焦神经科学、原创药物研发、转化研究与国际合作。
 permalink: /cn/
 ---
 
