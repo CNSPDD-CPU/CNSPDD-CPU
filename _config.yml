@@ -4,12 +4,14 @@ description: >-
   The Center for Neuroscience and Innovative Drug Development at China Pharmaceutical University advances mechanism-based, sex-informed precision therapies for neurological and psychiatric disorders.
 baseurl: ""
 url: "https://cnsidd.com"
+logo: "/assets/images/cnsidd-logo.png"
 
 # Build settings
 markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Navigation
 navigation:
