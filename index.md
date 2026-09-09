@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Home
+title: CNSIDD | Center for Neuroscience and Innovative Drug Development, China Pharmaceutical University
+description: The Center for Neuroscience and Innovative Drug Development (CNSIDD) at China Pharmaceutical University advances neuroscience, innovative drug discovery, translational research, and international collaboration.
 permalink: /
 ---
 
@@ -78,36 +79,3 @@ permalink: /
             </article>
             {% endfor %}
         </div>
-    </section>
-
-    <section class="home-news-band" aria-labelledby="latest-news-title">
-        <div class="home-shell home-section">
-            <div class="home-section-head home-news-head">
-                <div>
-                    <p class="home-section-marker">02 / Latest dispatches</p>
-                    <h2 class="home-section-title" id="latest-news-title">Research in motion</h2>
-                </div>
-                <a class="home-news-link" href="{{ '/news/' | relative_url }}">View all news →</a>
-            </div>
-            <div class="home-news-grid">
-                {% for item in site.data.news.en limit: 3 %}
-                <a class="home-news-card" href="{{ item.url | relative_url }}" aria-label="Read {{ item.title }}">
-                    <div class="home-news-media">
-                        <img src="{{ item.image | relative_url }}" alt="{{ item.image_alt }}" width="{{ item.width }}" height="{{ item.height }}" {% if forloop.first %}loading="eager" fetchpriority="high"{% else %}loading="lazy"{% endif %} decoding="async">
-                    </div>
-                    <div class="home-news-body">
-                        <div class="home-news-meta">
-                            <time datetime="{{ item.iso_date }}">{{ item.date }}</time>
-                            <span>{{ item.category }}</span>
-                        </div>
-                        <h3 class="home-news-title">{{ item.card_title | default: item.title }}</h3>
-                        <p class="home-news-excerpt">{{ item.excerpt }}</p>
-                    </div>
-                </a>
-                {% endfor %}
-            </div>
-        </div>
-    </section>
-</div>
-
-<script src="{{ '/assets/js/home-rotator.js' | relative_url }}?v=20260822-1" defer></script>
