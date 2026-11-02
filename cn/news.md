@@ -25,7 +25,7 @@ permalink: /cn/news/
                 <p class="news-section-label">新闻汇总</p>
                 <h2 class="news-section-title" id="news-section-title" tabindex="-1">从科研现场到合作网络</h2>
             </div>
-            <p class="news-section-count">6 篇报道</p>
+            <p class="news-section-count">{{ site.data.news.cn | size }} 篇报道</p>
         </div>
 
         <div class="news-card-grid">
@@ -34,7 +34,7 @@ permalink: /cn/news/
             <a class="news-card{% if forloop.first %} news-card--feature{% endif %}" href="{{ item.url | relative_url }}" aria-label="查看 {{ item.title }}">
                 <div class="news-card-media">
                     <img src="{{ item.image | relative_url }}" alt="{{ item.image_alt }}" width="{{ item.width }}" height="{{ item.height }}" {% if forloop.first %}loading="eager" fetchpriority="high"{% else %}loading="lazy"{% endif %} decoding="async">
-                    <span class="news-card-index">0{{ forloop.index }}</span>
+                    <span class="news-card-index">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
                 </div>
                 <div class="news-card-body">
                     <div class="news-card-meta">
