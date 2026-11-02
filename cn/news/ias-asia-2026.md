@@ -45,8 +45,17 @@ permalink: /cn/news/ias-asia-2026/
                 <img src="{{ '/assets/images/news/ias-asia-2026/2.webp' | relative_url }}" alt="专家授课现场及会议间隙学术交流照片" width="1270" height="853" loading="lazy" decoding="async">
                 <figcaption>专家授课现场及会议间隙学术交流照片</figcaption>
             </figure>
-            <figure class="news-figure news-figure--portrait">
-                <img src="{{ '/assets/images/news/ias-asia-2026/3.webp' | relative_url }}" alt="授课教授与青年学员合影" width="292" height="1800" loading="lazy" decoding="async">
+            <figure class="news-figure news-figure--collage">
+                <div class="news-collage-grid" aria-hidden="true">
+                    <span class="news-collage-tile" style="--slice: 0.000%"><img src="{{ '/assets/images/news/ias-asia-2026/3.webp' | relative_url }}" alt="" width="292" height="1800" loading="lazy" decoding="async"></span>
+                    <span class="news-collage-tile" style="--slice: 14.286%"><img src="{{ '/assets/images/news/ias-asia-2026/3.webp' | relative_url }}" alt="" width="292" height="1800" loading="lazy" decoding="async"></span>
+                    <span class="news-collage-tile" style="--slice: 28.571%"><img src="{{ '/assets/images/news/ias-asia-2026/3.webp' | relative_url }}" alt="" width="292" height="1800" loading="lazy" decoding="async"></span>
+                    <span class="news-collage-tile" style="--slice: 42.857%"><img src="{{ '/assets/images/news/ias-asia-2026/3.webp' | relative_url }}" alt="" width="292" height="1800" loading="lazy" decoding="async"></span>
+                    <span class="news-collage-tile" style="--slice: 57.143%"><img src="{{ '/assets/images/news/ias-asia-2026/3.webp' | relative_url }}" alt="" width="292" height="1800" loading="lazy" decoding="async"></span>
+                    <span class="news-collage-tile" style="--slice: 71.429%"><img src="{{ '/assets/images/news/ias-asia-2026/3.webp' | relative_url }}" alt="" width="292" height="1800" loading="lazy" decoding="async"></span>
+                    <span class="news-collage-tile" style="--slice: 85.714%"><img src="{{ '/assets/images/news/ias-asia-2026/3.webp' | relative_url }}" alt="" width="292" height="1800" loading="lazy" decoding="async"></span>
+                    <span class="news-collage-tile" style="--slice: 100.000%"><img src="{{ '/assets/images/news/ias-asia-2026/3.webp' | relative_url }}" alt="" width="292" height="1800" loading="lazy" decoding="async"></span>
+                </div>
                 <figcaption>授课教授与青年学员合影</figcaption>
             </figure>
             <figure class="news-figure">

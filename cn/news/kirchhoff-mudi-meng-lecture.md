@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "中国药科大学神经科学与原创药物研发中心主任Frank Kirchhoff教授在孟目的学院作专题学术报告"
+title: "Frank Kirchhoff教授在孟目的学院作学术报告"
 permalink: /cn/news/kirchhoff-mudi-meng-lecture/
 ---
 
@@ -10,7 +10,7 @@ permalink: /cn/news/kirchhoff-mudi-meng-lecture/
     <div class="news-article-back"><a class="news-back-link" href="{{ '/cn/news/' | relative_url }}">← 返回新闻汇总</a></div>
     <header class="news-article-header">
         <p class="news-article-kicker">中心动态 · CNSIDD</p>
-        <h1 class="news-article-title">中国药科大学神经科学与原创药物研发中心主任Frank Kirchhoff教授在孟目的学院作专题学术报告</h1>
+        <h1 class="news-article-title">Frank Kirchhoff教授在孟目的学院作学术报告</h1>
         <p class="news-article-lead">Frank Kirchhoff教授在孟目的学院作专题报告，探讨生物学性别、脑功能与神经元—胶质细胞通讯。</p>
         <div class="news-article-meta">
             <time datetime="2026-10-22">2026年10月22日</time>

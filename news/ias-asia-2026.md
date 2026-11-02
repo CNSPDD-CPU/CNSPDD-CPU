@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Inaugural Asian Chapter of the International Astrocyte School Successfully Held in Nanjing"
+title: "International Astrocyte School Opens Its First Asian Chapter in Nanjing"
 permalink: /news/ias-asia-2026/
 ---
 
@@ -10,7 +10,7 @@ permalink: /news/ias-asia-2026/
     <div class="news-article-back"><a class="news-back-link" href="{{ '/news/' | relative_url }}">← Back to news archive</a></div>
     <header class="news-article-header">
         <p class="news-article-kicker">Center dispatch · CNSIDD</p>
-        <h1 class="news-article-title">Inaugural Asian Chapter of the International Astrocyte School Successfully Held in Nanjing</h1>
+        <h1 class="news-article-title">International Astrocyte School Opens Its First Asian Chapter in Nanjing</h1>
         <p class="news-article-lead">The first Asian edition of the International Astrocyte School brought researchers to Nanjing for a week of glial biology training and exchange.</p>
         <div class="news-article-meta">
             <time datetime="2026-10-17">OCT 11–17, 2026</time>
@@ -45,8 +45,17 @@ permalink: /news/ias-asia-2026/
                 <img src="{{ '/assets/images/news/ias-asia-2026/2.webp' | relative_url }}" alt="Scientific lectures and informal discussions between faculty members and participants" width="1270" height="853" loading="lazy" decoding="async">
                 <figcaption>Scientific lectures and informal discussions between faculty members and participants</figcaption>
             </figure>
-            <figure class="news-figure news-figure--portrait">
-                <img src="{{ '/assets/images/news/ias-asia-2026/3.webp' | relative_url }}" alt="Faculty members and young researchers at IAS Asia 2026" width="292" height="1800" loading="lazy" decoding="async">
+            <figure class="news-figure news-figure--collage">
+                <div class="news-collage-grid" aria-hidden="true">
+                    <span class="news-collage-tile" style="--slice: 0.000%"><img src="{{ '/assets/images/news/ias-asia-2026/3.webp' | relative_url }}" alt="" width="292" height="1800" loading="lazy" decoding="async"></span>
+                    <span class="news-collage-tile" style="--slice: 14.286%"><img src="{{ '/assets/images/news/ias-asia-2026/3.webp' | relative_url }}" alt="" width="292" height="1800" loading="lazy" decoding="async"></span>
+                    <span class="news-collage-tile" style="--slice: 28.571%"><img src="{{ '/assets/images/news/ias-asia-2026/3.webp' | relative_url }}" alt="" width="292" height="1800" loading="lazy" decoding="async"></span>
+                    <span class="news-collage-tile" style="--slice: 42.857%"><img src="{{ '/assets/images/news/ias-asia-2026/3.webp' | relative_url }}" alt="" width="292" height="1800" loading="lazy" decoding="async"></span>
+                    <span class="news-collage-tile" style="--slice: 57.143%"><img src="{{ '/assets/images/news/ias-asia-2026/3.webp' | relative_url }}" alt="" width="292" height="1800" loading="lazy" decoding="async"></span>
+                    <span class="news-collage-tile" style="--slice: 71.429%"><img src="{{ '/assets/images/news/ias-asia-2026/3.webp' | relative_url }}" alt="" width="292" height="1800" loading="lazy" decoding="async"></span>
+                    <span class="news-collage-tile" style="--slice: 85.714%"><img src="{{ '/assets/images/news/ias-asia-2026/3.webp' | relative_url }}" alt="" width="292" height="1800" loading="lazy" decoding="async"></span>
+                    <span class="news-collage-tile" style="--slice: 100.000%"><img src="{{ '/assets/images/news/ias-asia-2026/3.webp' | relative_url }}" alt="" width="292" height="1800" loading="lazy" decoding="async"></span>
+                </div>
                 <figcaption>Faculty members and young researchers at IAS Asia 2026</figcaption>
             </figure>
             <figure class="news-figure">

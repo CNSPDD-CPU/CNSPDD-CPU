@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "2026年诺贝尔生理学或医学奖得主 Georg Nagel 教授到访中国药科大学神经科学与原创药物研发中心"
+title: "诺贝尔奖得主Georg Nagel教授到访CNSIDD"
 permalink: /cn/news/georg-nagel-visit/
 ---
 
@@ -10,7 +10,7 @@ permalink: /cn/news/georg-nagel-visit/
     <div class="news-article-back"><a class="news-back-link" href="{{ '/cn/news/' | relative_url }}">← 返回新闻汇总</a></div>
     <header class="news-article-header">
         <p class="news-article-kicker">中心动态 · CNSIDD</p>
-        <h1 class="news-article-title">2026年诺贝尔生理学或医学奖得主 Georg Nagel 教授到访中国药科大学神经科学与原创药物研发中心</h1>
+        <h1 class="news-article-title">诺贝尔奖得主Georg Nagel教授到访CNSIDD</h1>
         <p class="news-article-lead">2026年诺贝尔生理学或医学奖得主Georg Nagel教授到访中心，并作光遗传学专题报告。</p>
         <div class="news-article-meta">
             <time datetime="2026-10-21">2026年10月21日</time>

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Professor Frank Kirchhoff, Director of the Center for Neuroscience and Innovative Drug Development at China Pharmaceutical University, Delivers an Academic Lecture at Mudi Meng Honors College"
+title: "Frank Kirchhoff Lectures on Brain Function at Mudi Meng Honors College"
 permalink: /news/kirchhoff-mudi-meng-lecture/
 ---
 
@@ -10,7 +10,7 @@ permalink: /news/kirchhoff-mudi-meng-lecture/
     <div class="news-article-back"><a class="news-back-link" href="{{ '/news/' | relative_url }}">← Back to news archive</a></div>
     <header class="news-article-header">
         <p class="news-article-kicker">Center dispatch · CNSIDD</p>
-        <h1 class="news-article-title">Professor Frank Kirchhoff, Director of the Center for Neuroscience and Innovative Drug Development at China Pharmaceutical University, Delivers an Academic Lecture at Mudi Meng Honors College</h1>
+        <h1 class="news-article-title">Frank Kirchhoff Lectures on Brain Function at Mudi Meng Honors College</h1>
         <p class="news-article-lead">Frank Kirchhoff discussed biological sex, brain function, and neuron–glia communication at Mudi Meng Honors College.</p>
         <div class="news-article-meta">
             <time datetime="2026-10-22">OCT 22, 2026</time>
