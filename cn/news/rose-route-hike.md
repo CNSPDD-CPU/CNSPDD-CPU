@@ -46,7 +46,9 @@ permalink: /cn/news/rose-route-hike/
                 <figcaption>CNSIDD成员徒步途中掠影</figcaption>
             </figure>
             <figure class="news-figure">
-                <img src="{{ '/assets/images/news/rose-route-hike/4.webp' | relative_url }}" alt="徒步活动中的交流与互动" width="1691" height="1268" loading="lazy" decoding="async">
+                <div class="news-figure-rotate-cw">
+                    <img src="{{ '/assets/images/news/rose-route-hike/4.webp' | relative_url }}" alt="徒步活动中的交流与互动" width="1691" height="1268" loading="lazy" decoding="async">
+                </div>
                 <figcaption>徒步活动中的交流与互动</figcaption>
             </figure>
         </div>

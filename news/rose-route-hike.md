@@ -46,7 +46,9 @@ permalink: /news/rose-route-hike/
                 <figcaption>Moments from the hike featuring CNSIDD members along the trail.</figcaption>
             </figure>
             <figure class="news-figure">
-                <img src="{{ '/assets/images/news/rose-route-hike/4.webp' | relative_url }}" alt="Informal interactions among CNSIDD members during the hike." width="1691" height="1268" loading="lazy" decoding="async">
+                <div class="news-figure-rotate-cw">
+                    <img src="{{ '/assets/images/news/rose-route-hike/4.webp' | relative_url }}" alt="Informal interactions among CNSIDD members during the hike." width="1691" height="1268" loading="lazy" decoding="async">
+                </div>
                 <figcaption>Informal interactions among CNSIDD members during the hike.</figcaption>
             </figure>
         </div>
