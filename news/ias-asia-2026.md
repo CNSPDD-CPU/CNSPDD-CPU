@@ -45,6 +45,10 @@ permalink: /news/ias-asia-2026/
                 <img src="{{ '/assets/images/news/ias-asia-2026/2.webp' | relative_url }}" alt="Scientific lectures and informal discussions between faculty members and participants" width="1270" height="853" loading="lazy" decoding="async">
                 <figcaption>Scientific lectures and informal discussions between faculty members and participants</figcaption>
             </figure>
+            <figure class="news-figure">
+                <img src="{{ '/assets/images/news/ias-asia-2026/4.webp' | relative_url }}" alt="Group photograph during the academic visit to China Pharmaceutical University on October 15" width="1270" height="951" loading="lazy" decoding="async">
+                <figcaption>Group photograph during the academic visit to China Pharmaceutical University on October 15</figcaption>
+            </figure>
             <figure class="news-figure news-figure--collage">
                 <div class="news-collage-grid" aria-hidden="true">
                     <span class="news-collage-tile" style="--slice: 0.000%"><img src="{{ '/assets/images/news/ias-asia-2026/3.webp' | relative_url }}" alt="" width="292" height="1800" loading="lazy" decoding="async"></span>
@@ -57,10 +61,6 @@ permalink: /news/ias-asia-2026/
                     <span class="news-collage-tile" style="--slice: 100.000%"><img src="{{ '/assets/images/news/ias-asia-2026/3.webp' | relative_url }}" alt="" width="292" height="1800" loading="lazy" decoding="async"></span>
                 </div>
                 <figcaption>Faculty members and young researchers at IAS Asia 2026</figcaption>
-            </figure>
-            <figure class="news-figure">
-                <img src="{{ '/assets/images/news/ias-asia-2026/4.webp' | relative_url }}" alt="Group photograph during the academic visit to China Pharmaceutical University on October 15" width="1270" height="951" loading="lazy" decoding="async">
-                <figcaption>Group photograph during the academic visit to China Pharmaceutical University on October 15</figcaption>
             </figure>
         </div>
     </section>
