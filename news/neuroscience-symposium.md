@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "CNSIDD at China Pharmaceutical University Hosts International Neuroscience Symposium"
+title: "CNSIDD Hosts International Neuroscience Symposium"
 permalink: /news/neuroscience-symposium/
 ---
 
@@ -10,7 +10,7 @@ permalink: /news/neuroscience-symposium/
     <div class="news-article-back"><a class="news-back-link" href="{{ '/news/' | relative_url }}">← Back to news archive</a></div>
     <header class="news-article-header">
         <p class="news-article-kicker">Center dispatch · CNSIDD</p>
-        <h1 class="news-article-title">CNSIDD at China Pharmaceutical University Hosts International Neuroscience Symposium</h1>
+        <h1 class="news-article-title">CNSIDD Hosts International Neuroscience Symposium</h1>
         <p class="news-article-lead">CNSIDD hosted an international symposium on glia, neuroimmune regulation, and brain homeostasis at CPU’s Jiangning Campus.</p>
         <div class="news-article-meta">
             <time datetime="2026-10-10">OCT 10, 2026</time>

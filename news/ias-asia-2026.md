@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "International Astrocyte School Opens Its First Asian Chapter in Nanjing"
+title: "First Asian Astrocyte School Opens in Nanjing"
 permalink: /news/ias-asia-2026/
 ---
 
@@ -10,7 +10,7 @@ permalink: /news/ias-asia-2026/
     <div class="news-article-back"><a class="news-back-link" href="{{ '/news/' | relative_url }}">← Back to news archive</a></div>
     <header class="news-article-header">
         <p class="news-article-kicker">Center dispatch · CNSIDD</p>
-        <h1 class="news-article-title">International Astrocyte School Opens Its First Asian Chapter in Nanjing</h1>
+        <h1 class="news-article-title">First Asian Astrocyte School Opens in Nanjing</h1>
         <p class="news-article-lead">The first Asian edition of the International Astrocyte School brought researchers to Nanjing for a week of glial biology training and exchange.</p>
         <div class="news-article-meta">
             <time datetime="2026-10-17">OCT 11–17, 2026</time>

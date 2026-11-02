@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "中国药科大学神经科学与原创药物研发中心举办神经科学前沿学术研讨会"
+title: "CNSIDD举办神经科学前沿学术研讨会"
 permalink: /cn/news/neuroscience-symposium/
 ---
 
@@ -10,7 +10,7 @@ permalink: /cn/news/neuroscience-symposium/
     <div class="news-article-back"><a class="news-back-link" href="{{ '/cn/news/' | relative_url }}">← 返回新闻汇总</a></div>
     <header class="news-article-header">
         <p class="news-article-kicker">中心动态 · CNSIDD</p>
-        <h1 class="news-article-title">中国药科大学神经科学与原创药物研发中心举办神经科学前沿学术研讨会</h1>
+        <h1 class="news-article-title">CNSIDD举办神经科学前沿学术研讨会</h1>
         <p class="news-article-lead">中心举办国际神经科学研讨会，聚焦胶质细胞、神经免疫与脑稳态研究。</p>
         <div class="news-article-meta">
             <time datetime="2026-10-10">2026年10月10日</time>

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "中国药科大学神经科学与原创药物研发中心组织开展“玫瑰线”徒步活动"
+title: "CNSIDD组织“玫瑰线”徒步活动"
 permalink: /cn/news/rose-route-hike/
 ---
 
@@ -10,7 +10,7 @@ permalink: /cn/news/rose-route-hike/
     <div class="news-article-back"><a class="news-back-link" href="{{ '/cn/news/' | relative_url }}">← 返回新闻汇总</a></div>
     <header class="news-article-header">
         <p class="news-article-kicker">中心动态 · CNSIDD</p>
-        <h1 class="news-article-title">中国药科大学神经科学与原创药物研发中心组织开展“玫瑰线”徒步活动</h1>
+        <h1 class="news-article-title">CNSIDD组织“玫瑰线”徒步活动</h1>
         <p class="news-article-lead">中心组织“玫瑰线”徒步活动，成员在户外锻炼中增进交流、凝聚团队。</p>
         <div class="news-article-meta">
             <time datetime="2026-10-24">2026年10月24日</time>
